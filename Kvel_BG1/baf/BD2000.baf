@@ -13,7 +13,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("C0Kvel_betrayal_discussion","GLOBAL",1)
 		SetGlobalTimer("bd_betrayal_discuss_timer","bd2000",ONE_MINUTE) //to space all the other NPC comments
-		DisplayStringHead("C0Kvel",~You and the drow are not so different, sacrificing so much for a temporary convenience.~)
+		DisplayStringHead("C0Kvel",~你和那卓尔也没什么两样，为了一时的方便牺牲这么多。~)
 		Continue()
 END
 
@@ -29,6 +29,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("bd_mdd410z_ot_timer","bd2000",THREE_MINUTES)  // Boareskyr Bridge & Bridgefort
 		SetGlobal("C0Kvel_bd_ot","bd2000",1)  
-		DisplayStringHead("C0Kvel",~This battlefield I recognize well.~)  
+		DisplayStringHead("C0Kvel",~这片战场，我认得清楚。~)  
 		Continue()
 END

@@ -4,7 +4,7 @@ IF
 THEN
 RESPONSE #100	
 	SetGlobal("C0KvelName","LOCALS",1)
-	SetName(~K'Vel~)
+	SetName(~克维尔~)
 	Continue()
 END
 

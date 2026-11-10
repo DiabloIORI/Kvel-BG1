@@ -4,177 +4,177 @@ BEGIN C0KVNOB1
 
 CHAIN IF WEIGHT #-1 ~AreaCheck("bd4700")
 GlobalLT("bd_plot","global",570)~ THEN C02KVEL KVEL-BD4700
-~There is no turning back this far onto the path!~
+~走到这条路上这么远，已回不了头了！~
 DO ~SetGlobal("C0Kvel_kicked_bd4700","global",1)
                  SetGlobal("bd_joined","locals",0)~ EXIT
 
 EXTEND_TOP BDSCHAEL 40 #1
 + ~OR(2)
 Global("SOD_fromimport","global",1)
-BeenInParty("C0KVEL")~ + ~What about K'Velarin? We still have an ongoing contract.~ EXTERN BDSCHAEL SCHAEL-KVEL-START
+BeenInParty("C0KVEL")~ + ~克维拉林呢？我们还有一份契约在手。~ EXTERN BDSCHAEL SCHAEL-KVEL-START
 END
 
 CHAIN BDSCHAEL SCHAEL-KVEL-START
-~Yes, the drow... he signed an agreement with the Dukes to march with the expedition as a sellsword, so you'll see him sooner or later. Don't worry—he hasn't forgotten about you if that's your concern. It seems your presence was one of the conditions for his cooperation.~
-= ~If you really want to meet him tonight, you'll find him at the Elfsong Tavern. He's... working there, in a sense. You'll see what I mean.~
+~是，那卓尔……他跟大公们签了约，以佣兵身份随远征队同行，所以你早晚能见着他。别担心——若你担心的是这个，他没忘了你。看来你的在场，是他肯合作的条件之一。~
+= ~你若真想在今晚见他，就去精灵之歌酒馆。他……算是，在那儿当差。你见了就明白我什么意思。~
 COPY_TRANS BDSCHAEL 40
 
 CHAIN IF WEIGHT #-1 ~Global("C0KvelSoDStartScene","GLOBAL",0)~ THEN BDPOOL05 KVEL-SOD-START-SCENE
-~'Ey, now this is what I call a proper meal! I've forgotten what it's like to have one e'er since this crisis started!~
+~嘿，这才叫我说的正经一顿饭！打这场乱子起，我都忘了吃顿正经饭是什么滋味！~
 DO ~SetGlobal("C0KvelSoDStartScene","GLOBAL",1)~
-== BDPOOL03 ~Hear, hear! Send my compliments over to the new chef, bartender!~
-== BDBART01 ~I'm sure he'll be very pleased to hear your words. Or not. More likely not, given what he's like.~
-== C0KVNOB1 ~I don't suppose I could meet this mystery chef you've recently hired? My wife's been cavilling about the one we've hired for a while now, and I'm certain if they're willing to work here, their demand in pay can't be that steep.~
-== BDBART01 ~Not sure I appreciate what you're suggesting about how much we pay our workers, sir. And I... wouldn't advise meeting him face to face. He doesn't like guests—just looking at him might scare you.~
-== C0KVNOB1 ~Oh, piffle. What sort of person do you think I am? If I were concerned over staining my clothes by getting too close to the riffraff, I wouldn't eat here. Now, let me go and have a look...~
+== BDPOOL03 ~说得好，说得好！替我向新来的厨子致意，酒保！~
+== BDBART01 ~我信他听了会很高兴。也许不会。以他那性子，多半不会。~
+== C0KVNOB1 ~我倒想问，能不能见见你们新近雇的这位神秘厨子？我家里那位，我妻子唠叨了好一阵子。我信他们若肯在这儿干，要的工钱也不会太高。~
+== BDBART01 ~先生，我不大确定我欣赏你这话里对我们工钱的暗示。而且我……不劝你跟他当面见。他不喜欢客人——光是看他，就可能吓着你。~
+== C0KVNOB1 ~哦，废话。你当我是什么人？我若怕靠那些下等人太近脏了衣裳，就不会来这儿吃。来，让我去看看……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C02KVC01")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KvelSoDStartScene","GLOBAL",1)~ THEN BDBART01 KVEL-SOD-START-SCENE-2
-~*sigh* And off he goes. I did warn him.~
+~*叹气* 他就这么去了。我可是警告过他的。~
 DO ~SetGlobal("C0KvelSoDStartScene","GLOBAL",2)~
-== BDBART01 ~Sir ran off without paying his tab either, milady. Should I send one of the men after him?~
-== BDALYTH ~Normally I'd say yes... but these are hard times, and it will be difficult to find him in the crowd outside. Let him off this once. He'll be back within the week.~
-== BDBART01 ~Understood. I'll write it down as debt in our books... with interest, of course.~
-== BDPOOL03 ~What do you think that was all about?~
-== BDPOOL05 ~Dunno. Maybe they've got a dragon roasting their potatoes in there. Heh heh. I love seeing those rich folk making fools out of themselves.~
-== BDPOOL03 ~You want to have a look too?~
-== BDPOOL05 ~Nah. Mind our own business. Come on, come on, food's getting cold.~
+== BDBART01 ~那位先生也没付账就跑了，小姐。要不要派人去追？~
+== BDALYTH ~平日里我会说去……可这年头难，外头人堆里也难找他。这一回就放过他。他一周内还会回来。~
+== BDBART01 ~明白。我记进账里，算他欠着……当然，带利息。~
+== BDPOOL03 ~你说这是怎么回事？~
+== BDPOOL05 ~不知道。也许他们里头有条龙在烤土豆。嘿嘿。我就爱看那些有钱人自己出丑。~
+== BDPOOL03 ~你也想去看？~
+== BDPOOL05 ~不去。少管闲事。走吧走吧，饭要凉了。~
 DO ~ActionOverride("CUTSPY",DestroySelf())~ EXIT
 
 CHAIN IF WEIGHT #-1 ~!InParty("C0KVEL")
 AreaCheck("BD0109")
 Global("C0KvelSoDStartScene","GLOBAL",2)~ THEN BDSCHAEL KVEL-SOD-START-SCENE-3
-~Well, that was a thing.~
+~好吧，这也算一桩事。~
 DO ~SetGlobal("C0KvelSoDStartScene","GLOBAL",3)~
-== BDSCHAEL IF ~BeenInParty("C0KVEL")~ THEN ~Given the reaction, you can probably guess who it is in the kitchen. Couldn't believe my ears when I heard it myself.~
-== BDSCHAEL IF ~BeenInParty("C0KVEL")~ THEN ~I'll wait for you two to catch up. Just don't take too long.~
+== BDSCHAEL IF ~BeenInParty("C0KVEL")~ THEN ~看这反应，你大概能猜出厨房里是谁。我自己听见时都不信自己的耳朵。~
+== BDSCHAEL IF ~BeenInParty("C0KVEL")~ THEN ~我等你们俩赶上来。只是别耽搁太久。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~AreaCheck("BD0109") Global("C0KvelSoDStart","GLOBAL",0)~ THEN C02KVEL KVEL-SOD-START
-~If you are hungry, make an order at the bar. You'll not receive a meal faster by intruding in the kitchen.~
+~你若要吃饭，就在柜台点单。闯进厨房不会让你早些吃上。~
 DO ~SetGlobal("C0KvelSoDStart","GLOBAL",1)~
 END
   + ~OR(2)
 Global("SOD_fromimport","global",1)
-BeenInParty("C0KVEL")~ + ~Not even for me, K'Vel?~ DO ~SetGlobal("C0KvelSoDFromBG1","GLOBAL",1)~ EXTERN C02KVEL KVEL-SOD-START-OLD-1
+BeenInParty("C0KVEL")~ + ~就算是我也不行么，克维尔？~ DO ~SetGlobal("C0KvelSoDFromBG1","GLOBAL",1)~ EXTERN C02KVEL KVEL-SOD-START-OLD-1
   + ~OR(2)
 Global("SOD_fromimport","global",1)
-BeenInParty("C0KVEL")~ + ~I'm not here to eat, I'm here to ask for your help.~ DO ~SetGlobal("C0KvelSoDFromBG1","GLOBAL",1)~ EXTERN C02KVEL KVEL-SOD-START-OLD-2
-  + ~!BeenInParty("C0KVEL")~ + ~You're... a drow chef?~ EXTERN C02KVEL KVEL-SOD-START-NEW-1
-  + ~!BeenInParty("C0KVEL")~ + ~Sorry. I'll get out.~ EXIT
+BeenInParty("C0KVEL")~ + ~我不是来吃饭的，我是来求你帮忙的。~ DO ~SetGlobal("C0KvelSoDFromBG1","GLOBAL",1)~ EXTERN C02KVEL KVEL-SOD-START-OLD-2
+  + ~!BeenInParty("C0KVEL")~ + ~你……是个卓尔厨子？~ EXTERN C02KVEL KVEL-SOD-START-NEW-1
+  + ~!BeenInParty("C0KVEL")~ + ~抱歉。我这就出去。~ EXIT
 
 CHAIN C02KVEL KVEL-SOD-START-OLD-1
-~I give no special treatment.~
+~我从不特殊照顾。~
 EXTERN C02KVEL KVEL-SOD-START-OLD-3
 
 CHAIN C02KVEL KVEL-SOD-START-OLD-2
-~...~
+~……~
 EXTERN C02KVEL KVEL-SOD-START-OLD-3
 
 CHAIN C02KVEL KVEL-SOD-START-OLD-3
-~I hear you intend to march against the crusade.~
+~听说你要随军去打那场圣战。~
 END
-  ++ ~That's right. And I'd like for you to join me.~ + KVEL-SOD-START-NEW-7
-  ++ ~I was hoping to catch up, but since you seem to enjoy your current job so much...~ + KVEL-SOD-START-OLD-4
+  ++ ~没错。我希望你跟我一起去。~ + KVEL-SOD-START-NEW-7
+  ++ ~我本想叙叙旧，可你似乎很享受眼下这份差事……~ + KVEL-SOD-START-OLD-4
 
 CHAIN C02KVEL KVEL-SOD-START-OLD-4
-~No. I am prepared to go. We have a prewritten contract, along with the new one I have signed with the Grand Dukes.~
+~不必。我已预备好动身。我们有一份先前写好的契约，加上我新与大公们签的那份。~
 END
-  ++ ~Alright, then. Come with me.~ + KVEL-SOD-START-NEW-7
-  ++ ~Just like that? That's refreshing. Let's go.~ + KVEL-SOD-START-NEW-7
-  ++ ~Actually, I'm just here to say you can stick around here a while longer if you want. I'll be fine on my own.~ + KVEL-SOD-START-NEW-8
+  ++ ~那好，跟我走。~ + KVEL-SOD-START-NEW-7
+  ++ ~就这么简单？真痛快。走吧。~ + KVEL-SOD-START-NEW-7
+  ++ ~其实我来只是告诉你，你若想在这儿多留一阵也行。我一个人没事。~ + KVEL-SOD-START-NEW-8
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-1
-~I am sanctioned to be working here, if it concerns you.~
-= ~Though if you intend to flee the building while screeching at the top of your lungs, like the previous buffoon, you are welcome to.~
+~若你担心，我在此做工是获准的。~
+= ~不过你若想学着先前那个蠢货，扯着嗓子尖叫着跑出这楼，也请便。~
 END
-  ++ ~Nothing so dramatic. I was just surprised.~ + KVEL-SOD-START-NEW-2
-  ++ ~You seem more like a mercenary than a servant, though. What are you doing here?~ + KVEL-SOD-START-NEW-3
-  ++ ~I won't screech, but I will leave you alone. Excuse me.~ EXIT
+  ++ ~没这么夸张。我只是吃了一惊。~ + KVEL-SOD-START-NEW-2
+  ++ ~可你看上去更像个佣兵，不像个仆役。你在这儿做什么？~ + KVEL-SOD-START-NEW-3
+  ++ ~我不尖叫，但我也不扰你。告辞。~ EXIT
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-2
-~If you are done speaking, leave. This batch of food still requires preparation. I do not appreciate being distracted.~
+~你说完就走。这一批吃食还要备。我不喜欢被打扰。~
 END
-  ++ ~Wait. I'm looking for capable hands to assist me on the march against the crusade. You seem very capable.~ + KVEL-SOD-START-NEW-4
-  ++ ~I'll leave you alone to continue with your work.~ EXIT
-  ++ ~Your rudeness displeases me, but I'll overlook it this time. I'm leaving now.~ EXIT
+  ++ ~等等。我在找能干的人，随我去打那场圣战。你看着很能干。~ + KVEL-SOD-START-NEW-4
+  ++ ~我不扰你，你接着忙。~ EXIT
+  ++ ~你这无礼叫我为难，这一回我饶了你。我走了。~ EXIT
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-3
-~Killing time.~
+~打发时间。~
 EXTERN C02KVEL KVEL-SOD-START-NEW-2
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-4
-~You are against the crusade?~
-= ~I see. Now that I am looking at you, I understand. You must be <CHARNAME>, the slayer of Sarevok.~
+~你反对那场圣战？~
+= ~明白了。如今看着你，我懂了。你定是<CHARNAME>，杀萨拉沃克的那位。~
 END
-  ++ ~Even you know of me?~ + KVEL-SOD-START-NEW-5
-  ++ ~Does that mean you'd be willing to work together?~ + KVEL-SOD-START-NEW-6
+  ++ ~连你也知道我？~ + KVEL-SOD-START-NEW-5
+  ++ ~那是不是说，你愿与我共事？~ + KVEL-SOD-START-NEW-6
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-5
-~Your name is hardly unknown throughout the city. And I had... old foes associated with the Iron Throne. Though they are now dealt with.~
+~你的名号在这城里几乎无人不知。而我曾有……旧敌与铁王座有关。不过他们如今都已了结。~
 EXTERN C02KVEL KVEL-SOD-START-NEW-6
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-6
-~Perhaps we may become allies. I would normally prefer a written agreement, but the contract I have signed with the Grand Dukes will suffice.~
-= ~Are you aware of what it means to accept a drow within your group?~
+~也许我们能成盟友。我平日更愿有纸面约定，可我同大公们签的那份契约也够了。~
+= ~你可知道，把一个卓尔收进队里意味着什么？~
 END
-  ++ ~It'll affect my reputation, I'm sure. But you seem strong enough to be worth the setback.~ + KVEL-SOD-START-NEW-7
-  ++ ~Now that I think of it, maybe it's not such a good idea.~ + KVEL-SOD-START-NEW-8
+  ++ ~这会影响我的名声，我信。可你看来够强，值得这点折损。~ + KVEL-SOD-START-NEW-7
+  ++ ~这么一想，也许这不是什么好主意。~ + KVEL-SOD-START-NEW-8
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-7
-~...~
-== C02KVEL ~Very well. One moment.~
-== C02KVEL ~...~ [C0KVSF5]
-== C02KVEL ~... ...~ [C0KVSF6]
-== C02KVEL ~... ... ...~ [C0KVSF7]
-== C02KVEL ~You. Take care of the rest.~
-== BDPOOL12 ~Wh—wait, you're leaving?~
-== C02KVEL ~I thought you'd be relieved.~
-== BDPOOL12 ~No, I—eh, ah, well—forget what I think, you can't just walk out right now! Am I supposed to take care of this whole house on my own? After they've all raised their expectations?~
-== C02KVEL ~You will survive.~
-== BDPOOL12 ~Now wait one moment! You can't just go whenever you... I mean, what about all the—AAH! Cripes, the pan's burning! Oooohhh...!~
-== C02KVEL ~I have my belongings close at hand. We may leave.~
+~……~
+== C02KVEL ~好。稍候。~
+== C02KVEL ~……~ [C0KVSF5]
+== C02KVEL ~…… ……~ [C0KVSF6]
+== C02KVEL ~…… …… ……~ [C0KVSF7]
+== C02KVEL ~你。剩下的你照管。~
+== BDPOOL12 ~什——等等，你要走？~
+== C02KVEL ~我以为你会松口气。~
+== BDPOOL12 ~不，我——呃，唉，好吧——别管我怎么想，你不能说走就走！难道要我一人在店里撑下来？他们可都把胃口吊起来了！~
+== C02KVEL ~你能活下来。~
+== BDPOOL12 ~等等！你不能就这么随时走……我是说，那些——啊！天哪，锅烧糊了！哦哦哦……！~
+== C02KVEL ~我的东西都在手边。可以走了。~
 DO ~SetGlobal("C0KvelSoDJoined","GLOBAL",1) JoinParty()~ EXIT
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-8
-~Then we have little to talk about. Leave.~
+~那就没什么可谈的。走吧。~
 EXIT
 
 CHAIN C02KVEL KVEL-SOD-START-NEW-9
-~Very well. The conditions for my presence here includes assisting you in whatever purpose is necessary. Lead on.~
+~好。我在此的条件，就包括助你办成任何必要之事。带路。~
 DO ~SetGlobal("C0KvelSoDJoined","GLOBAL",1) JoinParty()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KvelSoDStart","GLOBAL",1) Global("C0KvelSoDJoined","GLOBAL",0)~ THEN C02KVEL KVEL-SOD-START
-~What do you want?~
+~你要什么？~
 END
-  + ~AreaCheck("BD0109")~ + ~I was hoping you'd join me. I need allies at my side when I march against the crusade.~ + KVEL-SOD-START-NEW-7
-  + ~!AreaCheck("BD0109")~ + ~I was hoping you'd join me. I need allies at my side when I march against the crusade.~ + KVEL-SOD-START-NEW-9
-  ++ ~Nothing. I'll leave you alone.~ EXIT
+  + ~AreaCheck("BD0109")~ + ~我希望你跟我走。我打那场圣战时，身边需要盟友。~ + KVEL-SOD-START-NEW-7
+  + ~!AreaCheck("BD0109")~ + ~我希望你跟我走。我打那场圣战时，身边需要盟友。~ + KVEL-SOD-START-NEW-9
+  ++ ~没什么。我不扰你。~ EXIT
 
 CHAIN IF WEIGHT #-1 ~GlobalGT("bd_joined","locals",0)~ THEN C02KVEL KVEL-SOD-PROLOGUE
-~If you believe it more efficient to split up, I will do so, even if I do not approve of it.~
+~你若觉得分开更划算，我就分开，尽管我不赞同。~
 END
-  ++ ~I know what I'm doing. Just wait here.~ + KVEL-SOD-PROLOGUE-1
+  ++ ~我知道自己在做什么。就在这儿等。~ + KVEL-SOD-PROLOGUE-1
   + ~GlobalGT("bd_npc_camp_chapter","global",1)
 GlobalLT("bd_npc_camp_chapter","global",5)
 OR(2)
 !Range("ff_camp",999)
 NextTriggerObject("ff_camp")
-!IsOverMe("C0KVEL")~ + ~Go back to the camp. I'll be fine without you.~ DO ~SetGlobal("bd_npc_camp","locals",1)~ + KVEL-SOD-PROLOGUE-1
-  ++ ~You're right. Stick around.~ + KVEL-SOD-PROLOGUE-2
+!IsOverMe("C0KVEL")~ + ~回营地去。没你也行。~ DO ~SetGlobal("bd_npc_camp","locals",1)~ + KVEL-SOD-PROLOGUE-1
+  ++ ~你说得对。留下吧。~ + KVEL-SOD-PROLOGUE-2
 
 CHAIN C02KVEL KVEL-SOD-PROLOGUE-1
-~So be it.~
+~那就这样。~
 DO ~SetGlobal("bd_joined","locals",0)~ EXIT
 
 CHAIN C02KVEL KVEL-SOD-PROLOGUE-2
-~As you wish.~
+~随你。~
 DO ~JoinParty()~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0KvelSoDJoined","GLOBAL",1) Global("bd_joined","locals",0)~ THEN C02KVEL KVEL-SOD-PROLOGUE2
-~Do you need my service again?~
+~你还需要我效力么？~
 END
-  ++ ~Yes.~ + KVEL-SOD-PROLOGUE-2
-  ++ ~Not yet.~ + KVEL-SOD-PROLOGUE-1
+  ++ ~需要。~ + KVEL-SOD-PROLOGUE-2
+  ++ ~还不到时候。~ + KVEL-SOD-PROLOGUE-1

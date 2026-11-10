@@ -10,5 +10,5 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("bd_sdd350b_ot_timer","bd5300",THREE_MINUTES)  // The original timer has the area code from Boareskyr Bridge & Bridgefort - I *think* this is a bug so I corrected it
 		SetGlobal("C0Kvel_bd_ot","bd5300",1)  
-		DisplayStringHead("C0Kvel",~I will dispose of these mages swiftly.~)
+		DisplayStringHead("C0Kvel",~这些法师，我会利落地收拾掉。~)
 END

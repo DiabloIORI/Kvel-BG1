@@ -2,16 +2,16 @@ BEGIN C02KVM01
 
 CHAIN IF WEIGHT #-1 ~!Gender(Player1,FEMALE)
 Global("C0KvelSoDQuest","GLOBAL",1)~ THEN C02KVM01 QUEST
-~You there! Excuse me, young man. Do you perhaps know if this is the camp of the coalition army?~
+~你！对不住，年轻人。你可知道这是不是联军的大营？~
 DO ~SetGlobal("C0KvelSoDQuest","GLOBAL",2)~ EXTERN C02KVM01 QUEST-1
 
 CHAIN IF WEIGHT #-1 ~Gender(Player1,FEMALE)
 Global("C0KvelSoDQuest","GLOBAL",1)~ THEN C02KVM01 QUEST
-~You there! Excuse me, young lady. Do you perhaps know if this is the camp of the coalition army?~
+~你！对不住，姑娘。你可知道这是不是联军的大营？~
 DO ~SetGlobal("C0KvelSoDQuest","GLOBAL",2)~ EXTERN C02KVM01 QUEST-1
 
 CHAIN IF WEIGHT #-1 ~GlobalGT("C0KvelSoDQuest","GLOBAL",1)~ THEN C02KVM01 QUEST
-~Forgive me, but as you can see, the conditions of these soldiers are truly terrible. Unless you are of even worse health, I cannot spare anything for you right now.~
+~恕我，可你瞧得见，这些兵的情形实在糟。除非你的身子比他们还坏，我眼下匀不出什么给你。~
 END
 IF ~InParty("C0Kvel")
 See("C0Kvel")
@@ -22,25 +22,25 @@ IF ~OR(3)
 GlobalGT("C0KvelSoDQuest","GLOBAL",2)~ EXIT
 
 CHAIN C02KVM01 QUEST-1
-~I've ridden all the way from Waterdeep, and I'm afraid I've gotten quite turned around. Old age does that to a person, you see.~
+~我从深水城一路骑来，怕是彻底走迷了。人老了就这样，你看。~
 END
-  ++ ~Yes, this is the place. Who might you be?~ + QUEST-2
-  ++ ~Who is asking? I can't allow just anyone to enter the camp.~ + QUEST-3
-  ++ ~What other war camp do you expect to find out here?~ + QUEST-4
+  ++ ~是，就是此处。你是什么人？~ + QUEST-2
+  ++ ~谁问的？我不能随便放人进营。~ + QUEST-3
+  ++ ~你倒指望在这荒处找着别的什么战营？~ + QUEST-4
 
 CHAIN C02KVM01 QUEST-2
-~Ablemarle, humble servant of Oghma, here to serve as a healer for the impending war. This is my identification, co-signed by the Open Lord and Most High Loremaster of the Font of Knowledge, if you'd care to see it.~
+~阿贝尔玛尔，奥格玛的谦卑仆人，来此给将临的战争当医者。这是我的凭证，由深水城公开领主与知识之泉的最高学识大师会签，你若要看。~
 END
-  ++ ~This looks right, but you should seek out the leaders of the coalition and show them too.~ + QUEST-5
-  ++ ~I'm not in charge of this sort of thing. You should go and find the commanders instead.~ + QUEST-5
-  ++ ~Don't shake those papers at me, old man, it's not my job to check visitors to this place.~ + QUEST-4
+  ++ ~这看着没错，可你该去找联军的首领，也给他们看。~ + QUEST-5
+  ++ ~这事不归我管。你该去找那些指挥官。~ + QUEST-5
+  ++ ~别拿那些纸在我眼前晃，老头，查访客不是我的差事。~ + QUEST-4
 
 CHAIN C02KVM01 QUEST-3
-~A fair query, of course. Let me see, hm, where did I put my documents...~
+~问得有理。让我想想，嗯，我把文书放哪儿了……~
 EXTERN C02KVM01 QUEST-2
 
 CHAIN C02KVM01 QUEST-4
-~Hmph! The attitude of youngsters these days. Well, from your response I'd assume I'm in the right place, so I will spare you the lecture this time and be on my way. I am sure this place has great need of a healer, and it will only become moreso as the war rages on.~
+~哼！如今年轻人的态度。唉，从你这回答，我就当自己来对了地方，那这回就免了你的训，我自去便是。我信这地方极缺一个医者，而战事越烧，就越缺。~
 END
 IF ~InParty("C0Kvel")~ EXTERN C02KVM01 QUEST-6
 IF ~OR(2)
@@ -48,7 +48,7 @@ IF ~OR(2)
 !See("C0Kvel")~ DO ~MoveToPoint([621.1647])~ EXIT
 
 CHAIN C02KVM01 QUEST-5
-~Yes of course. Fie, that old men like me who should be spending my twilight years reading books by the fire must still find ourselves involved in conflict. Thank you for your assistance. I should be able to find my own way from here.~
+~是，自然。唉，像我这样的老人，本该在火边读书度晚年，却还得掺进纷争里。多谢你相助。从这儿起我该自己能找着路。~
 END
 IF ~InParty("C0Kvel")
 See("C0Kvel")~ EXTERN C02KVM01 QUEST-6
@@ -57,77 +57,77 @@ IF ~OR(2)
 !See("C0Kvel")~ DO ~MoveToPoint([621.1647])~ EXIT
 
 CHAIN C02KVM01 QUEST-6
-~Wait a minute. Wait just one solitary minute. Your companion in the back, I think he looks familiar.~
+~等一等。就等这一小会儿。你后头那位同伴，我看他面熟。~
 DO ~SetGlobal("C0KvelSoDQuest","GLOBAL",3)~
-== C02KVELJ ~*sigh* I was hoping this would not happen.~
-== C02KVM01 ~A—aaaahh! You, you're...~
+== C02KVELJ ~*叹气* 我原盼这事别发生。~
+== C02KVM01 ~啊——啊啊！你，你是……~
 END
-  ++ ~Don't be alarmed, sir. He may be drow, but he's on our side.~ EXTERN C02KVELJ QUEST-7
-  ++ ~I suppose that's the expected response to seeing a drow walking freely in the camp.~ EXTERN C02KVELJ QUEST-7
-  ++ ~Can you just get out of our way now, old man?~ EXTERN C02KVELJ QUEST-7
+  ++ ~别慌，先生。他也许是卓尔，可他在我们这边。~ EXTERN C02KVELJ QUEST-7
+  ++ ~我猜在营里看见一个卓尔自由走动，这就是该有的反应。~ EXTERN C02KVELJ QUEST-7
+  ++ ~你现在能不能就让开，老头？~ EXTERN C02KVELJ QUEST-7
 
 CHAIN C02KVELJ QUEST-7
-~Forget it, <CHARNAME>. Let this old man say his piece.~
-== C02KVM01 ~You're that drow from years ago... K... K-V... blast it, what was the name again?~
-== C02KVELJ ~...K'Velarin.~
-== C02KVM01 ~That's it, that's the one! Ecthel's bodyguard. I heard you weren't following him anymore. So this is where you are now!~
+~算了，<CHARNAME>。让这老人把话说完。~
+== C02KVM01 ~你就是多年前那个卓尔……克……克维……该死，那名字是什么来着？~
+== C02KVELJ ~……克维拉林。~
+== C02KVM01 ~就是它，就是那个！埃克瑟尔的护卫。我听说你不再跟着他了。那你如今在这儿！~
 END
-  ++ ~The two of you know each other?~ EXTERN C02KVM01 QUEST-8
+  ++ ~你们两个认识？~ EXTERN C02KVM01 QUEST-8
 
 CHAIN C02KVM01 QUEST-8
-~I am the grand-uncle of this one's friend, Ecthel Darcourt. I may have given up my family name when I first entered the church of Oghma, but the boy has always been dear to me. And... he was the one who brought this drow to me, five years ago.~
-== C02KVELJ ~This was... soon after my first meeting with Ecthel, my previous employer. I was in a poor state then, and was in no position to resist.~
-== C02KVM01 ~Hmph! 'At death's door' might be a more accurate way to say it. Poison, one most terrible and never before seen, ran through this man's blood. You would not recognize him as he was then, horribly emaciated and pale as he was. As a matter of fact, I would not have blamed anyone for thinking he was already dead.~
-== C02KVM01 ~Ecthel pleaded with me to save his life if I could. The silly, compassionate boy... well, I suppose I am little different. I did not need much convincing when seeing a life in need, and so I brought the library's most rare and valuable Rejuvenescence Roborant from our deepest vault. The compensation the Most Holy demanded for that, let me tell you! I will be carrying that debt for my remaining lifetime!~
-== C02KVELJ ~Get to the point. I know better than to stop you with any method save for an excessive force to the head, but we have little time to waste.~
-== C02KVM01 ~That terrible attitude you hold still has not changed, I see. He was like this when he finally awakened, going on about how he had no wish to be indebted, and so on... it took Ecthel negotiating a contract with this drow before he finally agreed to stay instead of wandering off in a half-restored state.~
-== C02KVM01 ~Of course, the two left the monastery sooner than I wished it. I always knew K'Velarin here still suffered the remnants of whatever poison nearly killed him within his body. The restorative was given far too late, and by that point every vital organ in his body had been affected. I insisted that he stay and undergo further treatment, but the High Loremaster refused. And so did the drow himself.~
-== C02KVM01 ~*sigh* I can see as well from your current state that you've made little effort to try and seek a proper cure over the years. The discoloration of your veins is visible even on your dark skin, your schlera are an unnatural hue, and the scars on your face have clearly not healed as they should. Do you seek death that badly, you foolish man?~
-== C02KVELJ ~If there is no cure, then I see little purpose in wasting my time in what few years I have left.~
-== C02KVM01 ~And who said there is no cure?~
-== C02KVELJ ~You have never found one. And I can see from your expression that it holds true to this day.~
-== C02KVM01 ~...~
-== C02KVELJ ~I believe my point is made.~
-== C02KVM01 ~...My shame is endless.~
-== C02KVM01 ~I have tried. The prospect of an unsolved problem eats away at this aged mind. But it may, indeed, be impossible to fully cure such a long-suffered poison. You are correct, you do not have many years left, K'Velarin, and I hope you spend what is left most wisely.~
-== C02KVELJ ~I do not need you to tell me that.~
-== C02KVM01 ~Very well, then. I believe I should go now and focus my efforts on men who still have some hope, and less indifference. Excuse me.~
+~我是这位的朋友埃克瑟尔·达库尔特的叔祖。我初入奥格玛教会时也许舍了家名，可那孩子一向叫我心疼。而……五年前，正是他把这卓尔带到我这儿来的。~
+== C02KVELJ ~那是……在我头一回遇见我先前那位雇主埃克瑟尔之后不久。我那时情形很糟，没力气抵抗。~
+== C02KVM01 ~哼！“一只脚踏在死门上”也许说得更准。一种最可怕、前所未见的毒，在这人血里流着。你认不出他那时的样子，瘦得怕人，白得像纸。说实话，谁要觉得他已经死了，我都不怪。~
+== C02KVM01 ~埃克瑟尔求我，若能救就救他一命。那傻孩子，心软……唉，我猜我也差不离。看见一条命有难，我不需要多少劝说，就从我们最深的库房里取了那修道院最稀罕、最贵重的“回春补剂”。最高圣者要的报偿，我跟你说！我余生都得背着那笔债！~
+== C02KVELJ ~说正题。我知道除了往头上狠狠来一下，没别的法子能拦你，可我们没多少时间可耗。~
+== C02KVM01 ~我看你那坏性子还是没改。他终于醒来时就是这样，一路说自己不愿欠人情之类……末了是埃克瑟尔跟这卓尔谈成了一份契约，他才肯留下，没在半复原的状态里游荡出去。~
+== C02KVM01 ~自然，两人比我希望的早离了修道院。我一直知道这里的克维拉林体内还受着那几乎害死他的毒余下的折磨。那补剂给得太晚，到那时他身子里每个要紧的脏器都已受了损。我坚持他该留下继续诊治，可最高学识大师不准。那卓尔自己也不肯。~
+== C02KVM01 ~*叹气* 我从你如今这模样也看得出，这些年你没怎么试着去找正经的治法。你血管的变色连在你那深色皮肤上都看得见，你的眼白颜色不对，你脸上的疤分明也没好好长合。你就这么急着求死么，你这蠢人？~
+== C02KVELJ ~若没有治法，那我看把我剩的这几年耗在这上头也没多大意思。~
+== C02KVM01 ~谁说过没有治法？~
+== C02KVELJ ~你从没找着过。而从你的神色我看得出，到今天仍是这样。~
+== C02KVM01 ~……~
+== C02KVELJ ~我看我的意思说到了。~
+== C02KVM01 ~……我的羞愧没个尽头。~
+== C02KVM01 ~我试过。一个解不开的难题会啃这颗老化的心。可要全然治好这样积了多年的毒，也许确是不可能。你说得对，你没剩多少年了，克维拉林，我盼你把剩下的用得尽量明智。~
+== C02KVELJ ~这不用你来告诉我。~
+== C02KVM01 ~那就这样。我看我该走了，把力气放在还有些指望、也没这么漠然的人身上。恕我。~
 END
-  ++ ~Please wait. Are you certain there is no cure?~ EXTERN C02KVELJ QUEST-9
-  ++ ~I'll let you go, then.~ EXTERN C02KVM01 QUEST-10
+  ++ ~请等等。你确定没有治法？~ EXTERN C02KVELJ QUEST-9
+  ++ ~那我就放你走。~ EXTERN C02KVM01 QUEST-10
 
 CHAIN C02KVELJ QUEST-9
-~Stop, <CHARNAME>. You do not want him to start considering it, or he will do it to no end.~
-== C02KVM01 ~I am old, I may do as I please! Truly, I have considered every possibility. Even the nature of his poison itself is not fully clear, which makes the prospect of a true antidote, especially one administered so late, difficult if not impossible...~
-== C02KVM01 ~Well, I can only think of one potential option. The Tear of Elysium, a rare elixir rumored to be made of sap harvested from Yggdrasil, the World Tree itself, in the Outer Planes...~
-== C02KVM01 ~Only three have ever been known to be in the Prime, one of which was used to cure King Azoun III of Cormyr from a fatal ailment... but even then, unless every myth told of its properties is true and not embellished, it may be a gamble at best.~
-== C02KVM01 ~The location of the first remaining one is not recorded even in all the tomes in the Font of Knowledge... the second one, however, rumor has it... where was it...~
-== C02KVELJ ~This is a waste of time.~
-== C02KVM01 ~Where was it again... the land of the elves, perhaps...? No, not Evereska... it should have been closer... AH!~
+~住口，<CHARNAME>。你别叫他开始琢磨这事，不然他会没完没了地琢磨下去。~
+== C02KVM01 ~我老了，我爱怎样就怎样！真的，我把各种可能都想过。连他那毒的性质都没全然弄清，这就叫配出真正的解药——尤其是给得这么晚——难，甚至不可能……~
+== C02KVM01 ~唉，我只能想到一个可能的法子。极乐之泪，一种稀罕的灵药，据传是用外位面那株世界之树“尤格德拉希尔”上采的汁液做的……~
+== C02KVM01 ~已知在主物质位面出现过的只有三份，其中一份曾用来治好科米尔的国王阿宗三世一场要命的病……可即便如此，除非关于它效力的每一条传说都是真的、没有夸大，那顶多算一场赌。~
+== C02KVM01 ~剩下第一份在何处，连知识之泉所有卷册里都没记……可第二份，传说……在哪儿来着……~
+== C02KVELJ ~这是白耗时间。~
+== C02KVM01 ~又在哪儿来着……精灵的地界，也许……？不，不是永聚岛……该更近些……啊！~
 END
-  ++ ~What? What is the surprise?~ EXTERN C02KVM01 QUEST-11
-  ++ ~Hurry up and tell me already!~ EXTERN C02KVM01 QUEST-11
+  ++ ~什么？惊着什么了？~ EXTERN C02KVM01 QUEST-11
+  ++ ~快点说呀！~ EXTERN C02KVM01 QUEST-11
 
 CHAIN C02KVM01 QUEST-10
-~Well, you'll have to excuse me in any case. There is much work to do, while these hands may work still.~
+~唉，不管怎样你都得恕我。活儿多着呢，趁这双手还动得。~
 DO ~MoveToPoint([621.1647])~ EXIT
 
 CHAIN C02KVM01 QUEST-11
-~You would not believe this. Unless my memory is hopelessly muddled, it was last seen in Dragonspear Castle itself!~
+~你不会信的。除非我的记性乱得没救了，它最后一次被见着，就在龙矛堡本身！~
 DO ~SetGlobal("C0KvelSoDKnowsTear","GLOBAL",1)~
-== C02KVELJ ~That is ridiculous.~
-== C02KVM01 ~Ridiculous, or the hands of fate at work? Indeed, it was remembered to be a priceless artifact kept by Daeros Dragonspear, and kept with his most valued treasures.~
+== C02KVELJ ~这太荒唐了。~
+== C02KVM01 ~荒唐，还是命数的手在动？真的，记得它是件无价之宝，由达埃罗斯·龙矛收藏，与他最看重的宝物放在一处。~
 END
-  ++ ~You're certain of this?~ EXTERN C02KVM01 QUEST-12
-  ++ ~Well, looks like there's hope for you after all, K'Vel.~ EXTERN C02KVELJ QUEST-13
+  ++ ~你确定？~ EXTERN C02KVM01 QUEST-12
+  ++ ~唉，看来你终究还有指望，克维尔。~ EXTERN C02KVELJ QUEST-13
 
 CHAIN C02KVM01 QUEST-12
-~Yes, positively. I may be old, but I can count on my years spent as a loremaster for the monastery to say, what I remember is exactly as it was written. Whether it is true, of its presence and its potency, is still up for debate. But it is very possible.~
+~是，确凿。我许是老了，可我能凭我在修道院当学识大师那些年担保：我记得的，跟写下来的分毫不差。它是否真在、是否真有那效力，还可争。可极有可能。~
 EXTERN C02KVELJ QUEST-13
 
 CHAIN C02KVELJ QUEST-13
-~I doubt it. Legends always make their contents seem more impressive than they truly are.~
-== C02KVM01 ~That, I cannot deny. Whether it saves your life in the long run even should you find it cannot be said for certain. But there can be no doubt that it is a powerful item of healing, and thus you should not give up hope regardless, no?~
-== C02KVELJ ~Even if that were the case, Dragonspear Castle is currently held by the crusade. We would not find it easily, assuming it has not already been found and used by the enemy.~
-== C02KVM01 ~That, too, is certainly true. But I have given the knowledge to you, and what you choose to do with it is your decision.~
+~我存疑。传说总把里头的东西说得比实情更了不起。~
+== C02KVM01 ~这我不能否认。它长远能否救你的命，就算你找着了也说不准。可无疑它是件强有力的疗伤之物，所以你无论如何不该断了指望，是不是？~
+== C02KVELJ ~就算如此，龙矛堡如今被圣战军据着。我们不容易找着它，还得假设它没已经被敌人找去用了。~
+== C02KVM01 ~这也无疑是真的。可我把这知识给了你，你拿它做什么，是你自己的决断。~
 EXTERN C02KVM01 QUEST-10

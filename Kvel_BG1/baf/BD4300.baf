@@ -9,7 +9,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("bd_mdd905a_ot_timer","bd4300",THREE_MINUTES)  
 		SetGlobal("C0Kvel_bd_ot","bd4300",1)  
-		DisplayStringHead("C0Kvel",~Only death will welcome us if we continue to linger.~)
+		DisplayStringHead("C0Kvel",~若再在此逗留，等着我们的只有死。~)
 		SmallWait(8)  
 		Continue()  
 END
@@ -23,7 +23,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("C0Kvel_SoDPortalComment","bd4300",1)
-		DisplayStringHead("C0Kvel",~Be alert! Devils come and seek our blood!~) 
+		DisplayStringHead("C0Kvel",~当心！魔鬼来取我们的血了！~) 
 		SmallWait(8) 
 		Continue()
 END
@@ -40,7 +40,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("C0Kvel_bd_MDD892a_ot","bd4300",1)  
 		SetGlobalTimer("bd_MDD892a_ot_timer","bd4300",ONE_MINUTE) //timer will be checked for Corwin 
-		DisplayStringHead("C0Kvel",~Foolish resistance.~)   
+		DisplayStringHead("C0Kvel",~愚蠢的顽抗。~)   
 		Continue() 
 END
 
@@ -52,7 +52,7 @@ IF
 	IfValidForPartyDialog("C0Kvel")  
 THEN
 	RESPONSE #100
-		DisplayStringHead("C0Kvel",~It is madness to enter the lion's den, but perhaps deeper madness to stay as we are.~)  
+		DisplayStringHead("C0Kvel",~进狮穴是疯，可我们就这样留着，也许是更深的疯。~)  
 		SetGlobal("C0Kvel_bd_mdd1290d_ot","bd4300",1)    
 		SmallWait(8)
 		Continue()
@@ -68,6 +68,6 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("bd_mdd1341a_ot_timer","bd4300",2)  // Dragonspear Castle Basement
 		SetGlobal("C0Kvel_bd_ot2","bd4300",1)  
-		DisplayStringHead("C0Kvel",~So it ends.~)  
+		DisplayStringHead("C0Kvel",~就这样结束了。~)  
 		Continue()
 END

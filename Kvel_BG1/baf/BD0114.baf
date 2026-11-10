@@ -7,6 +7,6 @@ IF
 	IfValidForPartyDialog("C0Kvel")  
 THEN
 	RESPONSE #100
-		DisplayStringHead("C0Kvel",~I am no stranger to pest extermination.~)
+		DisplayStringHead("C0Kvel",~灭除害虫这种事，我并不陌生。~)
 		SetGlobal("C0Kvel_BD_BEETLE","BD0114",1)  
 END

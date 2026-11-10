@@ -12,7 +12,7 @@ THEN
 		Continue()
 	RESPONSE #100
 		SetGlobal("C0Kvel_bd_mdd000te_ot","bd0120",1)
-		DisplayStringHead("C0Kvel",~Hmph. Is that all?~)
+		DisplayStringHead("C0Kvel",~哼。就这些？~)
 		Wait(5)
 		Continue()
 END

@@ -1,0 +1,267 @@
+COPY ~%MOD_FOLDER%/cre/C02Kvel.cre~ ~override~
+  SAY NAME1 ~K'Vel~
+  SAY NAME2 ~K'Vel~
+  WRITE_ASCII 0x248 ~C02Kvel~ #8  //override script
+  WRITE_ASCII 0x280 ~C0Kvel~ #32  //DV
+  WRITE_ASCII 0x2cc ~C02Kvel~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0x34 ~C0KvelM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~C0KvelL~ #8   //medium portrait
+  SAY BIO ~When asked about his past, K'VEL tells you there are only three things that you need to know about him - first, that he was born in the drow city of Eryndlyn, second, that he no longer belongs there, and third, that he is now a sellsword making his living on the surface through any means necessary. What more you can tell of him is merely through observation.
+  
+Though primarily a swordsman by trade, K'Vel has nonetheless a passing knowledge of arcane magic and thievery that seems more learned by experience rather than study. You have read about the drow in your childhood, and though the drow mercenary is distant and self-reliant, he seems to lack most of the cruelty and arrogance expected of his kin, and approaches every situation with a calm, calculated awareness, as though nothing is ever completely beyond his expectations.
+  
+As an opportunist who seeks means of self-preservation, K'Vel has signed a contract as a sellsword to the Grand Dukes, offering his service in standing against the crusade and allowing him a degree of freedom against the typical scrutiny against the drow, though he does not expect it to last and believes your company to be an additional safety measure.~
+  SAY INITIAL_MEETING ~Hmm?~ [C0KV000]
+  SAY MORALE ~Not worth it!~ [C0KV001]
+  SAY LEADER ~Follow me.~ [C0KV002]
+  SAY TIRED ~Could use some rest.~ [C0KV003]
+  SAY BORED ~*sigh*~ [C0KV004]
+  SAY BATTLE_CRY1 ~Take 'em down!~ [C0KV005]
+  SAY BATTLE_CRY2 ~Let's go!~ [C0KV006]
+  SAY BATTLE_CRY3 ~~ [C0KV007]
+  SAY DAMAGE ~~ [C0KV008]
+  SAY DYING ~~ [C0KV009]
+  SAY HURT ~I'm bleeding.~ [C0KV010]
+  SAY SELECT_COMMON1 ~Hmm?~ [C0KV000]
+  SAY SELECT_COMMON2 ~Yeah?~ [C0KV011]
+  SAY SELECT_COMMON3 ~Huh?~ [C0KV012]
+  SAY SELECT_ACTION1 ~Sure.~ [C0KV013]
+  SAY SELECT_ACTION2 ~Right.~ [C0KV014]
+  SAY SELECT_ACTION3 ~Mm-hmm.~ [C0KV015]
+  SAY SELECT_ACTION4 ~Stop that.~ [C0KV016]
+  SAY CRITICAL_HIT ~Got 'em!~ [C0KV017]
+  SAY CRITICAL_MISS ~~ [C0KV018]
+  SAY TARGET_IMMUNE ~No good.~ [C0KV019]
+  SAY INVENTORY_FULL ~Can't move now.~ [C0KV020]
+  SAY SPELL_DISRUPTED ~That's not supposed to happen.~ [C0KV021]
+  SAY HIDDEN_IN_SHADOWS ~Keeping quiet.~ [C0KV022]
+  SAY REACT_TO_DIE_GENERAL ~Down by one!~ [C0KV023]
+  SAY PICKED_POCKET ~Found something.~ [C0KV024]
+  
+APPEND ~bddialog.2da~
+~C0Kvel        C02Kvel	C02KvelJ	C02KvelD~
+UNLESS ~C0Kvel~
+
+COPY_EXISTING ~BDNOBM1.cre~ ~override/C0KVNOB1.CRE~
+  WRITE_ASCII DEATHVAR ~C0KVNOB1~ #32
+  WRITE_ASCII DIALOG ~C0KVNOB1~ #8
+  SAY NAME1 ~Lord Orfred Tonbottom II~
+  SAY NAME2 ~Lord Orfred Tonbottom II~
+
+COPY ~%MOD_FOLDER%/cre/C0KVDR03.cre~ ~override/C02ANDRO.CRE~
+  WRITE_ASCII DEATHVAR ~C02ANDRO~ #32
+  WRITE_ASCII DIALOG ~C02ANDRO~ #8
+  SAY NAME1 ~Androsz~
+  SAY NAME2 ~Androsz~
+
+COPY ~%MOD_FOLDER%/cre/C0KVDR03.cre~ ~override/C02ANDR2.CRE~
+  WRITE_ASCII DEATHVAR ~C02ANDRO~ #32
+  WRITE_ASCII DIALOG ~C02ANDRO~ #8
+  WRITE_BYTE 0x24 90
+  WRITE_BYTE 0x26 90
+  WRITE_BYTE 0x46 ~-1~
+  WRITE_BYTE 0x48 ~-1~
+  WRITE_BYTE 0x52 12
+  SAY NAME1 ~Androsz~
+  SAY NAME2 ~Androsz~
+
+COPY_EXISTING ~BDCRUS5D.cre~ ~override/C02KVD01.CRE~
+  WRITE_BYTE 0x24 0
+  WRITE_BYTE 0x26 0
+  WRITE_ASCII DEATHVAR ~C02KVD01~ #32
+
+COPY_EXISTING ~BDCRUE45.cre~ ~override/C02KVC01.CRE~
+  WRITE_SHORT 0x27B ~19~
+  WRITE_ASCII DEATHVAR ~C02KVC01~ #32
+  WRITE_ASCII DIALOG ~C02KVC01~ #8
+  SAY NAME1 ~Crusader Leader~
+  SAY NAME2 ~Crusader Leader~
+
+COPY_EXISTING ~BDCRUZ30.cre~ ~override/C02KVC02.CRE~
+  WRITE_SHORT 0x27B ~19~
+  WRITE_ASCII DEATHVAR ~C02KVC02~ #32
+  WRITE_ASCII DIALOG ~C02KVC02~ #8
+  SAY NAME1 ~Crusader~
+  SAY NAME2 ~Crusader~
+
+COPY_EXISTING ~BDCRUS95.cre~ ~override/C02KVC03.CRE~
+  WRITE_SHORT 0x27B ~19~
+  WRITE_ASCII DEATHVAR ~C02KVC03~ #32
+  WRITE_ASCII DIALOG ~C02KVC03~ #8
+  SAY NAME1 ~Crusader~
+  SAY NAME2 ~Crusader~
+
+COPY_EXISTING ~BDCRUS96.cre~ ~override/C02KVC04.CRE~
+  WRITE_SHORT 0x27B ~19~
+  WRITE_ASCII DEATHVAR ~C02KVC04~ #32
+  WRITE_ASCII DIALOG ~C02KVC04~ #8
+  SAY NAME1 ~Crusader~
+  SAY NAME2 ~Crusader~
+
+COPY_EXISTING ~BDCRUS96.cre~ ~override/C02KVS01.CRE~
+  WRITE_SHORT 0x27B ~19~
+  WRITE_ASCII DEATHVAR ~C02KVC04~ #32
+  WRITE_ASCII DIALOG ~C02KVC04~ #8
+  SAY NAME1 ~Crusader~
+  SAY NAME2 ~Crusader~
+
+COPY_EXISTING ~BDFIST92.cre~ ~override/C02KVS01.CRE~
+  WRITE_ASCII DEATHVAR ~C02KVS01~ #32
+  WRITE_ASCII DIALOG ~C02KVS01~ #8
+
+COPY_EXISTING ~BDHELVDA.cre~ ~override/C02KVS02.CRE~
+  WRITE_ASCII DEATHVAR ~C02KVS02~ #32
+  WRITE_ASCII DIALOG ~C02KVS02~ #8
+
+COPY_EXISTING ~BDDAGF52.cre~ ~override/C02KVS03.CRE~
+  WRITE_ASCII DEATHVAR ~C02KVS03~ #32
+  WRITE_ASCII DIALOG ~C02KVS03~ #8
+
+COPY_EXISTING ~BDWTR50.cre~ ~override/C02KVS04.CRE~
+  WRITE_ASCII DEATHVAR ~C02KVS04~ #32
+  WRITE_ASCII DIALOG ~C02KVS04~ #8
+
+COPY ~%MOD_FOLDER%/cre/C02KVM01.cre~ ~override~
+  SAY NAME1 ~Ablemarle~
+  SAY NAME2 ~Ablemarle~
+  WRITE_ASCII 0x280 ~C02KVM01~ #32
+  WRITE_ASCII 0x2cc ~C02KVM01~ #8
+
+COPY_EXISTING ~C02KVM01.ITM~ ~OVERRIDE~
+SAY NAME1 ~Coin~
+SAY NAME2 ~Ancient Coin~
+SAY DESC ~This large, weathered coin is of no sort that you recognize. According to K'Vel, however, should you give it over to any tavern within the Sword Coast or Amn, then he can somehow use it to track you regardless of distance.
+
+Weight: 1~
+
+COPY_EXISTING ~C02KVM02.ITM~ ~OVERRIDE~
+SAY NAME1 ~Gem~
+SAY NAME2 ~Elysium's Tear~
+SAY DESC ~This radiant crystal initially appears like a priceless gem. However, it is in fact a legendary remedy known as Elysium's Tear, a restorative harvested from Yggdrasil the World Tree in the Outer Realms. Its healing properties are said to be legendary, and it can bring even those on the brink of death back to perfect health.
+
+Weight: 0~
+
+////////////////////////////////////////
+/////////JOURNAL////////////////////////
+////////////////////////////////////////
+
+OUTER_SET %kvel_sod_journal_entry_reward% = RESOLVE_STR_REF (~Permanent Bonus: Unlimited Drow Bladeworks
+
+The art of dual-wielding long blades is often considered clumsy and impractical by most practitioners of swordsmanship, with only rare examples such as the legendary Drizzt Do'Urden being known throughout the Realms. In the society of drow, however, where swordplay is as much about elegance as deadliness, such styles are far more common, and the many generations of perfecting such techniques have given them a wealth of exclusive knowledge of how to use a weapon in each hand to dazzle, intimidate, and ultimately slay your foe in a manner that is both beautiful and terrifying. By receiving some guidance from the blademaster Androsz Zaer'iyon, you have permanently gained a +1 bonus to THAC0 and a further +1 bonus to off-hand THAC0.~)
+
+////////////////////////////////////////
+/////////DIALOGUE///////////////////////
+////////////////////////////////////////
+
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/DLG/C02KVEL.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/DLG/C02KVELJ.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/DLG/SODDIALOG.D~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/DLG/SODPID.D~
+
+////////////////////////////////////////
+/////////SCRIPTS////////////////////////
+////////////////////////////////////////
+
+EXTEND_TOP ~bdbaldur.BCS~ ~%MOD_FOLDER%/BAF/bdbaldur.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~bdbaldur.BCS~ ~%MOD_FOLDER%/BAF/baldur-drowitem.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BDPARTY.BCS~ ~%MOD_FOLDER%/BAF/BDPARTY.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BD0063.BCS~ ~%MOD_FOLDER%/BAF/BD0063.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BD0103.BCS~ ~%MOD_FOLDER%/BAF/BD0103.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BDC116D.BCS~ ~%MOD_FOLDER%/BAF/BDC116D.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~BD0114.BCS~ ~%MOD_FOLDER%/BAF/BD0114.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~BD0120.BCS~ ~%MOD_FOLDER%/BAF/BD0120-korlasz.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~BD0120.BCS~ ~%MOD_FOLDER%/BAF/BD0120-combat.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~BD0130.BCS~ ~%MOD_FOLDER%/BAF/BD0120-korlasz.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BD0109.BCS~ ~%MOD_FOLDER%/BAF/BD0109.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BD1000.BCS~ ~%MOD_FOLDER%/BAF/BD1000.BAF~ EVALUATE_BUFFER 
+
+COPY_EXISTING ~bd1000.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(SetGlobal("bd_move_npcs","bd1000",1)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~\1 SetGlobal("C0Kvel_MoveCamp","MYAREA",1)~ 
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+
+EXTEND_TOP ~BD2000.BCS~ ~%MOD_FOLDER%/BAF/BD2000.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BD3000.BCS~ ~%MOD_FOLDER%/BAF/BD3000.BAF~ EVALUATE_BUFFER 
+
+COPY_EXISTING ~bd3000.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(SetGlobal("bd_move_npcs","bd3000",1)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~\1 SetGlobal("xxBiff_MoveCamp","MYAREA",1)~ 
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+	
+COPY_EXISTING ~bd3000.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(SetGlobal("bd_move_voghiln","bd3000",0)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~\1 SetGlobal("C0Kvel_MoveCamp","MYAREA",0)~ 
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+
+EXTEND_BOTTOM ~BD4300.BCS~ ~%MOD_FOLDER%/BAF/BD4300.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~BD4400.BCS~ ~%MOD_FOLDER%/BAF/BD4400.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~BD5100.BCS~ ~%MOD_FOLDER%/BAF/BD5100.BAF~ EVALUATE_BUFFER 
+EXTEND_BOTTOM ~BD5300.BCS~ ~%MOD_FOLDER%/BAF/BD5300.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BD7100.BCS~ ~%MOD_FOLDER%/BAF/BD7100.BAF~ EVALUATE_BUFFER 
+
+COPY_EXISTING ~bd7100.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(SetGlobal("bd_move_npcs","bd7100",1)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~\1 SetGlobal("xxBiff_MoveCamp","MYAREA",1)~ 
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+
+EXTEND_BOTTOM ~BDASC3.BCS~ ~%MOD_FOLDER%/BAF/BDASC3.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BDCUT08.BCS~ ~%MOD_FOLDER%/BAF/BDCUT08.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BDCUT58.BCS~ ~%MOD_FOLDER%/BAF/BDCUT58.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~BDCUT59B.BCS~ ~%MOD_FOLDER%/BAF/BDCUT59B.BAF~ EVALUATE_BUFFER 
+EXTEND_TOP ~PLAYER1D.BCS~ ~%MOD_FOLDER%/BAF/PLAYER1D.BAF~ EVALUATE_BUFFER 
+
+EXTEND_BOTTOM ~BDCUT42.BCS~ ~%MOD_FOLDER%/BAF/BDCUT42.BAF~ EVALUATE_BUFFER 
+
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVEL.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVELB.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C0KV02.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC00.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC01.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC02.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC03.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC04.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC05.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC06.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC07.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVC08.BAF~ 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/BAF/C02KVCV1.BAF~ 
+
+COPY_EXISTING ~BD4300.are~ ~override~
+      LPF ADD_AREA_ITEM
+      INT_VAR
+        container_to_add_to = 1
+      STR_VAR
+        item_to_add = ~C02KVM02~
+      END

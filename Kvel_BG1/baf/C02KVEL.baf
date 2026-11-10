@@ -24,7 +24,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("C0Kvel_SoDbridge","bd1000",1)
-		DisplayStringHead(Myself,~The bridge is beyond repair.~)
+		DisplayStringHead(Myself,~这座桥已经修不好了。~)
 END
 
 // ANDROSZ

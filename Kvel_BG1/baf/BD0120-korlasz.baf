@@ -19,7 +19,7 @@ THEN
 		IncrementGlobal("bd_leaving_ot","global",1)
 		SetGlobal("C0Kvel_SoDleavingcomment","global",1)
 		SetGlobalTimerRandom("bd_leaving_ot_timer","global",TWENTY_MINUTES,THIRTY_MINUTES)
-		DisplayStringHead("C0Kvel",~May this be the end of this overly long conflict.~)
+		DisplayStringHead("C0Kvel",~但愿这场拖得太久的争斗到此为止。~)
 END
 
 /* Second comment: after Korlasz defeated */
@@ -41,5 +41,5 @@ THEN
 		IncrementGlobal("bd_leaving2_ot","global",1)
 		SetGlobal("C0Kvel_SoDleavingcomment","global",2)
 		SetGlobalTimerRandom("bd_leaving2_ot_timer","global",EIGHT_MINUTES,THIRTEEN_MINUTES)
-		DisplayStringWait("C0Kvel",~As you may be free from conflict awhile, I will depart from your immediate presence soon. Though I will remain in the city, should you require my continued service.~)  
+		DisplayStringWait("C0Kvel",~既然你或可暂离争斗，我很快便会从你近旁离开。不过我会留在这城里，若你仍要我继续效力。~)  
 END

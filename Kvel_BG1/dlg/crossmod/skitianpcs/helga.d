@@ -7,13 +7,13 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelX3Helga1","GLOBAL",0)~ THEN X3HELGAB C0KvelX3Helga1
-~You're a mighty warrior, drow. I could respect that.~
+~你是个强壮的武士，卓尔。这我敬。~
 DO ~SetGlobal("C0KvelX3Helga1","GLOBAL",1)~
-== BC0KVEL ~'Could'. It would seem you still question whether I am worthy of respect.~
-== X3HELGAB ~Bah, I'm not a woman of careful words. If you must find a meaning in every letter, then it be likely we won't get along so well.~
-== BC0KVEL ~Whether you like or respect me is of little worth. The only assurance I require is that your shield will not fail during battle.~
-== X3HELGAB ~Aye, that you can be assured of tenfold. I have ne'er lost a fight of my choice yet, in all my years of living.~
-== BC0KVEL ~Then that is enough.~
+== BC0KVEL ~“能敬”。看来你仍在疑我配不配得敬。~
+== X3HELGAB ~呸，我不是个细斟字句的女人。你若非要从每个字母里找出意思，那我们大概处不好。~
+== BC0KVEL ~你喜不喜欢、敬不敬我，都值不了多少。我唯一要的保证是：战阵上你的盾不会失手。~
+== X3HELGAB ~是，这一点你大可十倍放心。我活这把年纪，凡我自己挑的仗，还没输过一场。~
+== BC0KVEL ~那就够了。~
 EXIT
 
 CHAIN IF ~InParty("X3Helga")
@@ -25,11 +25,11 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelX3Helga2","GLOBAL",0)~ THEN X3HELGAB C0KvelX3Helga2
-~Ye fight well indeed, drow, that be of no doubt. But there is something...~
+~你打得确是好，卓尔，这点无疑。可有些……~
 DO ~SetGlobal("C0KvelX3Helga2","GLOBAL",1)~
-== BC0KVEL ~What do you see, dwarf?~
-== X3HELGAB ~I be a warrior, but me duties as priestess an' healer be as important as might on the battlefield. I can nae say for certain, but I have me suspicions, if nothing else.~
-== BC0KVEL ~I would ask that you say nothing more of it. This is not your affair.~
-== X3HELGAB ~Ye value yer warrior's pride above all, eh? Fair enough. I can respect that, so long as yer body will not fail ye.~
-== BC0KVEL ~It is not that. But I appreciate your silence.~
+== BC0KVEL ~你看出什么了，矮人？~
+== X3HELGAB ~我是个武士，可我当祭司与医者的职分，跟战阵上的力气一样要紧。我说不准，可我有些疑心，别的就没什么了。~
+== BC0KVEL ~我请你别再提这事。这不干你的事。~
+== X3HELGAB ~你把武士的自尊看得高过一切，嗯？说得过去。这我敬，只要你的身子不失手。~
+== BC0KVEL ~不是那个。可我多谢你不多言。~
 EXIT

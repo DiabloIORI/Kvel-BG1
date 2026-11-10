@@ -1,122 +1,122 @@
 CHAIN IF ~IsGabber(Player1)~ THEN C02KVELJ PID
-~Speak, but make it meaningful.~
+~说吧，可要说得有意义。~
 END
-  ++ ~Can I ask you some questions?~ + PID-ASK
-  ++ ~Something's wrong with your voice.~ + PID-STRINGFIX
-  ++ ~Nothing right now.~ EXIT
+  ++ ~我能问你几个问题么？~ + PID-ASK
+  ++ ~你的声音有点不对。~ + PID-STRINGFIX
+  ++ ~眼下没什么。~ EXIT
 
 CHAIN C02KVELJ PID-ASK
-~As you wish.~
+~随你。~
 END
   + ~Global("C0KvelSoDTrainedRecruits","GLOBAL",1)
-     Global("C0KvelSoDInstructor","GLOBAL",0)~ + ~You're a capable instructor. I presume you had a similar role in Eryndlyn.~ DO ~IncrementGlobal("C0KvelSoDInstructor","GLOBAL",1)~ + PID-SOD-INSTRUCTOR
-  + ~Global("C0KvelSoDChef","GLOBAL",0)~ + ~How did you come to work as the Elfsong Tavern's chef?~ DO ~IncrementGlobal("C0KvelSoDChef","GLOBAL",1)~ + PID-SOD-CHEF
+     Global("C0KvelSoDInstructor","GLOBAL",0)~ + ~你是个能干的教习。我猜你在埃林德林也担过差不多的职分。~ DO ~IncrementGlobal("C0KvelSoDInstructor","GLOBAL",1)~ + PID-SOD-INSTRUCTOR
+  + ~Global("C0KvelSoDChef","GLOBAL",0)~ + ~你怎么会来当精灵之歌酒馆的厨子？~ DO ~IncrementGlobal("C0KvelSoDChef","GLOBAL",1)~ + PID-SOD-CHEF
   + ~Global("C0KvelSoDFromBG1","GLOBAL",1)
-     Global("C0KvelSoDAndroszAgain","GLOBAL",0)~ + ~Have you seen Androsz since the encounter at the Undercity?~ DO ~IncrementGlobal("C0KvelSoDAndroszAgain","GLOBAL",1)~ + PID-SOD-ANDROSZAGAIN
+     Global("C0KvelSoDAndroszAgain","GLOBAL",0)~ + ~下城区那回之后，你见过安德罗兹么？~ DO ~IncrementGlobal("C0KvelSoDAndroszAgain","GLOBAL",1)~ + PID-SOD-ANDROSZAGAIN
   + ~Global("C0KvelSoDFromBG1","GLOBAL",1)
-     Global("C0KvelSoDEcthel","GLOBAL",0)~ + ~Have you been in contact with Ecthel?~ DO ~IncrementGlobal("C0KvelSoDEcthel","GLOBAL",1)~ + PID-SOD-ECTHEL
+     Global("C0KvelSoDEcthel","GLOBAL",0)~ + ~你跟埃克瑟尔还有往来么？~ DO ~IncrementGlobal("C0KvelSoDEcthel","GLOBAL",1)~ + PID-SOD-ECTHEL
   + ~Global("C0KvelSoDAndroszAlly","GLOBAL",1)
-     Global("C0KvelSoDAndroszTalk","GLOBAL",0)~ + ~What do you think of fighting alongside Androsz again?~ DO ~IncrementGlobal("C0KvelSoDAndroszTalk","GLOBAL",1)~ + PID-SOD-ANDROSZ
+     Global("C0KvelSoDAndroszTalk","GLOBAL",0)~ + ~你怎么看再与安德罗兹并肩作战？~ DO ~IncrementGlobal("C0KvelSoDAndroszTalk","GLOBAL",1)~ + PID-SOD-ANDROSZ
   + ~Global("C0KvelSoDPoisonTalk","GLOBAL",2)
-     Global("C0KvelSoDHealing","GLOBAL",0)~ + ~Your condition must be difficult to deal with. How often do you feel pain?~ DO ~IncrementGlobal("C0KvelSoDRevenge","GLOBAL",1)~ + PID-SOD-HEALING
+     Global("C0KvelSoDHealing","GLOBAL",0)~ + ~你这情形想必难熬。你多久疼一回？~ DO ~IncrementGlobal("C0KvelSoDRevenge","GLOBAL",1)~ + PID-SOD-HEALING
   + ~Global("C0KvelSoDPoisonTalk","GLOBAL",2)
-     Global("C0KvelSoDRevenge","GLOBAL",0)~ + ~So you see no hope for a cure to your condition. Have you considered revenge?~ DO ~IncrementGlobal("C0KvelSoDRevenge","GLOBAL",1)~ + PID-SOD-REVENGE
+     Global("C0KvelSoDRevenge","GLOBAL",0)~ + ~那你看自己的病没指望了。你想过报仇么？~ DO ~IncrementGlobal("C0KvelSoDRevenge","GLOBAL",1)~ + PID-SOD-REVENGE
   + ~Global("C0KvelSoDPoisonTalk","GLOBAL",2)
-     Global("C0KvelSoDKnowsTear","GLOBAL",4)~ + ~How have you been feeling ever since you drank the Tear of Elysium?~ DO ~IncrementGlobal("C0KvelSoDKnowsTear","GLOBAL",5)~ + PID-SOD-TEAR
-  ++ ~Never mind. I don't have anything to ask.~ EXIT
+     Global("C0KvelSoDKnowsTear","GLOBAL",4)~ + ~你喝了极乐之泪以后，一直觉得如何？~ DO ~IncrementGlobal("C0KvelSoDKnowsTear","GLOBAL",5)~ + PID-SOD-TEAR
+  ++ ~算了。我没什么要问的。~ EXIT
 
 CHAIN C02KVELJ PID-SOD-INSTRUCTOR
-~In a sense. It was not so simple as it is here. Drow have greater incentive to act in their own interests over others. To make them believe in risking their lives for a greater purpose, even for pragmatism, is a challenge.~
-= ~Compared to those days, this was a mere matter of ascertaining personal shortcomings. Many of those I instructed in the past did not live to reach that point.~
+~某种意义上是的。可不像这儿这么简单。卓尔更有劲头去为自己、而不是为别人行事。要他们信该为更大的目的冒命，哪怕出于务实，也是难事。~
+= ~比起那些日子，这不过是弄清楚各人短处的事。我从前教过的许多人，没活到那一步。~
 EXIT
 
 CHAIN C02KVELJ PID-SOD-CHEF
-~It should not be truly so surprising. The tavern's proprietor is an acquaintance of my former employer. Despite everything, she values her own connections enough to offer me shelter as a favor.~
-= ~I simply could not accept holding such a debt with no manner of repayment. There was little else I could offer. The position of cook is one I have some experience in, and one where I could receive minimal attention as well.~
+~这其实不该这么叫人吃惊。酒馆的老板是我先前那位雇主的熟人。不管怎样，她看重自己的人脉，肯做个顺水人情给我个栖身处。~
+= ~我实在不能受这样一份人情却毫无还报的法子。我能拿出的不多。厨子这个位分我有些经验，也是个能少惹人注意的位子。~
 END
-  ++ ~You also seemed to be quite comfortable with it.~ + PID-SOD-CHEF-1
+  ++ ~你看着也挺自在的。~ + PID-SOD-CHEF-1
 
 CHAIN C02KVELJ PID-SOD-CHEF-1
-~That—and this blade—are my few true talents of note. It would be a waste not to find some measure of comfort in perfecting them.~
+~那个——还有这把刀——是我少有几样真拿得出手的本事。不从中寻些精进的慰藉，那是浪费。~
 EXIT
 
 CHAIN C02KVELJ PID-SOD-ANDROSZAGAIN
-~I have not. It is... somewhat concerning, considering his foolish interest in continuing our rivalry. But he lacks the freedom I now have, and it would not be surprising if he has returned to Eryndlyn by now, if he has not already reappeared.~
-= ~Still... one cannot ever fully predict Androsz. And now my concern is not only for myself, but also for you. I believe you have also caught his interest, given all that has occurred. Should I no longer serve as an adequate target, his attention may be turned upon you next.~
-= ~You should hope that does not come to pass.~
+~没有。这……有点叫人不安，想到他还蠢到有心继续我们的对抗。可他没有我如今这份自由，他若至今还没再露面，那已经回了埃林德林也不奇怪。~
+= ~不过……安德罗兹从来不能全然预料。而我如今担心的不只我自己，还有你。就发生的这一切看，我相信你也招了他的兴致。我若不再是个合用的靶子，他的注意下一个也许就转到你身上。~
+= ~你该盼这事别成真。~
 EXIT
 
 CHAIN C02KVELJ PID-SOD-ECTHEL
-~Tch. He has certainly made an effort to ensure that I could not forget him if I tried. Ecthel was summoned back to Waterdeep not long after your battle in the Undercity. Since the news of the crusade reached him, his letters of correspondence have been relentless and predictable. They make for suitable kindling for the oven.~
-= ~He has insisted that I hold to the revised contract that was signed under your name. Though it is hardly necessary. I would not have made it to today had I not been true to my word when it mattered.~
+~啧。他确是用心确保我就算想忘也忘不了他。你我在下城区那一战之后不久，埃克瑟尔就被召回了深水城。自圣战军的消息传到他耳里，他那些来信就没断过，也一猜就中。拿来点炉子倒合用。~
+= ~他坚持要我守着那份以你名义签的修订契约。虽说大可不必。我若在该守信的时候没守信，也活不到今日。~
 EXIT
 
 CHAIN C02KVELJ PID-SOD-ANDROSZ
-~It was a prudent decision. Androsz will make a difference when the opposing forces meet each other.~
+~那是明智的决断。两军对上时，安德罗兹会起大作用。~
 END
-  ++ ~Yes, but what do you think? He's your old rival.~ + PID-SOD-ANDROSZ-1
-  ++ ~Fair enough.~ + PID-SOD-ANDROSZ-2
+  ++ ~是，可你怎么看？他是你旧日的对手。~ + PID-SOD-ANDROSZ-1
+  ++ ~说得过去。~ + PID-SOD-ANDROSZ-2
 
 CHAIN C02KVELJ PID-SOD-ANDROSZ-1
-~The rivalry was always a means to an end. Androsz will not admit it, but I have always had more to gain from our former bond. For him, I was a merely means of sharpening his blade, while I saw him as my benefactor in surviving in a dangerous realm.~
-= ~Androsz has beauty and talent, which makes him privileged. I was gifted with nothing but my innate strength. Had I no one with incentive to see me alive, I would never have lived long in Eryndlyn.~
-= ~Now, relying on him is no longer necessary. He may pursue me for his own desire for challenge, but I have neither the power nor the desire to indulge him.~
+~那对抗一向是达目的的手段。安德罗兹不会认，可我从我们旧日那点情分里得的，一向比他多。于他，我不过是磨刀的路子；于我，他是我在险地里活命的恩主。~
+= ~安德罗兹有貌有才，那叫他得天独厚。我除了一身天生的力气，什么都没得着。若没有一个有劲头看我活着的人，我在埃林德林活不长久。~
+= ~如今，靠他不再必要了。他也许为自己的好胜来追我，可我没那份力气，也没那份兴致去奉陪他。~
 EXTERN C02KVELJ PID-SOD-ANDROSZ-2
 
 CHAIN C02KVELJ PID-SOD-ANDROSZ-2
-~Still, persuading Androsz to fight for another's cause is impressive enough. He has always acted purely on his own whim. Perhaps it is something within you that he finds fascinating.~
+~不过，能劝动安德罗兹为别人的事去战，已够叫人佩服。他一向只按自己的兴头行事。也许是你身上有什么叫他着迷。~
 EXIT
 
 CHAIN C02KVELJ PID-SOD-HEALING
-~Every day. Increasingly more frequent, as of late.~
+~天天。近来还越来越勤。~
 END
-  ++ ~How can you just live with that?~ + PID-SOD-HEALING-1
-  ++ ~There's no chance of curing you?~ + PID-SOD-HEALING-1
-  ++ ~I see. Let me ask something else.~ + PID-ASK
+  ++ ~你怎么就能这么忍着过？~ + PID-SOD-HEALING-1
+  ++ ~你的病没治好的可能？~ + PID-SOD-HEALING-1
+  ++ ~我明白了。我另问些别的。~ + PID-ASK
 
 CHAIN C02KVELJ PID-SOD-HEALING-1
-~There are more important matters.~
+~有更要紧的事。~
 END
-  ++ ~More important than preserving your own life?~ + PID-SOD-HEALING-2
-  ++ ~Fair enough. It's your life to live.~ + PID-ASK
+  ++ ~比保住你自己的命还紧要？~ + PID-SOD-HEALING-2
+  ++ ~说得过去。命是你的，你自己过。~ + PID-ASK
 
 CHAIN C02KVELJ PID-SOD-HEALING-2
-~Allow me to ask you a question, <CHARNAME>, to enlighten us both. Should you be afflicted by an incurable illness, one which would spell the end of your life, the time of which is but a gamble... and you chose to pursue any hope of curing it... willing to resort to any means necessary, no matter how foul. And in the end, your efforts are naught but failure, and death takes you in the end regardless.~
-= ~Would you consider that a life well lived? Would it not be one of despair and desperation? Would you be satisfied, or wish that you had spent the remaining time in a way that brought you peace?~
+~让我问你一句，<CHARNAME>，好叫我们都明白些。你若染上一种治不好的病，注定要结果你的命，那日子不过一场赌……而你选择去追任何治好的指望……不惜用任何手段，不管多脏。末了，你的力气只落个败，死终究还是把你带走。~
+= ~你会觉得这一生过得值么？那不会是一场绝望与拼命的活么？你会称心，还是盼自己把剩下的时间用在能给你安宁的法子上？~
 END
-  ++ ~I would still try.~ + PID-SOD-HEALING-3
-  ++ ~I'm willing to help you.~ + PID-SOD-HEALING-3
-  ++ ~I'm not sure.~ + PID-SOD-HEALING-3
+  ++ ~我还是会试。~ + PID-SOD-HEALING-3
+  ++ ~我愿意帮你。~ + PID-SOD-HEALING-3
+  ++ ~我不确定。~ + PID-SOD-HEALING-3
 
 CHAIN C02KVELJ PID-SOD-HEALING-3
-~I will not presume to judge whether your choice would be right. That is for you to decide. But a choice is all it is—I merely chose mine, knowing I will prefer it to the alternative.~
-= ~You may not understand. From birth, I have struggled for survival, yet never seen the true value in living. When what I had taken for granted was stolen, I believed it was time to find my own value, and live out what time I have left as I would prefer it.~
-= ~Perhaps you believe it is giving up. But I consider it a manner of defiance. Someone chose this fate for me, and for my end to be one filled with suffering and agony. I refuse it. I will continue to live as I wish, even if the time is meager.~
+~我不冒昧评判你的选择对不对。那由你定。可那不过是个选择——我只是挑了我自己的，明知道比起另一个，我更喜欢它。~
+= ~你也许不懂。我自出生就在为活命挣扎，可从没看见活着有什么真价值。等我当作理所当然的东西被夺了，我相信该是时候去找我自己的价值，按我更愿意的样子把剩下的时间过完。~
+= ~你也许觉得这是放弃。可我当作一种抗。有人替我选了这个命数，要我的结局满是苦与痛。我拒。我要照自己的意思继续活，哪怕时间少得可怜。~
 EXIT
 
 CHAIN C02KVELJ PID-SOD-REVENGE
-~And who do you think I should take my revenge on?~
-= ~The person who prepared the poison died by another's hand. Should I avenge myself on a suspicion that Matron Zaer'iyon gave the order? My own mother, matron of House Au'dayrr?~
-= ~Perhaps they could have both been responsible, for all I know. And perhaps Eryndlyn and the world would be better without them. I may even be able to accomplish the absurd task of killing them both, had I the time and resources to plan. I have the knowledge of them, their homes, and their weaknesses. It would be not impossible.~
-= ~Even then, what really could I hope to do? Can I save anyone? Can I slay the perennial cycle of hatred and madness of the drow that inflicted this poison upon me? There are thousands of drow like myself, <CHARNAME>. The only difference was that I was blessed with the ability to live.~
-= ~And I intend to make however much use of that gift as I can. Let the drow continue as they are, until one, or two, or a hundred even, with the will and the way to change them arrives upon this realm one day. That is their part to play. Not mine.~
+~那你觉得我该向谁报仇？~
+= ~制毒的人死在别人手里了。我该凭一点疑心去向扎尔伊昂主母报仇么？向我自己的母亲，奥达伊尔家的主母？~
+= ~也许两个都有份，就我所知。也许埃林德林和这世界没了他们更好。我若有时日与资源谋划，甚至也许能干成那桩荒唐事，把两个都杀了。我知道他们的事、他们的家、他们的软肋。并非不可能。~
+= ~可就算那样，我真能指望做什么？我能救谁？我能斩断卓尔那周而复始的恨与狂么——正是它把这毒加在我身上？像我这样的卓尔有成千上万，<CHARNAME>。唯一的差别，是我蒙眷顾有了活下来的本事。~
+= ~而我打算尽量用这份天赋。让卓尔照旧下去，直到某一天，一个、两个，或者一百个有那份心、也有那份法去改他们的人来到这世上。那是他们该扮的份。不是我的。~
 EXIT
 
 CHAIN C02KVELJ PID-SOD-TEAR
-~Does it matter? It has earned me perhaps a few years, if even that much.~
+~这打紧么？它也许给我挣了几年，若真有那么多。~
 END
-  ++ ~Just tell me.~ + PID-SOD-TEAR-1
-  ++ ~As long as it's reduced your pain, it was worth it.~ + PID-SOD-TEAR-1
-  ++ ~I guess not.~ + PID-SOD-TEAR-1
+  ++ ~就跟我说吧。~ + PID-SOD-TEAR-1
+  ++ ~只要它减了你的痛，那就值。~ + PID-SOD-TEAR-1
+  ++ ~我猜没有。~ + PID-SOD-TEAR-1
 
 CHAIN C02KVELJ PID-SOD-TEAR-1
-~If it's of any consolation, I rest more easily now. I may even awaken regularly without feeling the need to expunge my own blood.~
-= ~Whether it was worth it... I personally care little. It is no small relief that I feel less pain, of course, but I refuse to treat it as some sort of false hope.~
-= ~At the very least, I may perform to a greater extent. I may not have the strength that I once did, but experience will more than make up for it.~
+~若这算点慰藉：我如今歇得安稳些了。我甚至能常睡常醒，而不觉得非得清一清自己的血。~
+= ~值不值……我个人不大在乎。觉着的痛少了，这自然是极大的宽慰，可我拒绝把它当作某种虚假的指望。~
+= ~至少我使起来能更得力些。我许没有从前的力气，可阅历足以补上。~
 END
 
 CHAIN C02KVELJ PID-STRINGFIX
-~A coldpine drop will fix that easily enough.~
+~一滴冷杉露就能轻易解决这个。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0KVFIX")~ EXIT

@@ -28,7 +28,7 @@ THEN
 		SetGlobal("BD_OT_DELAY","BD0103",1)
 		SetGlobal("C0Kvel_BD_PLAY_ONCE","BD0103",1)
 		Wait(1)
-		DisplayStringWait("C0Kvel",~At your command, we depart.~)
+		DisplayStringWait("C0Kvel",~遵命，我们这就动身。~)
 		SetGlobal("BD_OT_DELAY","BD0103",0)
 		SetInterrupt(TRUE)
 		Continue()

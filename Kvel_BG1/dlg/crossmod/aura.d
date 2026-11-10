@@ -7,14 +7,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelDrake1","GLOBAL",0)~ THEN BC0AURA C0KvelAura
-~K'Vel, the segmented wooden contraption strapped to your back... it's a fishing rod, isn't it?~
+~克维尔，你背上绑的那件分节的木器……是钓竿，是不是？~
 DO ~SetGlobal("C0KvelDrake1","GLOBAL",1)~
-== BC0KVEL ~You recognize it... that, I did not expect. It was not originally designed as such, but I have adapted it for my own purposes.~
-== BC0AURA ~I was raised in a fishing town, you know. I don't eat fish, but I've still learned the technique and the tools for it. Is it something you enjoy doing?~
-== BC0KVEL ~You may consider it that way. Fishing is a useful skill, and an agreeable pasttime in itself.~
-== BC0AURA ~And to think you even know how to design your own fishing rod! I'd love to see what else you think of, if you had the incentive.~
-== BC0KVEL ~Hmph. I dabble in innovation when it seems practical. I do not share your fascination towards the unknown.~
-== BC0AURA ~Do you think I could give that rod a try some time? I'd like to see how well it performs compared to the design I'm used to. And maybe I can even improve it a little!~
-== BC0KVEL ~That would be inadvisable. You would buckle under its weight. And the game it is suited for would likely pull you undersea instead.~
-== BC0AURA ~Oh. It does look a little heavy, come to think of it... I'll just take a look at it while camping instead, then. I wouldn't like to get caught by the fish.~
+== BC0KVEL ~你认得它……这我倒没料到。它原不是为此造的，我改成了自己的用处。~
+== BC0AURA ~你知道么，我是在渔镇长大的。我不吃鱼，可技法与器具还是学的。这是你喜欢做的事么？~
+== BC0KVEL ~你可以这么看。钓鱼是有用的本事，本身也是个合意的消遣。~
+== BC0AURA ~想不到你连钓竿都会自己设计！你若有个由头，我倒想看看你还能想出什么。~
+== BC0KVEL ~哼。看着实用时，我也弄些新东西。我可没有你对未知那份着迷。~
+== BC0AURA ~你觉得我哪天能试试那钓竿么？我想看看它比我惯用的那种强多少。说不定我还能改好一点！~
+== BC0KVEL ~那不妥。你会被它的分量压弯腰。而它要钓的东西，多半会把你拖下海去。~
+== BC0AURA ~哦。想想它看着是有点沉……那我扎营时就只看一看吧。我可不想被鱼拖了去。~
 EXIT

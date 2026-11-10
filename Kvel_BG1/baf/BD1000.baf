@@ -36,6 +36,6 @@ THEN
 	RESPONSE #100
 		SetGlobal("C0Kvel_bd_mdd016b","bd1000",1)
 		SetGlobalTimer("bd_mdd016b_timer","bd1000",ONE_ROUND)
-		DisplayStringHead("C0Kvel",~Hmph. Who is she truly trying to fool?~)  
+		DisplayStringHead("C0Kvel",~哼。她到底想骗谁？~)  
     Continue()
 END

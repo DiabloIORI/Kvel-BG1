@@ -12,23 +12,23 @@ LAF HANDLE_AUDIO END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~DWHALB01.ITM~ THEN BEGIN
 COPY ~%MOD_FOLDER%/itm/drow/DWHALB01.ITM~ ~OVERRIDE~
-SAY NAME1 ~Halberd~
-SAY NAME2 ~Drow Halberd +3~
-SAY DESC ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. Magic has been used to forge this particular weapon, gifting it with enhanced abilities to slaughter foes.
+SAY NAME1 ~戟~
+SAY NAME2 ~卓尔戟 +3~
+SAY DESC ~与其同类一样，这柄戟由一片砍刀似的斧刃装在一根约六尺长的杆上。这柄兵器是以魔法锻成，赋予它更强的杀敌之力。
 
-This item, like most drow equipment, is created using adamantine, an alloy of adamantite that quickly turns to dust if removed from the Underdark.
+此物与其多数卓尔装备一样，是用精金合金造成，一旦离开幽暗地域，便会很快化为尘土。
 
-STATISTICS:
+属性：
 
-THAC0: +3
-Damage: 1d10+3 (piercing)
-Speed Factor: 6
-Proficiency Type: Halberd
-Type: Two-handed
-Requires:
- 13 Strength
+命中：+3
+伤害：1d10+3（穿刺）
+速度因子：6
+熟练类型：戟
+类型：双手
+需求：
+ 力量 13
 
-Weight: 15~
+重量：15~
 END
 
 ////////////////////////////////////////
@@ -36,161 +36,161 @@ END
 ////////////////////////////////////////
 
 COPY_EXISTING ~C0KVBK01.ITM~ ~OVERRIDE~
-SAY NAME1 ~Book~
-SAY NAME2 ~Business Ledger~
-SAY DESC ~This is the personal ledger of one Ecthel Darcourt, filled with records of his various trade deals. It has been foolishly misplaced by him and entrusted to you by a disapproving Bentley Mirrorshade to be returned to its owner.
+SAY NAME1 ~书~
+SAY NAME2 ~生意账簿~
+SAY DESC ~这是埃克瑟尔·达库尔特的私人账本，记着他各色买卖。他蠢到把它放丢了，由看不下去的宾利·米尔沙德交给你，好还给原主。
 
-Weight: 2~
+重量：2~
 
 COPY_EXISTING ~C0KVLE01.ITM~ ~OVERRIDE~
-SAY NAME1 ~Studded Leather Armor~
-SAY NAME2 ~K'Vel's Leather Armor +3~
-SAY DESC ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place.
+SAY NAME1 ~镶钉皮甲~
+SAY NAME2 ~克维尔的皮甲 +3~
+SAY DESC ~镶钉皮甲与寻常皮甲没多少相同。皮甲是硬壳，镶钉皮甲则柔韧，缀着数百枚金属钉。钉子排得极密，成一层灵活的硬金属，能挡开劈砍。底下那层软皮，不过是把钉子固定住的手段。
 
-K'Vel's custom-made suit of leather armor is somewhat lighter and easier to move in than the standard design, allowing the wearer to cast spells while wearing it, with protective enchantments to provide slight protection against fire and cold, on top of being colored with a dark dye which makes it easier for the wearer to move unnoticed.
+克维尔这套定制皮甲比寻常式样轻些，也好活动些，叫穿着者能穿着它施法，另有护身附魔，略能抗火与抗寒，还染了深色，叫穿着者更容易不被察觉地行动。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Hide In Shadows: +10%
-– Fire Resistance: +10%
-– Cold Resistance: +10%
-– Spellcasting is not disabled
+装备能力：
+– 潜行：+10%
+– 抗火：+10%
+– 抗寒：+10%
+– 不阻碍施法
 
-Armor Class: 4 (2 vs. slashing, 3 vs. piercing and missile)
-Requires:
- 6 Strength
+护甲等级：4（对劈砍 2，对穿刺与远程 3）
+需求：
+ 力量 6
 
-Weight: 15~
+重量：15~
 
 COPY_EXISTING ~C0KVAM01.ITM~ ~OVERRIDE~
-SAY NAME2 ~House Au'dayrr Insignia~
-SAY DESC ~This drow house insignia, depicting a warped and twisted claw, is the symbol of House Au'dayrr of Eryndlyn. Though possession of it would be a symbol of status in any drow city, to display something such as this openly on the surface would do more harm than good. K'Vel claims that were it not for its protective enchantments giving it practical value, he would have discarded it a long time ago.
+SAY NAME2 ~奥达伊尔家族徽记~
+SAY DESC ~这枚卓尔家族徽记刻着一只扭曲的爪，是埃林德林奥达伊尔家的标记。虽则拥有它在任何卓尔城里都是身份的凭证，可在地表公然亮出这等东西，害处多过好处。克维尔说，若不是它那护身附魔还有实用，他早就扔了。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Armor Class: +1
-– Saving Throws: +1, an extra +3 vs. Death
-– Immunity to backstab
+装备能力：
+– 护甲等级：+1
+– 豁免检定：+1，对死亡另加 +3
+– 免疫背刺
 
-Weight: 0~
-OUTER_SET strref = RESOLVE_STR_REF (~When you reach for the insignia, K'Vel tucks it more deeply beneath his collar. "Much as possession of this distastes me, it is still too useful to simply let go."~ [GAM_47])
+重量：0~
+OUTER_SET strref = RESOLVE_STR_REF (~你去拿那徽记时，克维尔把它往衣领里塞得更深了。“这东西虽叫我厌恶，可还太有用，不能就这么丢。”~ [GAM_47])
 APPEND item_use.2da ~C0KVAM01 K'Vel %strref% 3~
 
 COPY_EXISTING ~C0KVCH01.ITM~ ~OVERRIDE~
-SAY NAME1 ~Elven Chain Mail~
-SAY NAME2 ~Dark Elven Chain of Agility +2~
-SAY DESC ~This appears to be a suit of drow armor, somehow immune to the usual effects of adamantite under the sun, yet closer examination shows that it is in fact of wood elven design and merely refitted with drow aesthetics and lacquered over with a dark coloring. Whether this is merely to substitute for actual drow craft or a spit in the face of their hated cousins, it is still an elegant piece of work, with enchantments to enhance the wearer's mobility.
+SAY NAME1 ~精灵链甲~
+SAY NAME2 ~暗精灵敏捷链甲 +2~
+SAY DESC ~这看着是一套卓尔甲，不知怎的却不吃精金在日光下那套通常的亏；可细看之下，它其实是木精灵的式样，只是改成了卓尔的样貌，又漆了深色。这是只为顶替真正的卓尔工艺，还是朝他们憎恶的表亲脸上啐一口，都无从知道；不管怎样，这仍是件雅致的活计，附魔能增强穿着者的灵活。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Dexterity: +1
-– Movement Rate: +50%
-– Spellcasting is not disabled
+装备能力：
+– 敏捷：+1
+– 移动速度：+50%
+– 不阻碍施法
 
-Armor Class: 3 (1 vs. slashing, 5 vs. crushing)
-Requires:
- 5 Strength
+护甲等级：3（对劈砍 1，对钝击 5）
+需求：
+ 力量 5
 
-Weight: 8~
+重量：8~
 
 COPY_EXISTING ~C0KVMI01.ITM~ ~OVERRIDE~
-SAY NAME1 ~Broken Helmet~
-SAY NAME2 ~Broken Helmet~
-SAY DESC ~The iron crisis sweeping across the Sword Coast region seemingly knows no mercy. This once fine helmet now lies in a misshapen heap of metal and leather before you.
+SAY NAME1 ~破损头盔~
+SAY NAME2 ~破损头盔~
+SAY DESC ~席卷剑湾一带的铁荒似乎毫无怜悯。这顶从前的好头盔，如今是一堆走了形的金属与皮革，摆在你眼前。
 
-STATISTICS:
+属性：
 
-Weight: 2~
+重量：2~
 
 COPY_EXISTING ~C0KVSW01.ITM~ ~OVERRIDE~
-SAY NAME1 ~Long Sword~
+SAY NAME1 ~长剑~
 SAY NAME2 ~Ll'enwithel +3~
-SAY UNIDENTIFIED_DESC ~These swords are usually referred to as double-edged swords, war swords, or military swords. In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture and may vary within the same culture depending on the era. Among the most common characteristics of all long swords is their length, which ranges from thirty-five inches to forty-seven inches. In the latter case, the blade is known to take up forty inches of the total length. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the long sword is designed for slashing, not thrusting.
+SAY UNIDENTIFIED_DESC ~这类剑通常被称作双刃剑、战剑或军用剑。许多情况下，长剑只有单面开刃。长剑并无单一式样；它的形制与长度因文化而异，同一文化里也因时代而变。所有长剑最常见的特征之一便是长度，从三十五寸到四十七寸不等。后一种情形下，刃身已知占全长四十寸。多数长剑是双刃，尖端锋利。虽有尖，长剑是为劈砍而造，不为刺。
 
-STATISTICS:
+属性：
 
-Damage: 1d8 (slashing)
-Speed Factor: 5
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
+伤害：1d8（劈砍）
+速度因子：5
+熟练类型：长剑
+类型：单手
+需求：
+ 力量 6
 
-Weight: 4~
-SAY DESC ~These swords are usually referred to as double-edge swords, war swords, or military swords. In many cases, the long sword has a single-edged blade. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the long sword is designed for slashing, not thrusting.
+重量：4~
+SAY DESC ~这类剑通常被称作双刃剑、战剑或军用剑。许多情况下，长剑只有单面开刃。多数长剑是双刃，尖端锋利。虽有尖，长剑是为劈砍而造，不为刺。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Armor Class: +3 vs. slashing attacks
+装备能力：
+– 护甲等级：对劈砍攻击 +3
 
-THAC0: +3
-Damage: 1d8+3 (slashing)
-Speed Factor: 2
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
+命中：+3
+伤害：1d8+3（劈砍）
+速度因子：2
+熟练类型：长剑
+类型：单手
+需求：
+ 力量 6
 
-Weight: 4~
+重量：4~
 
 COPY_EXISTING ~C0KVSW02.ITM~ ~OVERRIDE~
-SAY NAME1 ~Long Sword~
+SAY NAME1 ~长剑~
 SAY NAME2 ~Zaatharien +3~
-SAY UNIDENTIFIED_DESC ~These swords are usually referred to as double-edged swords, war swords, or military swords. In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture and may vary within the same culture depending on the era. Among the most common characteristics of all long swords is their length, which ranges from thirty-five inches to forty-seven inches. In the latter case, the blade is known to take up forty inches of the total length. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the long sword is designed for slashing, not thrusting.
+SAY UNIDENTIFIED_DESC ~这类剑通常被称作双刃剑、战剑或军用剑。许多情况下，长剑只有单面开刃。长剑并无单一式样；它的形制与长度因文化而异，同一文化里也因时代而变。所有长剑最常见的特征之一便是长度，从三十五寸到四十七寸不等。后一种情形下，刃身已知占全长四十寸。多数长剑是双刃，尖端锋利。虽有尖，长剑是为劈砍而造，不为刺。
 
-STATISTICS:
+属性：
 
-Damage: 1d8 (slashing)
-Speed Factor: 5
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
+伤害：1d8（劈砍）
+速度因子：5
+熟练类型：长剑
+类型：单手
+需求：
+ 力量 6
 
-Weight: 4~
-SAY DESC ~These swords are usually referred to as double-edge swords, war swords, or military swords. In many cases, the long sword has a single-edged blade. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the long sword is designed for slashing, not thrusting.
+重量：4~
+SAY DESC ~这类剑通常被称作双刃剑、战剑或军用剑。许多情况下，长剑只有单面开刃。多数长剑是双刃，尖端锋利。虽有尖，长剑是为劈砍而造，不为刺。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– Critical Hit Chance: +20% (this weapon)
+装备能力：
+– 暴击率：+20%（此兵器）
 
-THAC0: +3
-Damage: 1d8+3 (slashing)
-Speed Factor: 2
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
+命中：+3
+伤害：1d8+3（劈砍）
+速度因子：2
+熟练类型：长剑
+类型：单手
+需求：
+ 力量 6
 
-Weight: 4~
+重量：4~
 
 COPY_EXISTING ~C0KVS201.ITM~ ~OVERRIDE~
-SAY NAME1 ~Two-handed Sword~
-SAY NAME2 ~Galeforce +3~
-SAY DESC ~This two-handed sword is larger and heavier than even other blades of its type, and is based off the drow greatsword Vhanz'ress—or Galeforce in the Common tongue—only forged from dwarven adamantine rather than adamantite. Though massive and practically impossible to wield except for those of exceptional strength and build, the enchantments on the weapon make it far swifter than its appearance suggests, allowing for its wielder to overwhelm their target with a rapid and heavy onslaught of blows as though a manifestation of a violent windstorm.
+SAY NAME1 ~双手剑~
+SAY NAME2 ~疾风 +3~
+SAY DESC ~这柄双手剑比同类的刃还更大更重，仿的是卓尔巨剑 Vhanz'ress——通用语里叫“疾风”——只是用矮人的精金合金、而非精金矿锻成。虽则庞大，除力气与体格出众者几乎使不动，可这兵器上的附魔叫它远快过外表所示，能叫使者以又快又重的连环猛击压垮对手，仿佛一场暴风现了形。
 
-As a near-perfect replica of K'Vel's original weapon which became dust after he first reached the surface, it is especially comfortable in his hands, and he is practiced enough in its use that he may wield it more effectively, with unmatched technique and no wasted movements while attacking.
+它是克维尔原那件兵器的近乎完美的复制——那件在他初到地表后化成了尘——所以在他手里格外称手，而他使得够熟，能以无人能及的手法、毫无多余的动作更有效地使它。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-– 1 extra attack per round
-– When this weapon is equipped by K'Vel, he wields it with Grand Master proficiency, gains +10% Critical Hit Chance, and will never critically miss
+装备能力：
+– 每轮多一次攻击
+– 由克维尔装备时，他以宗师级熟练使用它，暴击率 +10%，且永不会致命失手
 
-THAC0: +3
-Damage: 1d12+3 (slashing)
-Speed Factor: 1
-Proficiency Type: Two-handed Sword
-Type: Two-handed
-Requires:
- 18 Strength
+命中：+3
+伤害：1d12+3（劈砍）
+速度因子：1
+熟练类型：双手剑
+类型：双手
+需求：
+ 力量 18
 
-Weight: 14~
+重量：14~
 
 ////////////////////////////////////////
 /////////SPELLS/////////////////////////
@@ -230,37 +230,37 @@ END
 ////////////////////////////////////////
 
 COPY ~%MOD_FOLDER%/cre/C0Kvel.cre~ ~override~
-  SAY NAME1 ~Kvel~
-  SAY NAME2 ~Kvel~
-  SAY BIO ~When asked about his past, K'VEL tells you there are only three things that you need to know about him - first, that he was born in the drow city of Eryndlyn, second, that he no longer belongs there, and third, that he is now a sellsword making his living on the surface through any means necessary. What more you can tell of him is merely through observation.
+  SAY NAME1 ~克维尔~
+  SAY NAME2 ~克维尔~
+  SAY BIO ~有人问起他的过往，克维尔只说他有三件事需要你知道——第一，他生在卓尔之城埃林德林；第二，他已不再属于那里；第三，他如今是个佣兵剑客，在地表靠任何必要的手段谋生。除此之外，你能看出的一切，都只能靠观察。
   
-Though primarily a swordsman by trade, K'Vel has nonetheless a passing knowledge of arcane magic and thievery that seems more learned by experience rather than study. You have read about the drow in your childhood, and though the drow mercenary is distant and self-reliant, he seems to lack most of the cruelty and arrogance expected of his kin, and approaches every situation with a calm, calculated awareness, as though nothing is ever completely beyond his expectations.~
-  SAY INITIAL_MEETING ~Hmm?~ [C0KV000]
-  SAY MORALE ~Not worth it!~ [C0KV001]
-  SAY LEADER ~Follow me.~ [C0KV002]
-  SAY TIRED ~Could use some rest.~ [C0KV003]
-  SAY BORED ~*sigh*~ [C0KV004]
-  SAY BATTLE_CRY1 ~Take 'em down!~ [C0KV005]
-  SAY BATTLE_CRY2 ~Let's go!~ [C0KV006]
+虽说本职是个剑客，克维尔对奥术与偷盗之术也略知一二，那更像是从阅历里学来的，而非钻研所得。你幼时读过关于卓尔的记载，而这位卓尔佣兵虽疏离自恃，却似乎少了族人身上多半的残忍与傲慢，凡事都以冷静、算计的清醒去应对，仿佛没有什么真能完全出乎他的意料。~
+  SAY INITIAL_MEETING ~嗯？~ [C0KV000]
+  SAY MORALE ~不值当！~ [C0KV001]
+  SAY LEADER ~跟我来。~ [C0KV002]
+  SAY TIRED ~该歇一歇了。~ [C0KV003]
+  SAY BORED ~*叹气*~ [C0KV004]
+  SAY BATTLE_CRY1 ~放倒他们！~ [C0KV005]
+  SAY BATTLE_CRY2 ~走！~ [C0KV006]
   SAY BATTLE_CRY3 ~~ [C0KV007]
   SAY DAMAGE ~~ [C0KV008]
   SAY DYING ~~ [C0KV009]
-  SAY HURT ~I'm bleeding.~ [C0KV010]
-  SAY SELECT_COMMON1 ~Hmm?~ [C0KV000]
-  SAY SELECT_COMMON2 ~Yeah?~ [C0KV011]
-  SAY SELECT_COMMON3 ~Huh?~ [C0KV012]
-  SAY SELECT_ACTION1 ~Sure.~ [C0KV013]
-  SAY SELECT_ACTION2 ~Right.~ [C0KV014]
-  SAY SELECT_ACTION3 ~Mm-hmm.~ [C0KV015]
-  SAY SELECT_ACTION4 ~Stop that.~ [C0KV016]
-  SAY CRITICAL_HIT ~Got 'em!~ [C0KV017]
+  SAY HURT ~我在流血。~ [C0KV010]
+  SAY SELECT_COMMON1 ~嗯？~ [C0KV000]
+  SAY SELECT_COMMON2 ~怎么？~ [C0KV011]
+  SAY SELECT_COMMON3 ~啊？~ [C0KV012]
+  SAY SELECT_ACTION1 ~好。~ [C0KV013]
+  SAY SELECT_ACTION2 ~行。~ [C0KV014]
+  SAY SELECT_ACTION3 ~嗯哼。~ [C0KV015]
+  SAY SELECT_ACTION4 ~别这样。~ [C0KV016]
+  SAY CRITICAL_HIT ~打中了！~ [C0KV017]
   SAY CRITICAL_MISS ~~ [C0KV018]
-  SAY TARGET_IMMUNE ~No good.~ [C0KV019]
-  SAY INVENTORY_FULL ~Can't move now.~ [C0KV020]
-  SAY SPELL_DISRUPTED ~That's not supposed to happen.~ [C0KV021]
-  SAY HIDDEN_IN_SHADOWS ~Keeping quiet.~ [C0KV022]
-  SAY REACT_TO_DIE_GENERAL ~Down by one!~ [C0KV023]
-  SAY PICKED_POCKET ~Found something.~ [C0KV024]
+  SAY TARGET_IMMUNE ~不成。~ [C0KV019]
+  SAY INVENTORY_FULL ~现在动不了。~ [C0KV020]
+  SAY SPELL_DISRUPTED ~这不该发生。~ [C0KV021]
+  SAY HIDDEN_IN_SHADOWS ~保持安静。~ [C0KV022]
+  SAY REACT_TO_DIE_GENERAL ~放倒一个！~ [C0KV023]
+  SAY PICKED_POCKET ~发现了什么。~ [C0KV024]
   WRITE_ASCII SCRIPT_OVERRIDE ~C0Kvel~ #8  //override script
   WRITE_ASCII DEATHVAR ~C0Kvel~ #32  //DV
   WRITE_ASCII DIALOG ~C0Kvel~ #8   //pre-joining dialogue file
@@ -276,8 +276,8 @@ APPEND ~interdia.2da~ ~C0Kvel BC0Kvel~
   UNLESS ~C0Kvel~
   
 COPY ~%MOD_FOLDER%/cre/C0KVNP01.cre~ ~override/C0KVNP01.CRE~
-SAY NAME1 ~Ecthel Darcourt~
-SAY NAME2 ~Ecthel Darcourt~
+SAY NAME1 ~埃克瑟尔·达库尔特~
+SAY NAME2 ~埃克瑟尔·达库尔特~
   WRITE_ASCII DEATHVAR ~C0KVNP01~ #32
   WRITE_ASCII DIALOG ~C0KVNP01~ #8
   WRITE_ASCII SCRIPT_OVERRIDE ~SHOUT~ #8   //pre-joining dialogue file
@@ -286,8 +286,8 @@ SAY NAME2 ~Ecthel Darcourt~
   WRITE_ASCII SCRIPT_DEFAULT ~~ #8
 
 COPY_EXISTING ~IRON5.cre~ ~override/C0KVNP02.CRE~
-SAY NAME1 ~Caravan Bodyguard~
-SAY NAME2 ~Caravan Bodyguard~
+SAY NAME1 ~商队护卫~
+SAY NAME2 ~商队护卫~
   WRITE_ASCII DEATHVAR ~C0KVNP02~ #32
   WRITE_ASCII DIALOG ~C0KVNP02~ #8
   WRITE_ASCII SCRIPT_CLASS ~~ #8
@@ -320,14 +320,14 @@ LPF DELETE_EFFECT INT_VAR match_opcode = 268 END
 COPY ~%MOD_FOLDER%/cre/C0KVNP05.cre~ ~override/C0KVNP05.CRE~
   WRITE_ASCII DEATHVAR ~C0KVNP05~ #32
   WRITE_ASCII DIALOG ~C0KVNP05~ #8
-  SAY NAME1 ~Oxley~
-  SAY NAME2 ~Oxley~
+  SAY NAME1 ~奥克斯利~
+  SAY NAME2 ~奥克斯利~
 
 COPY ~%MOD_FOLDER%/cre/C0KVNP06.cre~ ~override/C0KVNP06.CRE~
   WRITE_ASCII DEATHVAR ~C0KVNP06~ #32
   WRITE_ASCII DIALOG ~C0KVNP06~ #8
-  SAY NAME1 ~Thug~
-  SAY NAME2 ~Thug~
+  SAY NAME1 ~恶棍~
+  SAY NAME2 ~恶棍~
 
 COPY_EXISTING ~C0KVNP06.cre~ ~override/C0KVNP07.CRE~
   WRITE_ASCII DEATHVAR ~C0KVNP07~ #32
@@ -336,39 +336,39 @@ COPY_EXISTING ~C0KVNP06.cre~ ~override/C0KVNP07.CRE~
 COPY ~%MOD_FOLDER%/cre/C0KVNP08.cre~ ~override/C0KVNP08.CRE~
   WRITE_ASCII DEATHVAR ~C0KVNP08~ #32
   WRITE_ASCII DIALOG ~C0KVNP08~ #8
-  SAY NAME1 ~Mercenary~
-  SAY NAME2 ~Mercenary~
+  SAY NAME1 ~雇佣兵~
+  SAY NAME2 ~雇佣兵~
 
 COPY ~%MOD_FOLDER%/cre/C0KVDR01.cre~ ~override/C0KVDR01.CRE~
   WRITE_ASCII SCRIPT_OVERRIDE ~C0KVDR01~ #8
   WRITE_ASCII DEATHVAR ~C0KVDR01~ #32
   WRITE_ASCII DIALOG ~C0KVDR01~ #8
-  SAY NAME1 ~Musaj Zaer'iyon~
-  SAY NAME2 ~Musaj Zaer'iyon~
+  SAY NAME1 ~穆萨吉·扎尔伊昂~
+  SAY NAME2 ~穆萨吉·扎尔伊昂~
 
 COPY ~%MOD_FOLDER%/cre/C0KVDR02.cre~ ~override/C0KVDR02.CRE~
   WRITE_ASCII DEATHVAR ~C0KVDR02~ #32
   WRITE_ASCII DIALOG ~C0KVDR02~ #8
-  SAY NAME1 ~Jhan Zaer'iyon~
-  SAY NAME2 ~Jhan Zaer'iyon~
+  SAY NAME1 ~占·扎尔伊昂~
+  SAY NAME2 ~占·扎尔伊昂~
 
 COPY ~%MOD_FOLDER%/cre/C0KVDR03.cre~ ~override/C0KVDR03.CRE~
   WRITE_ASCII DEATHVAR ~C0KVDR03~ #32
   WRITE_ASCII DIALOG ~C0KVDR03~ #8
-  SAY NAME1 ~Androsz Zaer'iyon~
-  SAY NAME2 ~Androsz Zaer'iyon~
+  SAY NAME1 ~安德罗兹·扎尔伊昂~
+  SAY NAME2 ~安德罗兹·扎尔伊昂~
 
 COPY ~%MOD_FOLDER%/cre/C0KVDR04.cre~ ~override/C0KVDR04.CRE~
   WRITE_ASCII DEATHVAR ~C0KVDR04~ #32
   WRITE_ASCII DIALOG ~C0KVDR04~ #8
-  SAY NAME1 ~Champion of Selvetarm~
-  SAY NAME2 ~Champion of Selvetarm~
+  SAY NAME1 ~塞尔维塔姆的勇士~
+  SAY NAME2 ~塞尔维塔姆的勇士~
 
 COPY ~%MOD_FOLDER%/cre/C0KVDR05.cre~ ~override/C0KVDR05.CRE~
   WRITE_ASCII DEATHVAR ~C0KVDR05~ #32
   WRITE_ASCII DIALOG ~C0KVDR05~ #8
-  SAY NAME1 ~Drow Assassin~
-  SAY NAME2 ~Drow Assassin~
+  SAY NAME1 ~卓尔刺客~
+  SAY NAME2 ~卓尔刺客~
 
 COPY_EXISTING ~GANTOL1.cre~ ~override~
   WRITE_ASCII SCRIPT_OVERRIDE ~GANTOL~ #8  //override script
@@ -401,7 +401,7 @@ APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   ~0x80101FEF CD_STATE_NOTVALID~
   UNLESS ~CD_STATE_NOTVALID~
 
-OUTER_SET gantolandan_1 = RESOLVE_STR_REF (~*sniff* Hngh...? Mff... *snoooore*~)
+OUTER_SET gantolandan_1 = RESOLVE_STR_REF (~*抽鼻* 嗯……？唔……*呼噜*~)
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/DLG/BC0KVEL.D~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/DLG/C0KVEL.D~

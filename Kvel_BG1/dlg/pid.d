@@ -1,248 +1,248 @@
 CHAIN IF ~IsGabber(Player1)~ THEN C0KVELJ PID
-~What is your command?~
+~你有什么吩咐？~
 END
-  ++ ~I have questions to ask you.~ + PID-ASK
-  ++ ~Something's wrong with your voice.~ + PID-STRINGFIX
-  ++ ~Nothing right now.~ EXIT
+  ++ ~我有话要问你。~ + PID-ASK
+  ++ ~你的声音有点不对。~ + PID-STRINGFIX
+  ++ ~眼下没什么。~ EXIT
 
 CHAIN C0KVELJ PID-ASK
-~Ask. I promise no answers.~
+~问吧。我不许诺给答案。~
 END
   + ~Global("C0KvelBG1Background","GLOBAL",1)
-    Global("C0KvelBG1Blooding","GLOBAL",0)~ + ~You mentioned the Blooding. What is it?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+    Global("C0KvelBG1Blooding","GLOBAL",0)~ + ~你提过血礼。那是什么？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                             IncrementGlobal("C0KvelBG1Blooding","GLOBAL",1)~ + PID-BLOODING
   + ~Global("C0KvelBG1Background","GLOBAL",1)
      Global("C0KvelBG1Blooding","GLOBAL",1)
      OR(3)
      Global("C0KvelBG1Blooding1","GLOBAL",0)
      Global("C0KvelBG1Blooding1","GLOBAL",0)
-     Global("C0KvelBG1Blooding1","GLOBAL",0)~ + ~Tell me more about the Blooding.~ + PID-BLOODING-Q
+     Global("C0KvelBG1Blooding1","GLOBAL",0)~ + ~再说说血礼。~ + PID-BLOODING-Q
   + ~Global("C0KvelBG1Background","GLOBAL",1)
-     Global("C0KvelBG1Eryndlyn","GLOBAL",0)~ + ~Tell me about Eryndlyn.~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+     Global("C0KvelBG1Eryndlyn","GLOBAL",0)~ + ~说说埃林德林。~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                             IncrementGlobal("C0KvelBG1Eryndlyn","GLOBAL",1)~ + PID-ERYNDLYN
-  + ~Global("C0KvelAngeloTorture","GLOBAL",4)~ + ~Why did you let Angelo torture you?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelAngeloTorture","GLOBAL",4)~ + ~你为什么任安杰洛折磨你？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                            SetGlobal("C0KvelAngeloTorture","GLOBAL",5)~ + PID-TORTURE
-  + ~Global("C0KvelDrizzt","GLOBAL",1)~ + ~You've met Drizzt. What are your thoughts on him?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelDrizzt","GLOBAL",1)~ + ~你见过崔斯特。你怎么看他？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                   SetGlobal("C0KvelDrizzt","GLOBAL",2)~ + PID-DRIZZT
-  + ~Global("C0KvelPIDDrowLanguage","GLOBAL",0)~ + ~Why is it I almost never hear you speak your language?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelPIDDrowLanguage","GLOBAL",0)~ + ~怎么我几乎从没听你说你自己的语言？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                                 SetGlobal("C0KvelPIDDrowLanguage","GLOBAL",1)~ + PID-LANGUAGE
-  + ~Global("C0KvelPIDMuscles","GLOBAL",0)~ + ~I don't see many elves of your physique. You must be around six feet tall, and you have almost the musculature of a dwarf.~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelPIDMuscles","GLOBAL",0)~ + ~我没见过几个你这样的精灵。你该有六尺高，肌肉几乎像矮人。~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
    SetGlobal("C0KvelPIDMuscles","GLOBAL",1)~ + PID-MUSCLES
-  + ~Global("C0KvelPIDCooking","GLOBAL",0)~ + ~I didn't think you were the type to be a gourmet. What's the story behind that?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelPIDCooking","GLOBAL",0)~ + ~我倒没想到你是讲究吃食的那类人。这背后有什么故事？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                                    SetGlobal("C0KvelPIDCooking","GLOBAL",1)~ + PID-COOKING
-  + ~Global("C0KvelPIDMage","GLOBAL",0)~ + ~How did you learn arcane magic when you're primarily a swordsman?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelPIDMage","GLOBAL",0)~ + ~你以剑术为主，怎么学的奥术？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                                    SetGlobal("C0KvelPIDMage","GLOBAL",1)~ + PID-MAGIC
-  + ~Global("C0KvelPIDThief","GLOBAL",0)~ + ~You know a lot about poisons. How did you come by this knowledge?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelPIDThief","GLOBAL",0)~ + ~你对毒知道得不少。这知识你从哪儿来的？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                                    SetGlobal("C0KvelPIDThief","GLOBAL",1)~ + PID-THIEF
-  + ~Global("C0KvelPIDEcthel","GLOBAL",0)~ + ~How did you and Ecthel start working together?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelPIDEcthel","GLOBAL",0)~ + ~你和埃克瑟尔是怎么开始共事的？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                   SetGlobal("C0KvelPIDEcthel","GLOBAL",1)~ + PID-ECTHEL
-  + ~Global("C0KvelPIDHelmet","GLOBAL",0)~ + ~Why don't you wear a full-face helmet all the time now?~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelPIDHelmet","GLOBAL",0)~ + ~你怎么如今不总戴着全罩的头盔了？~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                            SetGlobal("C0KvelPIDHelmet","GLOBAL",1)~ + PID-HELMET
-  + ~Global("C0KvelBG1Event","GLOBAL",13) Global("C0KvelPIDAndrosz","GLOBAL",0)~ + ~Tell me about Androsz.~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
+  + ~Global("C0KvelBG1Event","GLOBAL",13) Global("C0KvelPIDAndrosz","GLOBAL",0)~ + ~说说安德罗兹。~ DO ~IncrementGlobal("C0KvelBG1TalkOptions","GLOBAL",1)
                                                                                                                 SetGlobal("C0KvelPIDAndrosz","GLOBAL",1)~ + PID-ANDROSZ
-  + ~GlobalGT("C0KvelBG1TalkOptions","GLOBAL",7) Global("C0KvelBG1Talkative","GLOBAL",0)~ + ~I'm surprised by you, K'Vel. I thought you'd be less forthcoming when it comes to conversation.~ DO ~SetGlobal("C0KvelPIDAndrosz","GLOBAL",1)~ + PID-TALKATIVE
-  ++ ~Never mind. I don't have anything to ask.~ EXIT
+  + ~GlobalGT("C0KvelBG1TalkOptions","GLOBAL",7) Global("C0KvelBG1Talkative","GLOBAL",0)~ + ~你叫我吃惊，克维尔。我以为你在谈话上不会这么肯说。~ DO ~SetGlobal("C0KvelPIDAndrosz","GLOBAL",1)~ + PID-TALKATIVE
+  ++ ~算了。我没什么要问的。~ EXIT
 
 CHAIN C0KVELJ PID-BLOODING
-~The coming of age ritual for an adolescent drow. You are sent into the tunnels of the Underdark along with a captured surfacer, with only one weapon of your choice to protect you.~
-= ~There are no rules, whether spoken or otherwise, other than to survive and bring proof of your kill to your matron mother. Fail, and you die one way or the other.~
+~那是卓尔少年成年的礼。你被送进幽暗地域的隧道里，随行一个被掳的地表人，只带你自选的一件兵器护身。~
+= ~没有规矩，不管明说还是别的，除了活下来，并把你杀死的凭据带回给你主母。败了，你横竖都得死。~
 END
-  ++ ~That sounds horribly cruel.~ + PID-BLOODING-1
-  ++ ~Which is the intended prey? The drow or the surfacer?~ + PID-BLOODING-2
-  ++ ~Sounds reasonable. Kill or be killed. A good lesson to learn early.~ + PID-BLOODING-1
+  ++ ~这听着凶残得可怕。~ + PID-BLOODING-1
+  ++ ~那谁是预定的猎物？卓尔还是地表人？~ + PID-BLOODING-2
+  ++ ~听着有道理。杀或被杀。早点学到这一课也好。~ + PID-BLOODING-1
 
 CHAIN C0KVELJ PID-BLOODING-1
-~No doubt. Drow accept the Blooding as proof of their ability to survive a cruel society. None would ever consider what it costs them, or whether it is worth it.~
+~无疑。卓尔把血礼当作自己能在这残酷社会活下来的凭证。没人会去想它要他们付什么代价，或者值不值。~
 EXTERN C0KVELJ PID-BLOODING-3
 
 CHAIN C0KVELJ PID-BLOODING-2
-~That depends on the competence of the drow. Those who lack the drive to kill for survival are not expected to live.~
+~这得看那卓尔的本事。没那份为活命去杀的狠劲的，就不该指望活。~
 EXTERN C0KVELJ PID-BLOODING-3
 
 CHAIN C0KVELJ PID-BLOODING-3
-~In the end, however, it never matters what emerges from that tunnel. Almost inevitably, two have died within.~
+~可说到底，从那条隧道里出来的是什么，从来不打紧。几乎无可避免地，里头的两个都死了。~
 EXIT
 
 CHAIN C0KVELJ PID-BLOODING-Q
-~Very well, though you may not like what you learn.~
+~好，虽说你听了也许不欢喜。~
 END
-  + ~Global("C0KvelBG1Blooding1","GLOBAL",0)~ + ~Do all drow have to undergo the Blooding?~ DO ~SetGlobal("C0KvelBG1Blooding1","GLOBAL",1)~ + PID-BLOODING-Q1
-  + ~Global("C0KvelBG1Blooding2","GLOBAL",0)~ + ~What was your Blooding like?~ DO ~SetGlobal("C0KvelBG1Blooding2","GLOBAL",1)~ + PID-BLOODING-Q2
-  + ~Global("C0KvelBG1Blooding3","GLOBAL",0)~ + ~You mentioned you had already killed before your Blooding. Can you tell me about that?~ DO ~SetGlobal("C0KvelBG1Blooding3","GLOBAL",1)~ + PID-BLOODING-Q3
+  + ~Global("C0KvelBG1Blooding1","GLOBAL",0)~ + ~所有卓尔都得经血礼么？~ DO ~SetGlobal("C0KvelBG1Blooding1","GLOBAL",1)~ + PID-BLOODING-Q1
+  + ~Global("C0KvelBG1Blooding2","GLOBAL",0)~ + ~你的血礼是什么样的？~ DO ~SetGlobal("C0KvelBG1Blooding2","GLOBAL",1)~ + PID-BLOODING-Q2
+  + ~Global("C0KvelBG1Blooding3","GLOBAL",0)~ + ~你提过血礼之前就已杀过人。能说给我听么？~ DO ~SetGlobal("C0KvelBG1Blooding3","GLOBAL",1)~ + PID-BLOODING-Q3
 
 CHAIN C0KVELJ PID-BLOODING-Q1
-~It is expected. But some houses with authority may... exempt young drow they see potential in. Certainly not out of compassion, but if they pragmatically value the drow's life enough to stop them from partaking in such a dangerous ritual.~
-= ~Failing that, it is much more common for drow who favor certain children to bestow certain... unsanctioned advantages to them before the hunt. Few completely escape the matron mothers' notice, of course, but are overlooked, if they deem the forms of cheating sufficiently competent.~
-= ~I, however, was given no such privilege. It was my luck that my house's matron spared my life at all on the birthing table.~
+~这是该有的。可有些有权势的家族会……免去他们看出有潜力的少年卓尔。自然不是出于怜悯，而是他们务实到觉得这卓尔值得留命，不叫他去掺那般凶险的礼。~
+= ~免不了这个，就更常见的是：偏爱某个孩子的卓尔，会在猎杀前给他们些……未获准许的好处。自然，少有完全躲过主母眼睛的，可只要她们觉得那作弊的法子够高明，也就装没看见。~
+= ~可我，没得过这样的恩典。我家族的主母肯在产床上留我一命，就算我的运气。~
 EXIT
 
 CHAIN C0KVELJ PID-BLOODING-Q2
-~I had already made my peace with killing before my Blooding, though by circumstance rather than choice. So I felt no dread at what I was forced to do as I entered the Underdark's depths, only my chances of survival.~
-= ~My hunt was a dwarf captured from a prior war fought between the Upperdark and the surface plains. Past his prime, and blind in one eye, but still strong and not to be underestimated. We encountered each other near the first day's end. I had already broken the blade I took with me against a hook horror's exoskeleton at that time, and carried naught but what remained with the handle. He held only a rock carved into a sharp tip.~
-= ~I was fatigued, demoralized, and most of all, hungry beyond comprehension, and I have no doubt my quarry felt the same. Neither of us felt the drive to battle, nor face potential death in our states, so we fled from each other as though making an unspoken agreement.~
-= ~For the next two days, I foraged, hunted, and set up traps before I rested to alert me should the dwarf attempt to strike me while I was unaware. Yet I never saw him until, out of impatience, I explored the caverns to try and end the tiresome hunt.~
-= ~Eventually, I found him sitting at one of the nearby rivers, by all appearances completely vulnerable. He held a makeshift rod made from carved bone and spider thread, and was humming while reeling in fish one at a time.~
-= ~I wondered if the dwarf was a fool. He was undoubtedly going to die here, regardless of how much food he prepared—did he not know or care? I did not trust it, and so I did not take the seemingly welcome opportunity. Instead, I observed. Soon, I had watched him long enough to remember every part of his technique. He did not move from his position the entire time, and so I turned away and left for my camp, and he did not respond.~
-= ~The next day, I returned to his fishing spot, and found him pinned under the jaws of a giant cave fisher, wrestling against its pincers in a futile attempt to save himself. I did not want the creature to take away my prey, and so I attacked it, burying my broken sword in its eye and forcing it to retreat.~
-= ~After that, the dwarf and I looked upon each other, and we knew the inevitable had come. We fought. I had no weapon, and he was already wounded and exhausted. Both of us struggled in a desperate, ugly brawl attempting to claw for survival.~
-= ~In the end, I was barely victorious. As I began to limp away, I heard him cough, and realized he was still alive. He pointed—using his middle finger as I had severed his pointer as proof of the kill—not at me, but at the dying fire nearby, with skewered fish grilling atop it.~
-= ~We could not understand each others' words, but I understood his wish for a final meal. With any sense of threat gone from my opponent, I obliged him. I took one of the fish for myself, and held the other to the dwarf's mouth.~
-= ~It was poorly cooked and lacked flavor, but still preferable to anything I had eaten in those few days. And when I watched the dwarf devouring his own share, bones and all, I thought it seemed the most extraordinary delicacy to him. And then, finally, he went silent.~
-= ~I left the caverns that day with many questions. Of why the dwarf chose to spend his last days in such a manner, of what he felt towards me, his killer, or what he was thinking while consuming the last meal before his death. And, knowing the other drow only consider these musings a sign of weakness, I kept it toward buried deep within me for the rest of my life.~
-= ~That is the story of my Blooding, <CHARNAME>. I do not often tell stories, but such is the nature of drow, and of those who are a victim of their cruel games. What you see of me is merely a fortunate survivor, and for all these years, that has never changed.~
+~血礼之前我就已与杀戮和解了，不过是情势所迫，不是自己挑的。所以我进幽暗地域深处时，对自己不得不做的事并无惧意，只想着活命的成算。~
+= ~我要猎的是个矮人，从前上幽暗与地表平原那边一场仗里掳来的。过了壮年，一只眼瞎了，可仍强壮，不可小看。我们头一日将尽时撞上了。那时我带去那把刀已在砍一只钩恐兽的外壳时崩了，手里只剩刀柄剩的那点。他只握着一块磨出尖的石头。~
+= ~我又疲又丧，最要紧的是饿得不成样子，我毫不怀疑我那猎物也一样。我们俩都没那份心思打，也没那个底气在如今这状态里冒死的险，于是彼此逃开，像达成了一场不言的约。~
+= ~接下来两日，我采食、猎捕、设陷阱，然后才歇，好叫万一那矮人趁我不备来下手时能警醒我。可我一直没见着他，直到我不耐烦了，去探那些洞窟，想把这累人的猎事做个了结。~
+= ~末了我找着他，坐在近处一条河边，看模样全然没有防备。他手里一根用刻骨与蛛丝做的临时钓竿，一边哼着，一边一条一条地把鱼拉上来。~
+= ~我倒想这矮人是不是个傻子。他无疑要死在这儿了，不管他备多少吃食——他不知道，还是不在乎？我不信这个，所以没去接那看着正好的机会。我只是看着。不多时，我看得够久，把他的手法每一处都记住了。他全程没离那位置，于是我转身回了我的营地，他也没反应。~
+= ~第二日，我回到他钓鱼那处，却见他被一只洞穴巨渔的钳子压在底下，正挣着命跟那钳爪搏，徒劳地想救自己。我不愿让那东西夺了我的猎物，就攻了上去，把断剑扎进它眼里，逼它退了。~
+= ~之后，那矮人与我对视，我们都知道躲不掉的事来了。我们打了。我没有兵器，他已然受伤力竭。我们俩在绝望难看的扭打里挣扎，都想抓住活命。~
+= ~末了我勉强胜了。我正要瘸着走开，听见他咳了一声，才知他还活着。他抬手指——用中指，因为我割了他的食指当杀的凭据——不是指我，而是指旁边那堆将熄的火，上头烤着串好的鱼。~
+= ~我们听不懂彼此的话，可我懂他想要最后一顿饭。对手身上已无半点威胁的意思，我就依了他。我拿了一条鱼给自己，把另一条送到那矮人嘴边。~
+= ~那鱼做得差，也没什么味，可仍比那几日我吃过的任何东西都好。而我看着那矮人连骨带肉吞自己那份时，觉得那于他像是天底下最出奇的美味。然后，他终于没了声息。~
+= ~那一日我带着许多疑问离开那些洞窟。那矮人为什么选这样度过最后几日，他对我这杀他的人是什么感觉，或者他吃死前最后一顿饭时在想什么。而知道别的卓尔只把这类念头当作软弱的迹象，我把它深埋在心里，此后一生都未曾说出。~
+= ~这就是我血礼的故事，<CHARNAME>。我不常说故事，可卓尔的本性就是这样，他们那残酷把戏的受害者也是。你看见的我，不过是个走运活下来的人，这些年，这一点从没变过。~
 EXIT
 
 CHAIN C0KVELJ PID-BLOODING-Q3
-~As you wish, though it is no grand tale.~
-= ~You see clearly for yourself that I am larger and stouter than most elves. That has been true ever since my youth, and because of it, I could not find myself comfortable in the training weapons I had at my disposal, as they were meant for children smaller than myself.~
-= ~I knew there was one weapon that could suit me, however. My elder brother Tae'lyon's bastard sword, which I had watched him wield in the training field time and again. Though I feared his reprisal, I could not stop myself from breaking into his room while he was absent and taking the sword.~
-= ~Despite intending to put it back in its place before anyone realized, I became lost in my affinity with its balance and weight. It suited me perfectly, and I could not bring myself to let it go. Eventually, Tae'lyon found me, and was enraged by the theft.~
-= ~He attacked me. It was the first time I had fought a drow that far above my age and experience. Only the sword in my hands could protect me at that time, and after being knocked to the ground several times, I saw no choice but to trust in it.~
-= ~I closed my eyes and instinctively took a stance I had long practiced. I do not believe my brother had anticipated it. When I dared to look again, he had in his blind rage charged into his own blade and ran himself through. I had only intended to threaten my brother into pause, but instead, I killed him.~
-= ~The matron mother believed that I had slain him in a display of superior skill, and thus forgave my act of fratricide and granted me all of my dead brother's possessions. But at the end of that day, I found the closest pit I could and threw the bloodied sword into its depths. I could not bring myself to look upon it again.~
+~随你，虽说这算不上什么大故事。~
+= ~你自己看得清楚，我比多数精灵都高大壮实。自少年时就是如此，也正因如此，我在手边那些操练兵器里总觉不趁手，因为那些都是给比我小的孩子造的。~
+= ~可我知道有一件兵器能合我。我兄长泰利昂那把半手剑，我在操练场上见他一回回使过。虽说怕他报复，我还是忍不住趁他不在闯进他房里，把那剑拿走了。~
+= ~我本想趁人没发觉就放回去，可我沉在那剑的配重与分量里，越看越称手，怎么也舍不得放。末了泰利昂找着我，为这偷窃暴怒。~
+= ~他打我。那是我头一回跟一个年纪与阅历都远高于我的卓尔交手。那时能护我的只有手里这把剑，被击倒几回之后，我看除了信它别无选择。~
+= ~我闭上眼，本能地摆出一个练过许久的架势。我不信我兄长料到了。等我敢再睁眼时，他在盲目的暴怒里冲上了自己的剑锋，把自己穿了个透。我本只想威胁他停手，可我却杀了他。~
+= ~主母相信我是以高超的本事杀了他，因此宽恕了我这弑亲之举，还把我亡兄的产业全给了我。可那一日终了，我找着最近的一处深坑，把那沾血的剑扔了下去。我再没法让自己去看它一眼。~
 EXIT
 
 CHAIN C0KVELJ PID-ERYNDLYN
-~Eryndlyn is not like other drow cities. We are not dominated by the priestesses of Lolth, and followers of other faiths, Ghaunadaur the Lord of Slime and Vhaeraun the Masked Lord the most prominent, control equal levels of political power.~
-= ~However, it is the merchant clans who control the influx of resources, knowledge and items of power within the city, and thus they are the ones who truly rule in a sense. And thus, power within the city is distributed by wealth and business connections, and the matron mothers are closer to merchant lords than priestesses.~
-= ~That does not make the city any less dangerous. If anything, quite the contrary. Under the fealty of a single mistress, some semblance of solidarity can be found regardless of its impermanence. In Eryndlyn, you must find your benefactor to protect you, or you die. It is that simple.~
+~埃林德林与别的卓尔城不同。我们不受罗丝的女祭司们把持，别的教派的信徒——最显的是污泥之主格乌纳杜尔与蒙面之主维瑞恩——掌着同等的权柄。~
+= ~然而，把着城内资源、学识与法器流入的是那些商团，所以某种意义上真正统治的是他们。于是城里的权势按财富与生意人脉分派，主母们比起祭司，倒更近于商团领主。~
+= ~这并不叫这城少些凶险。真要说，恰恰相反。在一位主母的臣服之下，不管多不久长，总还能见着点齐心的模样。在埃林德林，你得寻着庇护你的人，不然就死。就这么简单。~
 EXIT
 
 CHAIN C0KVELJ PID-TORTURE
-~As I recall, he would have killed one of us on the spot if I had not distracted him. Which was only necessary because you allowed us to be captured.~
+~我记得，若不是我把他的注意引开，他当场就会杀我们中一个。而这之所以必要，全因为任我们被抓了。~
 END
-  ++ ~I thought we would be judged fairly.~ + PID-TORTURE-1
-  ++ ~What about your own life?~ + PID-TORTURE-2
-  ++ ~You're right. It was my mistake.~ + PID-TORTURE-3
+  ++ ~我以为我们会受公平裁断。~ + PID-TORTURE-1
+  ++ ~那你自己的命呢？~ + PID-TORTURE-2
+  ++ ~你说得对。是我的错。~ + PID-TORTURE-3
 
 CHAIN C0KVELJ PID-TORTURE-1
-~I understand the human belief in the fairness of justice, but considering the circumstances, your actions were foolish.~
+~我懂人类信裁断公平那一套，可照眼前的情形，你的举动是蠢的。~
 EXTERN C0KVELJ PID-TORTURE-3
 
 CHAIN C0KVELJ PID-TORTURE-2
-~It is not the... first time I have made myself vulnerable as bait to achieve my goal. Though never have I been part of a goal so stupid.~
+~这不是我头一回把自己当饵、露在险处去达目的。可我从没掺过这么蠢的目的。~
 EXTERN C0KVELJ PID-TORTURE-3
 
 CHAIN C0KVELJ PID-TORTURE-3
-~You are my employer, and it is not my place to judge you. But you had best understand the full consequences of your actions, no matter how well-intentioned they may seem.~
+~你是我的雇主，轮不到我来评判你。可你最好明白你举动的全部后果，不管它看着多出于好意。~
 EXIT
 
 CHAIN C0KVELJ PID-DRIZZT
-~He is a fortunate drow, I cannot deny. But only the later part of his life can truly be considered of his own making.~
+~我不能否认，他是个走运的卓尔。可只有他后半生，才真算他自己挣来的。~
 END
-  ++ ~What do you mean by that?~ + PID-DRIZZT-1
+  ++ ~这话什么意思？~ + PID-DRIZZT-1
 
 CHAIN C0KVELJ PID-DRIZZT-1
-~While I was still a servant of my house in Eryndlyn, I had journeyed to Menzoberranzan on business dealings. The tale of Drizzt Do'Urden is a suppressed bit of history, but I still learned some, and not all drow—male drow in particular—spoke his name in hushed curses.~
-= ~He has become recognized as a hero even among surfacers, but few truly understand the truth behind the life he was dealt. He was blessed by circumstance, spared from his mother when meant for death, born to the right father, raised by the right sister, and taught the right things to survive yet not give up his self-identity.~
-= ~A slightly fortunate drow may have one, perhaps a few such blessings. But at large, drow who resist the Spider Queen's yoke are rarely dealt such hands. More often, they are dead and forgotten.~
+~我还给我家族在埃林德林当差时，曾为些买卖去过魔索布莱。崔斯特·杜垩登那故事是一段被压下的史事，可我还是知道了一些，而并非所有卓尔——尤其卓尔男性——都会在压低的声音里咒着他的名。~
+= ~他连在地表人里都成了公认的英雄，可少有真懂他这一生被发的是什么牌。他蒙机缘眷顾：本该去死时被母亲放过，生对了父亲，被对的那个姐姐养大，又被教了对的东西，好活下来却没丢了自己。~
+= ~一个稍有运气的卓尔也许得着一样，或者几样这样的眷顾。可大体上，抗拒蜘蛛女王枷锁的卓尔，少有被发这样一手牌的。更多时候，他们死了，也被人忘了。~
 EXIT
 
 CHAIN C0KVELJ PID-LANGUAGE
-~I am speaking my language right now. It is also your language.~
+~我此刻说的就是我自己的语言。那也是你的语言。~
 END
-  ++ ~I meant the drow language.~ + PID-LANGUAGE-1
-  ++ ~So you would speak drow if necessary?~ + PID-LANGUAGE-2
-  ++ ~Fair enough.~ EXIT
+  ++ ~我指的是卓尔语。~ + PID-LANGUAGE-1
+  ++ ~所以必要时你会说卓尔语？~ + PID-LANGUAGE-2
+  ++ ~说得过去。~ EXIT
 
 CHAIN C0KVELJ PID-LANGUAGE-1
-~Would you gather any meaning from my words if I did?~
+~我若说，你能从我的话里听出什么来么？~
 END
-  ++ ~No, but I find other languages fascinating.~ + PID-LANGUAGE-3
-  ++ ~What if you spoke to a drow?~ + PID-LANGUAGE-2
-  ++ ~You don't feel the slightest comfort in falling back on your native tongue?~ + PID-LANGUAGE-4
+  ++ ~不能，可我觉得别的语言有意思。~ + PID-LANGUAGE-3
+  ++ ~那你若跟一个卓尔说话呢？~ + PID-LANGUAGE-2
+  ++ ~你退回母语时，就没一点自在么？~ + PID-LANGUAGE-4
 
 CHAIN C0KVELJ PID-LANGUAGE-2
-~If, on a rare day that I am required to negotiate with another drow rather than draw steel, then I see the possibility.~
+~若哪一日我稀罕到非得跟另一个卓尔谈、而不是拔刀，那我就看有这个可能。~
 EXIT
 
 CHAIN C0KVELJ PID-LANGUAGE-3
-~Then find a linguist. They will no doubt find conversation more meaningful.~
+~那去找个语言学者。他们无疑觉得谈话更有意思。~
 EXIT
 
 CHAIN C0KVELJ PID-LANGUAGE-4
-~I have lived on the surface for seven years. In that time, I have depended on the knowledge of Common for almost all time, while the drow language is but a memory. What sentiment might I hold for it?~
+~我在地表住了七年。那些年里，我几乎全靠通用语的知识过活，而卓尔语只是一段记忆。我对它能有什么情分？~
 END
-  + ~InParty("VICONIA")~ + ~Viconia still seems to depend on it greatly.~ + PID-LANGUAGE-5
-  ++ ~So you would speak drow to someone who only understands it?~ + PID-LANGUAGE-2
-  ++ ~I believe there's value in learning languages for its own sake.~ + PID-LANGUAGE-3
-  ++ ~You have a point. Let's leave it at that.~ EXIT
+  + ~InParty("VICONIA")~ + ~维康妮亚似乎还很依赖它。~ + PID-LANGUAGE-5
+  ++ ~所以你会跟一个只懂卓尔语的人说卓尔语？~ + PID-LANGUAGE-2
+  ++ ~我相信学语言本身就有价值。~ + PID-LANGUAGE-3
+  ++ ~你这话有理。就到这儿吧。~ EXIT
 
 CHAIN C0KVELJ PID-LANGUAGE-5
-~She is continuing to exist in denial.~
+~她还在自欺地活着。~
 EXIT
 
 CHAIN C0KVELJ PID-MUSCLES
-~It is uncommon. Almost unheard of, certainly. But possible. And its rarity works to my benefit.~
-= ~Few drow have the ability to wield greatswords such as mine with the limitations of their stature. And many have fallen in combat against me by that natural disadvantage.~
+~这不常见。甚至可说闻所未闻。可并非不可能。而它稀罕，正合我利。~
+= ~少有卓尔凭他们身量的限制，能使我这般的巨剑。许多卓尔就因这天生的劣势死在我手里。~
 EXIT 
 
 CHAIN C0KVELJ PID-COOKING
-~When living in a place where anyone might use food as a way to poison their rivals, learning the art is preferable to always keeping bottles of antidotes at hand.~
-= ~With that in mind, there is little reason not to treat cookery as a skill. It is no less complex or essential than swordsmanship.~
+~住在一个任何人都会拿吃食去毒对手的地方，学这门手艺，总比手边老备着几瓶解毒药好。~
+= ~这么想着，把烹饪当一门本事就没什么理由不可。它跟剑术一样复杂，也一样要紧。~
 EXIT 
 
 CHAIN C0KVELJ PID-MAGIC
-~All drow are expected to learn the basic understanding of magic. They have a choice on whether to cultivate their knowledge into a deeper craft.~
-= ~For some, it need not be immediate, so long as they keep their mind sharp, and study from the correct sources.~
+~所有卓尔都该学通魔法的基础。要不要把这知识养成更深的技艺，由他们自己挑。~
+= ~有些人不必马上，只要他们保持头脑利落，从对的源头学起。~
 EXIT 
 
 CHAIN C0KVELJ PID-THIEF
-~In Eryndlyn, you stand no chance of survival without some knowledge of poison, whether it is to create it, or protect yourself from the various forms of it.~
-= ~Otherwise, your death will not only be unavoidable, but excruciatingly painful. Most drow who have been foolish enough to make certain enemies become too afraid to eat. Some, to even freely breathe.~
+~在埃林德林，不懂些毒的知识就别想活——不管是制毒，还是防住各色各样的毒。~
+= ~不然，你的死不但躲不掉，还会痛得钻心。多数蠢到结下某些仇家的卓尔，会怕到不敢吃饭。有些连喘气都不敢自在。~
 EXIT 
 
 CHAIN C0KVELJ PID-ECTHEL
-~We... owed each other a respective debt. That alone would not be enough to ensure my loyalty, but I could ensure he was trustworthy, a rarity among surfacers for how quickly I gained that understanding.~
-= ~The foolishly honest type serve a valuable purpose.~
+~我们……彼此各欠一份情。单凭那不够保我的忠心，可我能确认他靠得住——就我弄明白这点的快法看，他在地表人里算稀罕。~
+= ~那种蠢到诚实的，有他的用处。~
 EXIT 
 
 CHAIN C0KVELJ PID-HELMET
-~My previous employer required it. You do not.~
+~我先前那位雇主要求如此。你不需要。~
 END
-  ++ ~My reputation still suffers by your presence, you know.~ + PID-HELMET-1
-  ++ ~So it was never for protecting yourself?~ + PID-HELMET-2
-  ++ ~What if I give you a new helmet?~ + PID-HELMET-3
+  ++ ~你知道么，有你在此，我的名声仍在受损。~ + PID-HELMET-1
+  ++ ~所以那从来不是为了护你自己？~ + PID-HELMET-2
+  ++ ~我若给你一顶新头盔呢？~ + PID-HELMET-3
 
 CHAIN C0KVELJ PID-HELMET-1
-~Yet it does not impede your purpose to the extent that it would a common merchant. You will survive.~
+~可它碍你的事，也碍不到一个寻常商人那个地步。你能活。~
 EXIT
 
 CHAIN C0KVELJ PID-HELMET-2
-~The helmet was a precaution to extend my service for as long as fate willed it. No matter how many measures I took to ensure none other discovered my identity, I knew it could always happen. And it did.~
+~那头盔是种防备，好叫我的效力拖到命数许我拖的时候。不管我布多少手段确保没别人发现我的身份，我知道那总会发生。而它发生了。~
 EXIT
 
 CHAIN C0KVELJ PID-HELMET-3
-~I will wear it for combat, of course. But do not expect me to keep it on always. Do you truly believe that old helmet was remotely comfortable?~
+~打起来我当然戴。可别指望我一直戴着。你真觉得那顶旧盔有一丁点舒服？~
 EXIT
 
 CHAIN C0KVELJ PID-ANDROSZ
-~Androsz is the secondboy of House Zaer'iyon, sixth house of Eryndlyn... as far as I remember. The status of drow houses shifts as often as the seasons on the surface.~
-= ~He is the weapons master now, I believe, which makes him the greatest swordsman of the house's males. And I do not doubt he may be the greatest swordsman in Eryndlyn.~
-= ~I suppose by surfacer standards, you could consider him my friend, though he considers our relationship an eternal rivalry. I have no longer any desire to entertain him, however... and so, perhaps there is little friendship left between us.~
+~安德罗兹是扎尔伊昂家的次子，埃林德林第六家……就我记得的。卓尔家族的位次变得跟地表的季节一样勤。~
+= ~我相信他如今是武器教习，那叫他成了这家男性里最强的剑客。我也不疑他也许是埃林德林最强的剑客。~
+= ~按地表人的标准，我想你可以当他是我朋友，虽说他把我们的关系当作一场无尽的对抗。可我如今没那份兴致去奉陪他……所以，也许我们之间也没剩多少朋友的情分了。~
 EXIT
 
 CHAIN C0KVELJ PID-TALKATIVE
-~Do not mistake that to believe I enjoy conversation. I have merely come to understand there is little benefit to withholding information of myself that cannot be used against me.~
+~别把这当成我爱说话。我只是渐渐明白：关于我自己的事，除非能被用来对付我，否则藏着没什么好处。~
 END
-  ++ ~Not much to be gained, either.~ + PID-TALKATIVE-1
-  ++ ~I thought drow would believe anything could be used against them.~ + PID-TALKATIVE-2
-  ++ ~Does that mean you trust me?~ + PID-TALKATIVE-3
+  ++ ~说出来也没什么好处。~ + PID-TALKATIVE-1
+  ++ ~我倒以为卓尔会觉得任何东西都能拿来对付自己。~ + PID-TALKATIVE-2
+  ++ ~那是不是说，你信我？~ + PID-TALKATIVE-3
 
 CHAIN C0KVELJ PID-TALKATIVE-1
-~In that you are wrong. Even the most insignificant of sentences can reveal much. Such as that you saw purpose in pointing out my seeming weakness.~
+~这一点你错了。就算最微不足道的一句话也能露许多事。比如：你觉得指出我这份看着的软肋是有目的的。~
 EXIT
 
 CHAIN C0KVELJ PID-TALKATIVE-2
-~With all forms self-preservation comes risk. That is where the fools who believe they can only trust themselves falter. When you keep everything close to yourself, you only leave yourself vulnerable to weaknesses others can see in your stead.~
+~凡是自保，都带着险。那些只信自己的蠢货就栽在这儿。你把一切都攥在近处，只叫自己露在别人替你看见的软肋上。~
 EXIT
 
 CHAIN C0KVELJ PID-TALKATIVE-3
-~I trust you enough to deliver information which I believe you may use to benefit rather than harm me. That does not mean I trust you fully.~
+~我信你到这个地步：肯给你我认为你会拿去利于我、而不是害我的消息。这不等于我全然信你。~
 EXIT
 
 CHAIN C0KVELJ PID-STRINGFIX
-~A coldpine drop will fix that easily enough.~
+~一滴冷杉露就能轻易解决这个。~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("C0KVFIX")~ EXIT

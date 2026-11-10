@@ -6,5 +6,5 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_NPC01","MYAREA",1)
-		DisplayStringHead("C0Kvel",~Magic itself is suffocated in this area. Fortunately, I still have my blade.~)  
+		DisplayStringHead("C0Kvel",~此地的魔法已被扼死。好在我还有这把剑。~)  
 END

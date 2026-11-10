@@ -9,7 +9,7 @@ THEN
 	RESPONSE #50  //Remove this if your NPC should say their line always
 		Continue() //Remove this if your NPC should say their line always
 	RESPONSE #50 //change this to #100 if your NPC should say their line always
-		DisplayStringWait("C0Kvel",~...I did not anticipate this when I signed my contract.~) 
+		DisplayStringWait("C0Kvel",~……我签契约时没料到会是这样。~) 
 	    SetGlobal("C0Kvel_bd_avernus_bark","bd4400",1)  
 		SmallWait(8)
 END

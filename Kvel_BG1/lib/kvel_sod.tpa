@@ -1,42 +1,42 @@
 COPY ~%MOD_FOLDER%/cre/C02Kvel.cre~ ~override~
-  SAY NAME1 ~K'Vel~
-  SAY NAME2 ~K'Vel~
+  SAY NAME1 ~克维尔~
+  SAY NAME2 ~克维尔~
   WRITE_ASCII 0x248 ~C02Kvel~ #8  //override script
   WRITE_ASCII 0x280 ~C0Kvel~ #32  //DV
   WRITE_ASCII 0x2cc ~C02Kvel~ #8   //pre-joining dialogue file
   WRITE_ASCII 0x34 ~C0KvelM~ #8   //small portrait
   WRITE_ASCII 0x3c ~C0KvelL~ #8   //medium portrait
-  SAY BIO ~When asked about his past, K'VEL tells you there are only three things that you need to know about him - first, that he was born in the drow city of Eryndlyn, second, that he no longer belongs there, and third, that he is now a sellsword making his living on the surface through any means necessary. What more you can tell of him is merely through observation.
+  SAY BIO ~问起他的过去，克维尔告诉你，关于他你只需知道三件事——第一，他生在卓尔城埃林德林；第二，他不再属于那里；第三，他如今是个雇佣剑客，在地表靠一切能用的法子过活。你还能看出什么，只能靠观察。
   
-Though primarily a swordsman by trade, K'Vel has nonetheless a passing knowledge of arcane magic and thievery that seems more learned by experience rather than study. You have read about the drow in your childhood, and though the drow mercenary is distant and self-reliant, he seems to lack most of the cruelty and arrogance expected of his kin, and approaches every situation with a calm, calculated awareness, as though nothing is ever completely beyond his expectations.
+他虽以剑客为业，对奥术与盗术却也有些浅识，看着更像从阅历里学来，而非读书所得。你幼时读过关于卓尔的书，而这卓尔雇佣兵虽疏离自恃，却似乎少有他同族该有的残忍与傲慢，面对一切情形都带着冷静、算计的警觉，仿佛从没有什么全然出乎他的预料。
   
-As an opportunist who seeks means of self-preservation, K'Vel has signed a contract as a sellsword to the Grand Dukes, offering his service in standing against the crusade and allowing him a degree of freedom against the typical scrutiny against the drow, though he does not expect it to last and believes your company to be an additional safety measure.~
-  SAY INITIAL_MEETING ~Hmm?~ [C0KV000]
-  SAY MORALE ~Not worth it!~ [C0KV001]
-  SAY LEADER ~Follow me.~ [C0KV002]
-  SAY TIRED ~Could use some rest.~ [C0KV003]
-  SAY BORED ~*sigh*~ [C0KV004]
-  SAY BATTLE_CRY1 ~Take 'em down!~ [C0KV005]
-  SAY BATTLE_CRY2 ~Let's go!~ [C0KV006]
+作为一个寻自保之法的投机者，克维尔与大公们签了一纸雇佣剑客的契约，献上效力去对抗圣战军，也借此得些自由，免遭对卓尔那通常的猜疑，虽说他并不指望这能长久，也相信你的队伍是另一样保命的法子。~
+  SAY INITIAL_MEETING ~嗯？~ [C0KV000]
+  SAY MORALE ~不值当！~ [C0KV001]
+  SAY LEADER ~跟我来。~ [C0KV002]
+  SAY TIRED ~该歇一歇了。~ [C0KV003]
+  SAY BORED ~*叹气*~ [C0KV004]
+  SAY BATTLE_CRY1 ~放倒他们！~ [C0KV005]
+  SAY BATTLE_CRY2 ~走！~ [C0KV006]
   SAY BATTLE_CRY3 ~~ [C0KV007]
   SAY DAMAGE ~~ [C0KV008]
   SAY DYING ~~ [C0KV009]
-  SAY HURT ~I'm bleeding.~ [C0KV010]
-  SAY SELECT_COMMON1 ~Hmm?~ [C0KV000]
-  SAY SELECT_COMMON2 ~Yeah?~ [C0KV011]
-  SAY SELECT_COMMON3 ~Huh?~ [C0KV012]
-  SAY SELECT_ACTION1 ~Sure.~ [C0KV013]
-  SAY SELECT_ACTION2 ~Right.~ [C0KV014]
-  SAY SELECT_ACTION3 ~Mm-hmm.~ [C0KV015]
-  SAY SELECT_ACTION4 ~Stop that.~ [C0KV016]
-  SAY CRITICAL_HIT ~Got 'em!~ [C0KV017]
+  SAY HURT ~我在流血。~ [C0KV010]
+  SAY SELECT_COMMON1 ~嗯？~ [C0KV000]
+  SAY SELECT_COMMON2 ~怎么？~ [C0KV011]
+  SAY SELECT_COMMON3 ~啊？~ [C0KV012]
+  SAY SELECT_ACTION1 ~好。~ [C0KV013]
+  SAY SELECT_ACTION2 ~行。~ [C0KV014]
+  SAY SELECT_ACTION3 ~嗯哼。~ [C0KV015]
+  SAY SELECT_ACTION4 ~别这样。~ [C0KV016]
+  SAY CRITICAL_HIT ~打中了！~ [C0KV017]
   SAY CRITICAL_MISS ~~ [C0KV018]
-  SAY TARGET_IMMUNE ~No good.~ [C0KV019]
-  SAY INVENTORY_FULL ~Can't move now.~ [C0KV020]
-  SAY SPELL_DISRUPTED ~That's not supposed to happen.~ [C0KV021]
-  SAY HIDDEN_IN_SHADOWS ~Keeping quiet.~ [C0KV022]
-  SAY REACT_TO_DIE_GENERAL ~Down by one!~ [C0KV023]
-  SAY PICKED_POCKET ~Found something.~ [C0KV024]
+  SAY TARGET_IMMUNE ~不成。~ [C0KV019]
+  SAY INVENTORY_FULL ~现在动不了。~ [C0KV020]
+  SAY SPELL_DISRUPTED ~这不该发生。~ [C0KV021]
+  SAY HIDDEN_IN_SHADOWS ~保持安静。~ [C0KV022]
+  SAY REACT_TO_DIE_GENERAL ~放倒一个！~ [C0KV023]
+  SAY PICKED_POCKET ~发现了什么。~ [C0KV024]
   
 APPEND ~bddialog.2da~
 ~C0Kvel        C02Kvel	C02KvelJ	C02KvelD~
@@ -45,14 +45,14 @@ UNLESS ~C0Kvel~
 COPY_EXISTING ~BDNOBM1.cre~ ~override/C0KVNOB1.CRE~
   WRITE_ASCII DEATHVAR ~C0KVNOB1~ #32
   WRITE_ASCII DIALOG ~C0KVNOB1~ #8
-  SAY NAME1 ~Lord Orfred Tonbottom II~
-  SAY NAME2 ~Lord Orfred Tonbottom II~
+  SAY NAME1 ~奥弗雷德·汤博顿二世领主~
+  SAY NAME2 ~奥弗雷德·汤博顿二世领主~
 
 COPY ~%MOD_FOLDER%/cre/C0KVDR03.cre~ ~override/C02ANDRO.CRE~
   WRITE_ASCII DEATHVAR ~C02ANDRO~ #32
   WRITE_ASCII DIALOG ~C02ANDRO~ #8
-  SAY NAME1 ~Androsz~
-  SAY NAME2 ~Androsz~
+  SAY NAME1 ~安德罗兹~
+  SAY NAME2 ~安德罗兹~
 
 COPY ~%MOD_FOLDER%/cre/C0KVDR03.cre~ ~override/C02ANDR2.CRE~
   WRITE_ASCII DEATHVAR ~C02ANDRO~ #32
@@ -62,8 +62,8 @@ COPY ~%MOD_FOLDER%/cre/C0KVDR03.cre~ ~override/C02ANDR2.CRE~
   WRITE_BYTE 0x46 ~-1~
   WRITE_BYTE 0x48 ~-1~
   WRITE_BYTE 0x52 12
-  SAY NAME1 ~Androsz~
-  SAY NAME2 ~Androsz~
+  SAY NAME1 ~安德罗兹~
+  SAY NAME2 ~安德罗兹~
 
 COPY_EXISTING ~BDCRUS5D.cre~ ~override/C02KVD01.CRE~
   WRITE_BYTE 0x24 0
@@ -74,36 +74,36 @@ COPY_EXISTING ~BDCRUE45.cre~ ~override/C02KVC01.CRE~
   WRITE_SHORT 0x27B ~19~
   WRITE_ASCII DEATHVAR ~C02KVC01~ #32
   WRITE_ASCII DIALOG ~C02KVC01~ #8
-  SAY NAME1 ~Crusader Leader~
-  SAY NAME2 ~Crusader Leader~
+  SAY NAME1 ~圣战军首领~
+  SAY NAME2 ~圣战军首领~
 
 COPY_EXISTING ~BDCRUZ30.cre~ ~override/C02KVC02.CRE~
   WRITE_SHORT 0x27B ~19~
   WRITE_ASCII DEATHVAR ~C02KVC02~ #32
   WRITE_ASCII DIALOG ~C02KVC02~ #8
-  SAY NAME1 ~Crusader~
-  SAY NAME2 ~Crusader~
+  SAY NAME1 ~圣战军士兵~
+  SAY NAME2 ~圣战军士兵~
 
 COPY_EXISTING ~BDCRUS95.cre~ ~override/C02KVC03.CRE~
   WRITE_SHORT 0x27B ~19~
   WRITE_ASCII DEATHVAR ~C02KVC03~ #32
   WRITE_ASCII DIALOG ~C02KVC03~ #8
-  SAY NAME1 ~Crusader~
-  SAY NAME2 ~Crusader~
+  SAY NAME1 ~圣战军士兵~
+  SAY NAME2 ~圣战军士兵~
 
 COPY_EXISTING ~BDCRUS96.cre~ ~override/C02KVC04.CRE~
   WRITE_SHORT 0x27B ~19~
   WRITE_ASCII DEATHVAR ~C02KVC04~ #32
   WRITE_ASCII DIALOG ~C02KVC04~ #8
-  SAY NAME1 ~Crusader~
-  SAY NAME2 ~Crusader~
+  SAY NAME1 ~圣战军士兵~
+  SAY NAME2 ~圣战军士兵~
 
 COPY_EXISTING ~BDCRUS96.cre~ ~override/C02KVS01.CRE~
   WRITE_SHORT 0x27B ~19~
   WRITE_ASCII DEATHVAR ~C02KVC04~ #32
   WRITE_ASCII DIALOG ~C02KVC04~ #8
-  SAY NAME1 ~Crusader~
-  SAY NAME2 ~Crusader~
+  SAY NAME1 ~圣战军士兵~
+  SAY NAME2 ~圣战军士兵~
 
 COPY_EXISTING ~BDFIST92.cre~ ~override/C02KVS01.CRE~
   WRITE_ASCII DEATHVAR ~C02KVS01~ #32
@@ -122,32 +122,32 @@ COPY_EXISTING ~BDWTR50.cre~ ~override/C02KVS04.CRE~
   WRITE_ASCII DIALOG ~C02KVS04~ #8
 
 COPY ~%MOD_FOLDER%/cre/C02KVM01.cre~ ~override~
-  SAY NAME1 ~Ablemarle~
-  SAY NAME2 ~Ablemarle~
+  SAY NAME1 ~阿贝尔玛尔~
+  SAY NAME2 ~阿贝尔玛尔~
   WRITE_ASCII 0x280 ~C02KVM01~ #32
   WRITE_ASCII 0x2cc ~C02KVM01~ #8
 
 COPY_EXISTING ~C02KVM01.ITM~ ~OVERRIDE~
-SAY NAME1 ~Coin~
-SAY NAME2 ~Ancient Coin~
-SAY DESC ~This large, weathered coin is of no sort that you recognize. According to K'Vel, however, should you give it over to any tavern within the Sword Coast or Amn, then he can somehow use it to track you regardless of distance.
+SAY NAME1 ~硬币~
+SAY NAME2 ~古旧硬币~
+SAY DESC ~这枚又大又旧的硬币，你认不出是哪一路的。可据克维尔说，你若把它交给剑湾或安姆境内任何一家酒馆，他就能靠它找到你，不管隔多远。
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~C02KVM02.ITM~ ~OVERRIDE~
-SAY NAME1 ~Gem~
-SAY NAME2 ~Elysium's Tear~
-SAY DESC ~This radiant crystal initially appears like a priceless gem. However, it is in fact a legendary remedy known as Elysium's Tear, a restorative harvested from Yggdrasil the World Tree in the Outer Realms. Its healing properties are said to be legendary, and it can bring even those on the brink of death back to perfect health.
+SAY NAME1 ~宝石~
+SAY NAME2 ~极乐之泪~
+SAY DESC ~这枚光润的水晶起初看着像颗无价的宝石。然而它其实是传说中一味灵药，叫极乐之泪，是从外位面那株世界之树尤格德拉希尔上采来的补剂。它的疗伤之力据说堪称传奇，连命悬一线的人也能被它救回完好的康健。
 
-Weight: 0~
+重量：0~
 
 ////////////////////////////////////////
 /////////JOURNAL////////////////////////
 ////////////////////////////////////////
 
-OUTER_SET %kvel_sod_journal_entry_reward% = RESOLVE_STR_REF (~Permanent Bonus: Unlimited Drow Bladeworks
+OUTER_SET %kvel_sod_journal_entry_reward% = RESOLVE_STR_REF (~永久加成：无限卓尔剑法
 
-The art of dual-wielding long blades is often considered clumsy and impractical by most practitioners of swordsmanship, with only rare examples such as the legendary Drizzt Do'Urden being known throughout the Realms. In the society of drow, however, where swordplay is as much about elegance as deadliness, such styles are far more common, and the many generations of perfecting such techniques have given them a wealth of exclusive knowledge of how to use a weapon in each hand to dazzle, intimidate, and ultimately slay your foe in a manner that is both beautiful and terrifying. By receiving some guidance from the blademaster Androsz Zaer'iyon, you have permanently gained a +1 bonus to THAC0 and a further +1 bonus to off-hand THAC0.~)
+双持长刃的法子，在多数剑术修习者看来往往既笨拙又不实用，全境之内只有寥寥几个例子广为人知，如那传奇的崔斯特·杜垩登。可在卓尔的社会里，剑术既求致命也求风致，这等路数远为常见，历代打磨这类技法的人，也积下了丰厚的独门知识：如何一手一剑地晃眼、威慑，末了以既好看又叫人生畏的法子杀掉对手。得剑术大师安德罗兹·扎尔伊昂些许指点，你永久获得命中 +1，副手命中另加 +1。~)
 
 ////////////////////////////////////////
 /////////DIALOGUE///////////////////////

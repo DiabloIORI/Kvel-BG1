@@ -10,13 +10,13 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelAjantis1","GLOBAL",0)~ THEN %AJANTIS_BANTER% C0KvelAjantis1
-~Stand in front of me where I can see you at all times, drow.~
+~站到我前面，让我随时看得见你，卓尔。~
 DO ~SetGlobal("C0KvelAjantis1","GLOBAL",1)~
-== BC0KVEL ~That would prove inconvenient for me to perform my role within this group, knight. I refuse.~
-== %AJANTIS_BANTER% ~This is not a request. I tolerate your presence only because Helm's all-seeing vision has yet to reveal any evil intent directed towards our allies, but I am prepared for that to change.~
-== %AJANTIS_BANTER% ~It would be the preferable outcome if it does not, but until then, I will never lower my vigilance around you. And that means keeping sight of your every action while on the road.~
-== BC0KVEL ~Do as you will, but do not expect me to restrain myself or alter my personal practice for your sake. I have cause to observe you as well, and mine is far more practical.~
-== %AJANTIS_BANTER% ~*sigh* Helm preserve me. This responsibility will be particularly difficult...~
+== BC0KVEL ~骑士，那样我没法在这队里尽我的职。我拒绝。~
+== %AJANTIS_BANTER% ~这不是请求。我容忍你在此，只因海尔姆无所不见的目光尚未显出你对盟友有半点恶意，但我已预备着它会变。~
+== %AJANTIS_BANTER% ~若不变，那是最好的结果。但在那之前，我在你身边绝不松懈警惕。也就是说，路上你的一举一动，我都得看着。~
+== BC0KVEL ~随你。但别指望我为你收束自己，或改了我的行事。我也有理由盯着你，而且我的理由实用得多。~
+== %AJANTIS_BANTER% ~*叹气* 海尔姆保佑我。这份担子会格外难……~
 EXIT
 
 CHAIN IF ~InParty("Ajantis")
@@ -28,18 +28,18 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelAjantis1","GLOBAL",1)~ THEN %AJANTIS_BANTER% C0KvelAjantis2
-~I have told you, drow. Remain where I can see you and be prepared for any unanticipated actions.~
+~我说过了，卓尔。留在我看得见的地方，随时预备着任何意料之外的举动。~
 DO ~SetGlobal("C0KvelAjantis1","GLOBAL",2)~
-== BC0KVEL ~...*sigh*~
-== BC0KVEL ~Indulge me in one curiosity. Is it that you in fact wish for me to betray the group, or perform some other vile act, so that your distrust might be validated?~
-== %AJANTIS_BANTER% ~Do not accuse me of such narrow and self-serving motives. Whatever you think of we 'surfacers', know that there are those who pay more than lip service to honor and virtue.~
-== BC0KVEL ~Then what is this?~
-== %AJANTIS_BANTER% ~...~
-== BC0KVEL ~Your honor and conviction, I do not doubt. They are your true sword and shield, which I can respect. The direction in which you point them... impulsive and inefficient. Perhaps instead of I, you should be looking within yourself.~
-== %AJANTIS_BANTER% ~I do not need lectures from a sellsword whose ethics were derived from a society in which survival at any personal sacrifice is the only thing to aspire to.~
-== BC0KVEL ~Fine. Philosophical debate is far from my interests regardless. Simpler things please me well enough. Eat. Though you seem to aspire to be a sleepless warden, for now you are still merely a mortal body.~
-== %AJANTIS_BANTER% ~This is... is it supposed to be edible?~
-== BC0KVEL ~Fearing poison? I'll give you time to think on it. That will likely keep for longer than you.~
+== BC0KVEL ~……*叹气*~
+== BC0KVEL ~容我好奇一问。你是当真盼我背叛这队人，或做出别的恶行，好让你的不信任得到印证么？~
+== %AJANTIS_BANTER% ~别拿这般狭隘自私的动机来指控我。你对我们这些“地表人”怎么看都行，可要知道，有人对荣誉与德行不只是嘴上说说。~
+== BC0KVEL ~那这算什么？~
+== %AJANTIS_BANTER% ~……~
+== BC0KVEL ~你的荣誉与信念，我不怀疑。它们是你真正的剑与盾，我敬重。只是你指向它们的那个方向……冲动而低效。也许你该看的不是我，而是你自己。~
+== %AJANTIS_BANTER% ~我不需要一个佣兵来训我——你那些操守，来自一个只以“不惜一切代价活命”为唯一追求的社会。~
+== BC0KVEL ~好。哲学辩论本就不在我兴趣之内。简单些的东西就已让我满意。吃吧。虽说你似乎想做个不眠的看守，眼下你到底还只是一具凡人的身子。~
+== %AJANTIS_BANTER% ~这……这东西是给人吃的？~
+== BC0KVEL ~怕有毒？我给你时间慢慢想。它大概比你耐放得多。~
 EXIT
 
 CHAIN IF ~InParty("Ajantis")
@@ -51,21 +51,21 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelAjantis1","GLOBAL",2)~ THEN BC0KVEL C0KvelAjantis3
-~I was perhaps wrong, knight.~
+~骑士，我也许错了。~
 DO ~SetGlobal("C0KvelAjantis1","GLOBAL",3)~
-== %AJANTIS_BANTER% ~I am all ears.~
-== BC0KVEL ~Since our last debate, I have been reconsidering. It was unfair that called your judgment of me impulsive.~
-== %AJANTIS_BANTER% ~Then you admit you have ulterior motives? If so... I'm disappointed. I was beginning to believe you could be trusted.~
-== BC0KVEL ~Perhaps not so unfair. As I said, I reconsidered. You were truthful when you claimed you preferred that I could be trusted. Perhaps it is I have not been giving you the respect you deserve.~
-== BC0KVEL ~We do not look it, but I have the advantage of many years of experience and understanding of people. For your youth, you are more rational in your judgment than I had expected. You made your distrust clear to me, rather than hiding on it. That, I appreciate.~
-== BC0KVEL ~Despite our differences, Ajantis Ilvastarr, I believe we can co-operate effectively.~
-== %AJANTIS_BANTER% ~And this is what you truly believe?~
-== BC0KVEL ~For all I believe your ways are inbound towards struggle and disaster, I find straightforward and candid thinkers the most preferable to associate with.~
-== %AJANTIS_BANTER% ~Then we understand each other. I do not approve of all your methods, but your intent appears benign. By my honor, I will put you under no more scrutiny than any other companion. I hope we may work together to fulfill our roles from here on.~
-== BC0KVEL ~Acceptable.~
-== BC0KVEL ~I assume that as I have your trust, you ate the dried rothe on rye?~
-== %AJANTIS_BANTER% ~...I did, yes. It was nourishing.~
-== BC0KVEL ~Good enough.~
+== %AJANTIS_BANTER% ~我洗耳恭听。~
+== BC0KVEL ~自上次辩论，我一直在想。我说你对我的判断出于冲动，这不公平。~
+== %AJANTIS_BANTER% ~那么你承认自己另有所图？若真如此……我失望了。我刚开始信你可靠。~
+== BC0KVEL ~也许没那么不公平。我说过，我重想了。你说你更愿我能被信任，这话是真的。也许是我一直没给你应得的看重。~
+== BC0KVEL ~我们看着不像，可我有多年的阅历，也懂得看人。以你的年纪，你的判断比我预想的更讲理。你把不信任明明白白摆给我看，而不是藏着。这一点，我领情。~
+== BC0KVEL ~阿詹提斯·伊尔瓦斯，尽管我们不同，我相信我们能好好配合。~
+== %AJANTIS_BANTER% ~这是你的真心话？~
+== BC0KVEL ~尽管我认定你这条路通向挣扎与灾祸，我却最愿与直爽坦率的人共事。~
+== %AJANTIS_BANTER% ~那我们彼此明白了。你的法子我不尽赞同，可你的用意看来良善。以我的荣誉起誓，从今往后我对你的审视，不会多于对任何其他同伴。但愿我们自此各尽其职，同心协力。~
+== BC0KVEL ~可以接受。~
+== BC0KVEL ~既然我已得了你的信任，那你吃了黑麦上的干卓尔肉？~
+== %AJANTIS_BANTER% ~……吃了，是。很顶饱。~
+== BC0KVEL ~那就好。~
 EXIT
 
 // Alora
@@ -78,14 +78,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelAlora1","GLOBAL",0)~ THEN %ALORA_BANTER% C0KvelAlora1
-~Look, K'Vel, the sky is falling! Watch out!~
+~看，克维尔，天塌下来了！当心！~
 DO ~SetGlobal("C0KvelAlora1","GLOBAL",1)~
-== BC0KVEL ~...~
-== %ALORA_BANTER% ~Aw, you didn't look up even for a little bit. I heard that joke always works on drow.~
-== BC0KVEL ~Perhaps you have not heard that I *have* lived on the surface for several years now, halfling. I see your mind does not work with half the dexterity of your fingers.~
-== %ALORA_BANTER% ~I can live with that. My fingers are the fastest in all of the Sword Coast! If my mind is even half as fast, that'd still make me a quick thinker!~
-== BC0KVEL ~Yet I have not failed to catch you even once yet.~
-== %ALORA_BANTER% ~Those times were for charity!~
+== BC0KVEL ~……~
+== %ALORA_BANTER% ~唉，你连头都没抬一下。我听说这笑话对卓尔总灵。~
+== BC0KVEL ~半身人，也许你没听说，我在地表已经住了好几年。看来你的脑子转得还不及你手指一半灵巧。~
+== %ALORA_BANTER% ~这我受得住。我这双手是剑湾最快的！就算我脑子只有它一半快，那也算机敏了！~
+== BC0KVEL ~可我至今一次都没能逮住你。~
+== %ALORA_BANTER% ~那几回是让着你！~
 EXIT
 
 CHAIN IF ~InParty("Alora")
@@ -97,27 +97,27 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelAlora2","GLOBAL",0)~ THEN BC0KVEL C0KvelAlora2
-~Stop following me around.~
+~别再跟着我。~
 DO ~SetGlobal("C0KvelAlora2","GLOBAL",1)~
-== %ALORA_BANTER% ~No!~
-== BC0KVEL ~My position requires stealth and patience. Your ceaseless hopping about only serves to draw attention to me, which is harmful to us both in several ways.~
-== %ALORA_BANTER% ~But I don't want to stop until I make you laugh!~
-== BC0KVEL ~That will never happen.~
-== %ALORA_BANTER% ~I'll make it happen!~
-== BC0KVEL ~For a rogue you are the very inverse of subtlety. What must I do to make you cease, save for a shallow feigning of good humor?~
-== %ALORA_BANTER% ~Hmm... now you've got me thinking... I got it! Tell me a joke, and if it makes me laugh, I'll leave you alone for as long as you like!~
-== BC0KVEL ~Ask something else.~
-== %ALORA_BANTER% ~Nope! No takebacks here! You're all about that "honoring the contract" stuff, now cough up! One joke, or I keep on annoying you!~
-== BC0KVEL ~*sigh*~
-== BC0KVEL ~...~
-== BC0KVEL ~Did you know that when illithids implant the tadpoles used for reproduction inside of a halfling, the process of ceremorphosis takes merely half the time, making them the devourers' favorite prey?~
-== %ALORA_BANTER% ~...~
-== BC0KVEL ~...~
-== %ALORA_BANTER% ~...~
-== %ALORA_BANTER% ~Are we... really?~
-== BC0KVEL ~No. But it appears you did believe it. To fool people, that is how 'jokes' work, is it not?~
-== %ALORA_BANTER% ~NO! Jokes are supposed to be funny, and make everyone laugh, not... that! I'm staying far, far away from you, at least until I stop getting goosebumps!~
-== BC0KVEL ~Silence at last.~
+== %ALORA_BANTER% ~不！~
+== BC0KVEL ~我的差事要隐秘，要耐性。你这样蹦来蹦去，只会把人引到我身上，这对我们俩都有好几样害处。~
+== %ALORA_BANTER% ~可我不把你逗笑，就不想停！~
+== BC0KVEL ~那永远不会发生。~
+== %ALORA_BANTER% ~我一定会办到！~
+== BC0KVEL ~以一个盗贼而论，你简直是“不露声色”的反面。除了假意装出几分好心情，我还得怎样才让你停下？~
+== %ALORA_BANTER% ~嗯……你倒让我动了脑子……有了！给我讲个笑话，若把我逗笑，我就随你意离开你多久都行！~
+== BC0KVEL ~换个要求。~
+== %ALORA_BANTER% ~不！不许收回去！你不是最讲“守信履约”那一套么，快说出来！一个笑话，不然我就接着烦你！~
+== BC0KVEL ~*叹气*~
+== BC0KVEL ~……~
+== BC0KVEL ~你可知，灵吸怪把繁殖用的小蝌蚪植进半身人体内时，蜕变过程只需一半时间，所以他们最中意的猎物就是半身人？~
+== %ALORA_BANTER% ~……~
+== BC0KVEL ~……~
+== %ALORA_BANTER% ~……~
+== %ALORA_BANTER% ~我们……真是这样？~
+== BC0KVEL ~不是。可你似乎真信了。要骗人，“笑话”就是这么使的，不是么？~
+== %ALORA_BANTER% ~不对！笑话该是好笑、让大家都笑的，不是……那种东西！我离你远远的，远到我不再起鸡皮疙瘩为止！~
+== BC0KVEL ~总算安静了。~
 EXIT
 
 // Baeloth
@@ -130,13 +130,13 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelBaeloth1","GLOBAL",0)~ THEN BBAELOTH C0KvelBaeloth1
-~My, but you're a brilliantly brobdingnagian brute, brother, aren't you? Are you perfectly positive that we are part of the same race?~
+~哎呀，你可真是个硕大无比的粗汉，兄弟，是不是？你十分确定我们属于同一个种族？~
 DO ~SetGlobal("C0KvelBaeloth1","GLOBAL",1)~
-== BC0KVEL ~I wish we were not.~
-== BBAELOTH ~Come now, show a little species solidarity! When this miserable mission is made history, would you care to sign another contract? I could use a heavyset hireling for my revival of the Black Pits.~
-== BBAELOTH ~It couldn't be any worse than serving under the yoke of the priestesses. I allow three square meals a day. And fine beds.~
-== BC0KVEL ~No.~
-== BBAELOTH ~*sigh* Oloth. And that settles it, then? Well, diplomacy is a slow, calculated process. I'll make you crack eventually.~
+== BC0KVEL ~我倒盼着我们不是。~
+== BBAELOTH ~来吧，讲点同族的义气！等这桩苦差成了往事，你愿不愿再签一份契约？我重开黑坑时，正缺个壮实的雇工。~
+== BBAELOTH ~那总不会比在祭司们的轭下当差更糟。我一天管三顿饱饭，还有好床。~
+== BC0KVEL ~不。~
+== BBAELOTH ~*叹气* Oloth。那就这么定了？唉，外交是个缓慢、算计的活。我早晚要叫你松口。~
 EXIT
 
 // Branwen
@@ -149,16 +149,16 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelBranwen1","GLOBAL",0)~ THEN %BRANWEN_BANTER% C0KvelBranwen1
-~The greatsword suits you, K'Vel. Few elves that I have met are blessed with a form as well-built as yours.~
+~巨剑配你，克维尔。我见过的精灵里，少有像你这样体格匀称的。~
 DO ~SetGlobal("C0KvelBranwen1","GLOBAL",1)~
-== BC0KVEL ~You are not wrong, Tempusite. Most drow are slight, even by the standards of elves. Rare do they have the choice to depend on raw strength as much as finesse.~
-== %BRANWEN_BANTER% ~Indeed. Even the mightiest berserkers of the north could turn red with envy over the your inherent gift. Little wonder you have become such a great warrior—'tis only a pity that you lack direction.~
-== BC0KVEL ~Seeking one to add to your flock, priestess? Perhaps I was wrong to appreciate your compliment.~
-== %BRANWEN_BANTER% ~The Lord of Battles judges not by breed nor upbringing, only zeal for warfare, which you have in abundance. Had you the stature of a halfling, I would treat you with equal respect so long as your sword arm is true.~
-== BC0KVEL ~And?~
-== %BRANWEN_BANTER% ~Why, no other god could fit your position in life more, no? I can see that you hold no loyalty to the Spider Queen, nor any other god to whom your kin speaks in prayer. What reason have you not to accept your calling?~
-== BC0KVEL ~I respect your strength and conviction, much as it is alien to me. But you suffer the same degree of myopia as any other priest I have known—that which spawns the belief that all actions are part of a greater purpose, even for the unwitting.~
-== BC0KVEL ~Though only the gods can decide whether you or I are right, I cannot hold the same belief. I trust in my sword and my knowledge, nothing more. And I have never regretted it.~
+== BC0KVEL ~你没说错，坦帕斯信徒。以精灵的标准看，卓尔多半瘦小。难得有哪个卓尔能选择像靠灵巧那样靠蛮力。~
+== %BRANWEN_BANTER% ~当真。就连北方最强的狂战士，也要为你的天赋眼红。难怪你成了这般了得的战士——只可惜你缺个方向。~
+== BC0KVEL ~祭司，你在给自己招人入伙？也许我夸你的好话，是夸错了。~
+== %BRANWEN_BANTER% ~战斗之主不以种族或教养论断人，只看对征战狂热与否，而这你有的是。就算你只有半身人的身量，只要你的剑臂不虚，我一样敬你。~
+== BC0KVEL ~然后呢？~
+== %BRANWEN_BANTER% ~哎呀，再没有别神更合你这处境了，不是么？我看你对蜘蛛女王并无忠心，对你族人祷告的任何神也都没有。你还有什么理由不接受你的天职？~
+== BC0KVEL ~我敬你的力量与信念，尽管它于我十分陌生。可你和我认识的任何祭司一样，都患着同一种短视——总以为一切举动都归于某个更大的目的，哪怕是出于无心之人。~
+== BC0KVEL ~你我谁对，只有神能定。可我信不了那一套。我只信我的剑和我的见识，别的都不信。而且我从未为此悔过。~
 EXIT
 
 // Coran
@@ -171,20 +171,20 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelCoran1","GLOBAL",0)~ THEN %CORAN_BANTER% C0KvelCoran1
-~Ah, K'Vel, my dark-hearted cousin. Were I to present your countenance to any elven maiden to whom I share acquaintance, they would assuredly label you as the least pleasing drow to have ever lived.~
+~啊，克维尔，我黑心的表亲。若我把你这副尊容呈给我相识的任何一位精灵少女，她们准会说你是古往今来最不讨喜的卓尔。~
 DO ~SetGlobal("C0KvelCoran1","GLOBAL",1)~
-== BC0KVEL ~Then it is fortunate for me that the affections of darthiir hold little importance in my heart.~
-== %CORAN_BANTER% ~I haven't finished! I'll excuse the vulgar diction, as I have understood you well enough to know that it is your way to irritate me into silence, but—~
-== BC0KVEL ~Enough... is what I would say if I did not know better. Get it over with.~
-== %CORAN_BANTER% ~*But* it is also true that from my long journeys in the human lands, I have known many dames with keen eyes that appreciate a larger, rougher sort of appeal, brimming with masculinity, and you certainly have that.~
-== BC0KVEL ~Your point?~
-== %CORAN_BANTER% ~All I want to suggest is, why not embrace what you were blessed with? You already have broken the perception many hold towards the drow... do you realize how much farther you could take it, were you to use your rare charms to the potential that they have?~
-== BC0KVEL ~And become a promiscuous, hedonistic layabout utterly barren of self-respect, such as yourself?~
-== %CORAN_BANTER% ~There's the insults again! Little wonder it is that my kin and all else have so little fondness for the drow, when you yourself are so fond of responding to even a helping hand with an ungrateful slap.~
-== BC0KVEL ~I know not what life you must have lived, but I have no doubt it has been an extreme of either gratification of emptiness.~
-== %CORAN_BANTER% ~My life certainly has been blessed with plenty of luck and beauty.~
-== BC0KVEL ~For the bare minimum of respect I have for your inept efforts at a peace offering, I will simply tell you that my own experience is that laying beside one whose intentions are unknown is a sure path to certain death.~
-== BC0KVEL ~Consider that my indifferent advice that may keep you from death one day.~
+== BC0KVEL ~那我倒算走运，darthiir 的青睐在我心里算不得什么。~
+== %CORAN_BANTER% ~我话还没说完！你那粗话我就饶了，因为我已经摸清你的路数——你就是想把我激到闭嘴，可是——~
+== BC0KVEL ~够了……若我不了解你，我就会这么说。快说完吧。~
+== %CORAN_BANTER% ~“可是”——我在人类地界长途行走这些年，也认得不少眼力好的女子，她们偏爱更魁梧、更粗犷的那一路，满是阳刚气，而你这方面确实有。~
+== BC0KVEL ~你想说什么？~
+== %CORAN_BANTER% ~我只想说，何不坦然受用上天给你的？你已破了众人对卓尔的一层成见……你可知道，若把你那罕见的魅力使到极处，你能走多远？~
+== BC0KVEL ~然后变成你这样滥情、纵欲、毫无自尊的浪荡子？~
+== %CORAN_BANTER% ~又来了，又是奚落！难怪我的族人和别人都不大待见卓尔——就连别人伸出的援手，你也偏要不知好歹地打回去。~
+== BC0KVEL ~我不知你过的是什么日子，但我毫不怀疑，那不是极度的纵情，就是极度的空虚。~
+== %CORAN_BANTER% ~我这辈子确实蒙了不少运气与美色。~
+== BC0KVEL ~看在你那点求和的心意上，我勉强给你一分敬意，就直说吧：以我的阅历，与意图不明之人同卧，是一条通向必死的路。~
+== BC0KVEL ~就当这是我一句冷淡的劝告，也许哪天能保你不死。~
 EXIT
 
 CHAIN IF ~InParty("Coran")
@@ -196,14 +196,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelCoran1","GLOBAL",1)~ THEN %CORAN_BANTER% C0KvelCoran2
-~Come now, K'Vel, smile a little. Surely, you cannot hate me so much that you find it preferable to maintain that irate visage.~
+~来吧，克维尔，笑一笑。你总不至于恨我到宁愿一直挂着这张怒脸吧。~
 DO ~SetGlobal("C0KvelCoran1","GLOBAL",2)~
-== BC0KVEL ~On the contrary, I do not hate you at all. I merely find you personally contemptible.~
-== %CORAN_BANTER% ~How is that any different?~
-== BC0KVEL ~I can at least appreciate that you appear to be 'attempting' to make peace, clumsy and imbecilic as your attempts are. That is more than I expect from most elves.~
-== %CORAN_BANTER% ~You are quite astute. Indeed, I find myself much more apt when it comes to charming the fairer sex, but I also believe in... what is it the humans say, those sedate types, "making love, not war"?~
-== BC0KVEL ~Yet you only seem to have mastered that term in the most literal sense. Even considering it 'mastery' is generous, if what I have heard is any indication.~
-== %CORAN_BANTER% ~Ah, a strike right where it hurts! I have never said this before, K'Vel, but out of all the enemies I have ever met, you are without a doubt my very favorite.~
+== BC0KVEL ~恰恰相反，我一点也不恨你。我只是觉得你这个人可鄙。~
+== %CORAN_BANTER% ~那有什么区别？~
+== BC0KVEL ~我至少还能认得出你在“试图”讲和，哪怕笨拙又愚蠢。这已超出我对多数精灵的指望。~
+== %CORAN_BANTER% ~你倒眼尖。确实，我在讨女人欢心这事上更在行，不过我也信……人类那句怎么说来着，那些稳重人讲的，“要做爱，不要战争”？~
+== BC0KVEL ~可你好像只把那话的字面意思学到手了。若我听到的那些话没错，把这算作“在行”，都算抬举。~
+== %CORAN_BANTER% ~啊，一击就打在痛处！这话我从没说过，克维尔，但我遇见的所有对头里，你无疑是我最喜欢的。~
 EXIT
 
 // Dorn
@@ -217,14 +217,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelDorn1","GLOBAL",0)~ THEN %DORN_BANTER% C0KvelDorn1
-~You are fighting for a lost cause, drow.~
+~卓尔，你在为一桩必败之事而战。~
 DO ~SetGlobal("C0KvelDorn1","GLOBAL",1)~
-== BC0KVEL ~Tell that to <CHARNAME>.~
-== %DORN_BANTER% ~*Your* cause. You believe by holding yourself up to a standard, you make yourself something more. It will not work. The shortsighted fools around you will still judge and persecute you.~
-== BC0KVEL ~And?~
-== %DORN_BANTER% ~Forget this charade of loyalty. If you seek self-preservation, take what you need by any means. Free yourself of your shackles, and find others of like mind. That is the way to survive.~
-== BC0KVEL ~That seemed to work out very well for you.~
-== %DORN_BANTER% ~I merely chose the wrong people. But I learned a valuable lesson—no one can ever be fully trusted. This time... I will be patient. Whether you are an ally or an enemy is yet to be seen.~
+== BC0KVEL ~这话去对<CHARNAME>说。~
+== %DORN_BANTER% ~“你”那桩事。你以为给自己立个标准，就让自己成了更高级的东西。那没用。你身边那些短视的蠢货照样会论断你、迫害你。~
+== BC0KVEL ~然后呢？~
+== %DORN_BANTER% ~丢开这套忠义的把戏。你若想自保，就尽手段去取你所需。挣脱你的镣铐，去找与你同心的人。那才是活法。~
+== BC0KVEL ~这法子于你倒挺灵。~
+== %DORN_BANTER% ~我只是选错了人。可我学到了一条可贵的教训——没有人能被完全信任。这一回……我会耐心。你是友是敌，还看不出来。~
 EXIT
 
 CHAIN IF ~InParty("Dorn")
@@ -236,12 +236,12 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelDorn2","GLOBAL",0)~ THEN BC0KVEL C0KvelDorn1
-~You are not half as clever as you believe to be, Dorn.~
+~多恩，你没自己以为的一半聪明。~
 DO ~SetGlobal("C0KvelDorn2","GLOBAL",1)~
-== %DORN_BANTER% ~Measure your next words carefully, drow.~
-== BC0KVEL ~It is the ignorance of youth showing, no doubt. Suffer a betrayal, cut a murderous path to life from death, and you believe you have learned. That you have become wise, and you know what it takes to survive. All you have learned is that you will not know when your death comes to you.~
-== %DORN_BANTER% ~And you believe yourself properly enlightened, do you? Tell me of your experiences, then, and perhaps I shall decide whether I deem you a worthy teacher. Though I doubt it.~
-== BC0KVEL ~I will spare us both the waste of time. Whether you live or die is of no concern to me.~
+== %DORN_BANTER% ~下一句话，掂量着说，卓尔。~
+== BC0KVEL ~这无疑是年少无知露了头。遭一场背叛，从死里劈出一条血路，你就以为学到了。以为自己变聪明了，知道活命要靠什么。你学到的只有一件事：你死到临头时，你不会知道。~
+== %DORN_BANTER% ~你倒觉得自己真开了窍，是不是？那就讲讲你的阅历，也许我再定夺你是否堪为人师。不过我怀疑。~
+== BC0KVEL ~省得我们俩白费工夫。你活你死，与我无关。~
 EXIT
 
 // Dynaheir
@@ -255,17 +255,17 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelDynaheir1","GLOBAL",0)~ THEN %DYNAHEIR_BANTER% C0KvelDynaheir1
-~Thou'rt of the city of Eryndlyn, art thou not?~
+~你是埃林德林城的人，是不是？~
 DO ~SetGlobal("C0KvelDynaheir1","GLOBAL",1)~
-== BC0KVEL ~Indeed. I have made no secret of that.~
-== %DYNAHEIR_BANTER% ~I have read lore of thy former home, the merchant city of the drow. The cults of Lolth, Ghaunadaur and Vhaeraun hold equal power, and their hatred for each other is only exceeded by that of the merchant lords who truly rule. Thy city exists in an everlasting power struggle.~
-== BC0KVEL ~No longer my city, and power struggles have always been the way of the drow. The only difference is that the banners visibly differ. That is all.~
-== %DYNAHEIR_BANTER% ~There is no denying that. But for whose banner didst thou fight under?~
-== BC0KVEL ~In other words, my faith? I have none.~
-== %DYNAHEIR_BANTER% ~I asked of thy banner, not thy faith. I understand that sometimes one must fight for a cause without faith.~
-== BC0KVEL ~...A little of each. Though never under the same name.~
-== %DYNAHEIR_BANTER% ~My intial impressions of thee were accurate, then.~
-== BC0KVEL ~That was then. If it is my loyalty you doubt, witch, you need only read the contract I signed. I have no better proof to offer you than that.~
+== BC0KVEL ~正是。我从没瞒这个。~
+== %DYNAHEIR_BANTER% ~我读过关于你故城的记载，那座卓尔商人之城。罗丝、格乌纳杜尔与维瑞恩的教派势力相当，他们彼此的憎恨，只输给真正掌权的商团领主。你那座城，永远陷在权势的争斗里。~
+== BC0KVEL ~那已不再是我的城，而权势争斗本就是卓尔的路数。唯一的区别是旗号明着不同。仅此而已。~
+== %DYNAHEIR_BANTER% ~这无可否认。可你为谁的旗号而战？~
+== BC0KVEL ~换句话说，我的信仰？我没有。~
+== %DYNAHEIR_BANTER% ~我问的是你的旗号，不是你的信仰。我明白，有时人须为一个信念而战，却并不相信它。~
+== BC0KVEL ~……各有一点。只是从来不在同一个名号之下。~
+== %DYNAHEIR_BANTER% ~那我最初对你的印象，看来没错。~
+== BC0KVEL ~那是从前。女巫，你若怀疑我的忠心，只须读我签的契约。我没有比这更好的凭证给你。~
 EXIT
 
 CHAIN IF ~InParty("Dynaheir")
@@ -277,15 +277,15 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelDynaheir2","GLOBAL",0)~ THEN %DYNAHEIR_BANTER% C0KvelDynaheir2
-~Who taught thee thy mastery of the Art, K'Vel?~
+~克维尔，是谁教你掌握了这门技艺？~
 DO ~SetGlobal("C0KvelDynaheir2","GLOBAL",1)~
-== BC0KVEL ~I am flattered that you might call my dabbling in the arcane anything resembling mastery.~
-== %DYNAHEIR_BANTER% ~Thy knowledge is unrefined, undoubtedly. Save for swordsmanship, thine skills are wielded as though tools of survival. Needed, but without attachment. But magic is not simply learned as one wishes it.~
-== BC0KVEL ~Is it not? I have read the scrolls. I remember the incantations. When needed, I can obfuscate my form and debilitate others, and I do so because it is useful. Why should my relationship with the Art go further than that?~
-== %DYNAHEIR_BANTER% ~Didst thou always treat that blade in your hands with as much dispassion? Thy act is well-practiced, but I do not believe so. One does not achieve such mastery without cause.~
-== %DYNAHEIR_BANTER% ~Once, thou didst dedicate thyself to a true art. Now, thou use things because they are convenient, no more.~
-== BC0KVEL ~And you find this concerning.~
-== %DYNAHEIR_BANTER% ~I pity thee. Thou lost something within thyself, and thy current act is built from despair in knowing it cannot be reclaimed. I only hope thy views on humanity is no more impassive.~
+== BC0KVEL ~你把我在奥术上的浅尝称作“掌握”，我受宠若惊。~
+== %DYNAHEIR_BANTER% ~你的知识固然未加打磨。除剑术之外，你的本事都像活命的工具那样使——要用，却无所依附。可魔法不是想学就能学成的。~
+== BC0KVEL ~不是么？我读过卷轴，记下咒文。需要时，我能隐去身形、削弱他人，我这么做只因它有用。我与这门技艺的关系，何必更进一步？~
+== %DYNAHEIR_BANTER% ~你握那把剑时，也一向这般冷淡么？你的功夫练得熟，可我不信。没有缘由，人成不了这般本事。~
+== %DYNAHEIR_BANTER% ~从前，你曾把自己献给一门真正的技艺。如今，你用东西只因它方便，仅此而已。~
+== BC0KVEL ~而你为此担忧。~
+== %DYNAHEIR_BANTER% ~我可怜你。你内里失了什么东西，而你如今的作为，是筑在知道自己再不能取回它的绝望之上。我只希望，你对人世之见不至于同样冷漠。~
 EXIT
 
 // Edwin
@@ -299,14 +299,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelEdwin1","GLOBAL",0)~ THEN BC0KVEL C0KvelEdwin1
-~Mage.~
+~法师。~
 DO ~SetGlobal("C0KvelEdwin1","GLOBAL",1)~
-== %EDWIN_BANTER% ~What! What do you want, drow? I was thinking! (Thinking of how best to deal with you if... yes, maybe... no, wait.)~
-== BC0KVEL ~You would do best to keep such thoughts in your head, where they belong. If you continue to assess threats from the wrong direction, you will certainly die from a cause you do not expect.~
-== %EDWIN_BANTER% ~So you say, so you say. But I cannot trust a man of unknown origin, especially one whose natural ability is being so impervious to magic. You may consider it paranoia, but for me, it is practical.~
-== BC0KVEL ~Think what you will. You should consider it fortunate that my responsibility includes ensuring your survival. Otherwise...~
-== %EDWIN_BANTER% ~"Otherwise"? (I knew it! The drow plots against me, most certainly! I must think of a strategy, quickly!)~
-== BC0KVEL ~...Forget it. By my observation, there is no more dangerous enemy to you than yourself.~
+== %EDWIN_BANTER% ~什么！你要什么，卓尔？我在想事！（在想若……是的，也许……不，等等，该怎么对付你最好。）~
+== BC0KVEL ~这种念头最好留在你脑子里，那才是它该在的地方。你若继续从错的方向估量威胁，必会死于一桩你料不到的缘由。~
+== %EDWIN_BANTER% ~你说，你说。可我信不过一个来历不明的人，尤其是天生就对魔法这般刀枪不入的。你可以当我多疑，于我，这是务实。~
+== BC0KVEL ~随你怎么想。你该庆幸，我的职责里也包括保你活命。否则……~
+== %EDWIN_BANTER% ~“否则”？（我就知道！这卓尔在算计我，绝对！我得赶紧想个对策！）~
+== BC0KVEL ~……算了。依我看，对你再没有比你自身更危险的敌人。~
 EXIT
 
 // Eldoth
@@ -320,13 +320,13 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelEldoth1","GLOBAL",0)~ THEN %ELDOTH_BANTER% C0KvelEldoth
-~I believe I feel a song coming up. The muse is upon me, I see the perfect subject.~
+~我觉得有首歌要来了。灵感正降于我，我已看见绝妙的题材。~
 DO ~SetGlobal("C0KvelEldoth1","GLOBAL",1)~
-== BC0KVEL ~...~
-== %ELDOTH_BANTER% ~"The Ugliest Drow To Have Ever Lived". It will surely be good for a few laughs, the dark elf that defied all expectations of beauty and grace, instead being cursed with the brawn to put a bull to shame...~
-== BC0KVEL ~...~ [C0KVSF2]
-== %ELDOTH_BANTER% ~Wh—hang on, where are you going? You are supposed to stand and listen!~
-== %ELDOTH_BANTER% ~Come back, right now! You cannot simply walk out of a conversation without a word! HEY!~
+== BC0KVEL ~……~
+== %ELDOTH_BANTER% ~“古往今来最丑的卓尔”。这准能博几声笑——这个暗精灵辜负了一切对美与优雅的期望，反被诅咒了一身足以叫公牛羞愧的蛮力……~
+== BC0KVEL ~……~ [C0KVSF2]
+== %ELDOTH_BANTER% ~什——等等，你去哪儿？你该站着听的！~
+== %ELDOTH_BANTER% ~回来，马上！你不能一句话不说就走出一场谈话！嘿！~
 EXIT
 
 CHAIN IF ~InParty("Eldoth")
@@ -338,14 +338,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelEldoth1","GLOBAL",1)~ THEN %ELDOTH_BANTER% C0KvelEldoth
-~As I've always said, life is all about appearance. In that respect, why even live if one is so hideous?~
+~我总说，人活一世全看相貌。既然如此，丑成这样，还活着做什么？~
 DO ~SetGlobal("C0KvelEldoth1","GLOBAL",2)~
-== BC0KVEL ~Why indeed.~
-== %ELDOTH_BANTER% ~Ah, you are talking to me this time? I had prepared myself to hear the graceless sounds of your distant footsteps once again.~
-== BC0KVEL ~I considered it. But against my wishes, your protection is regrettably part of my responsibility as well, and I have no need to make it harder standing from a distance. But that may change should you deem to begin singing any ridiculous songs of me.~
-== %ELDOTH_BANTER% ~You needn't worry on that end. The muse was lost. After the wordless insult you subjected me to, I have little desire to ever sing of your name even in mockery. But what's this about "protection"? The only thing I need protecting from is the kind of poor image you present to others by standing close to me.~
-== BC0KVEL ~Then you would prefer that I keep away. That is good. Should a stray arrow catch you deservedly in the throat, there was nothing I could have done.~
-== %ELDOTH_BANTER% ~*sigh* How utterly insufferable.~
+== BC0KVEL ~确实，做什么。~
+== %ELDOTH_BANTER% ~啊，这一回你倒跟我说话了？我已做好准备，再听一次你远去的脚步那粗陋声响。~
+== BC0KVEL ~我考虑过。可违我本愿，保你活命也在我职责之内，我没必要站在远处把这事弄得更难。不过你若打算唱什么关于我的荒唐歌子，那也许会变。~
+== %ELDOTH_BANTER% ~这方面你不必担心。灵感已失。你那样无声地羞辱我之后，我连拿你名字打趣都没什么兴致了。可这“保你”是怎么回事？我唯一需要防的，就是你站得离我太近，把你这副糟糕形象呈给别人看。~
+== BC0KVEL ~那你倒愿我离远些。很好。若有一支流矢该中你咽喉，我也无能为力。~
+== %ELDOTH_BANTER% ~*叹气* 真是难以忍受。~
 EXIT
 
 // Faldorn
@@ -358,14 +358,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelFaldorn1","GLOBAL",0)~ THEN %FALDORN_BANTER% C0KvelFaldorn1
-~I have watched you foraging for mushrooms and other wild growths, drow. Your technique is callous, and utterly uncaring towards the other beasts of the wild.~
+~卓尔，我见你采集蘑菇和别的野物。你的手法粗暴，对野地里的其他生灵全无顾惜。~
 DO ~SetGlobal("C0KvelFaldorn1","GLOBAL",1)~
-== BC0KVEL ~They will have to make do. I must also eat.~
-== %FALDORN_BANTER% ~And they, who have lived on the land for far longer than you have, do not deserve their own sustenance?~
-== BC0KVEL ~If they required it so desperately, I would not find it. In my experience, the land is more than generous.~
-== %FALDORN_BANTER% ~If empathy towards the wild will not persuade you, then perhaps practicality will. The method in which you cut is wasteful and an insult towards the Great Mother's bounty. You could gather even more of use with half the effort needed.~
-== BC0KVEL ~And you know better? ...But of course you do. Who do I think I'm speaking to?~
-== %FALDORN_BANTER% ~Watch your tone, or I shall withhold my wisdom. Pass me your knife, and I will show you the proper way.~
+== BC0KVEL ~它们得将就。我也得吃。~
+== %FALDORN_BANTER% ~而它们在这片地上活得比你久得多，就不配得自己那份食粮？~
+== BC0KVEL ~若它们真那么急需，我也寻不着。依我的阅历，这地丰饶得很。~
+== %FALDORN_BANTER% ~若对野物的怜惜说不动你，那也许实利能。你下刀的法子既浪费，又是对大地母亲恩赐的轻慢。用一半的气力，你能采到更多可用的。~
+== BC0KVEL ~你更懂？……可你当然更懂。我当我在跟谁说话？~
+== %FALDORN_BANTER% ~注意你的口气，不然我就不传你这智慧了。把你的刀递给我，我教你正道。~
 EXIT
 
 // Garrick
@@ -378,21 +378,21 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelGarrick1","GLOBAL",0)~ THEN %GARRICK_BANTER% C0KvelGarrick1
-~"Hmm, hmm-di-de-hm, we fight and then we pray, when we lose we run to fight another day..."~
+~“嗯，嗯—嘀—得—嗯，我们打完了就祷告，输了就跑，日后再战……”~
 DO ~SetGlobal("C0KvelGarrick1","GLOBAL",1)~
-== BC0KVEL ~Ministrel. Taste this.~
-== %GARRICK_BANTER% ~Hello, what's this? Some sort of candy? I say, I was feeling rather peckish.~
-== BC0KVEL ~A confection made with lemon juice, honey and coldpine sap, then hardened. I can hear the hoarseness of your voice—this will soothe it a little.~
-== %GARRICK_BANTER% ~Er... can I be sure this is safe to eat? You're being uncharacteristically generous.~
-== BC0KVEL ~Much as I hate to say it, your singing is important to boosting morale... but only if it sounds better than a croaking toad.~
-== %GARRICK_BANTER% ~I knew you weren't as surly as you look, dear K'Vel! This looks absolutely delectible. *chew* And it tastes sublime as well!~
-== %GARRICK_BANTER% ~Mmh... wait, what'sh... why'sh m'mouth... can't feel m'tongue!~
-== BC0KVEL ~Coldpine sap also contains a weak poison that causes numbness in your mouth until one has built up a tolerance for it.~
-== %GARRICK_BANTER% ~Mmm—mwwmhy?!~
-== BC0KVEL ~I did not lie when I claimed it would soothe your throat. I merely ommitted the other potential effects.~
-== %GARRICK_BANTER% ~Gah! Pfaugh! *spit* *spit*~
-== BC0KVEL ~If you must perform, do it with your instrument. The lute is barely tolerable. I could do with less of your voice to accompany it.~
-== %GARRICK_BANTER% ~M'gods! Y're absh'lutely atroshioush! Mmm! HMM!~
+== BC0KVEL ~吟游诗人。尝尝这个。~
+== %GARRICK_BANTER% ~咦，这是什么？某种糖？说起来，我正有点饿了。~
+== BC0KVEL ~柠檬汁、蜂蜜和冷松树脂熬成、再晾硬的甜食。我听得出你嗓子发哑——这能稍稍润一润。~
+== %GARRICK_BANTER% ~呃……我能确定这东西吃了没事？你这大方得不像你。~
+== BC0KVEL ~虽说我不愿承认，你的歌声对鼓舞士气确有要紧……但前提是它比癞蛤蟆叫好听些。~
+== %GARRICK_BANTER% ~我就知道你不如外表那么阴沉，亲爱的克维尔！这看着实在可口。*咀嚼* 味道也极好！~
+== %GARRICK_BANTER% ~嗯……等等，这是什……我的嘴怎么……舌头没知觉了！~
+== BC0KVEL ~冷松树脂里也含一种弱毒，会让嘴麻木，直到人吃出耐受为止。~
+== %GARRICK_BANTER% ~唔——唔什么？！~
+== BC0KVEL ~我说它能润你嗓子，并没有撒谎。我只是略去了别的可能效果。~
+== %GARRICK_BANTER% ~呃！呸！*吐* *吐*~
+== BC0KVEL ~要表演就用你的乐器。那鲁特琴勉强能听。你的嗓子陪着它，我宁可少听些。~
+== %GARRICK_BANTER% ~天哪！你真是太差劲了！嗯！嗯！~
 EXIT
 
 CHAIN IF ~InParty("Garrick")
@@ -404,16 +404,16 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelGarrick1","GLOBAL",1)~ THEN BC0KVEL C0KvelGarrick2
-~How's your tongue, bard?~
+~舌头怎么样了，诗人？~
 DO ~SetGlobal("C0KvelGarrick1","GLOBAL",2)~
-== %GARRICK_BANTER% ~Terrible, just terrible! I still can't taste things the way I used to! That was an awful prank you played on me!~
-== BC0KVEL ~You can enunciate again. That means you're fully recovered. Perhaps I should use a greater dosage of sap instead of honey.~
-== %GARRICK_BANTER% ~"Fully recovered"? Do you know what kind of torture it is to not be able to enjoy the rich flavors of food? Especially when you, surprising as it is, can so easily make such mouth-watering dishes using only the bounty of the earth!~
-== %GARRICK_BANTER% ~How is it *you* are not affected by those sweets, by the way? I've seen you munching on the things regularly without a hint of anything wrong.~
-== BC0KVEL ~As I said, one can build up a tolerance. And this is one of my favorites.~
-== %GARRICK_BANTER% ~Well... I can't deny that it's delicious, while you can still taste it...~
-== BC0KVEL ~Have another. I could do with the quiet.~
-== %GARRICK_BANTER% ~Er... no, thank you. I'm tempted, certainly, but my tongue is a valuable asset, and I'd rather not lose the ability to use it again.~
+== %GARRICK_BANTER% ~糟透了，简直糟透了！我到现在吃东西都不复从前的味道！你对我使的那个恶作剧太恶劣了！~
+== BC0KVEL ~你又能咬字了。这说明你已全然恢复。也许我该多放些树脂，少放些蜂蜜。~
+== %GARRICK_BANTER% ~“全然恢复”？你可知道，不能好好品尝食物的百般滋味，是怎样一种折磨？尤其是你自己——说来怪了——竟能只用大地的出产就做出那样叫人流口水的菜！~
+== %GARRICK_BANTER% ~对了，那些甜食怎么*你*吃了就没事？我常见你时常嚼那东西，一点毛病都没有。~
+== BC0KVEL ~我说过，耐受是可以养出来的。而且这是我最爱吃的之一。~
+== %GARRICK_BANTER% ~好吧……我不能否认它好吃，趁你还尝得出味的时候……~
+== BC0KVEL ~再来一个。我也乐得清静。~
+== %GARRICK_BANTER% ~呃……不，谢了。我确实动心，可我的舌头是宝贵的本钱，我宁可别再丢了用它的本事。~
 EXIT
 
 // Imoen
@@ -427,17 +427,17 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelImoen1","GLOBAL",0)~ THEN %IMOEN_BANTER% C0KvelImoen1
-~Can you cook me something, K'Vel, I'm hungry!~
+~你能给我做点吃的么，克维尔，我饿了！~
 DO ~SetGlobal("C0KvelImoen1","GLOBAL",1)~
-== BC0KVEL ~Wait for mealtime.~
-== %IMOEN_BANTER% ~But I'm hungry right now!~
-== BC0KVEL ~That is not my concern.~
-== %IMOEN_BANTER% ~But you always do the cooking for the group! Your food is so tasty, I'm always cleaning my bowl nowadays. Besides, you signed a contract with <CHARNAME>, so you have to follow orders.~
-== BC0KVEL ~<CHARNAME> is my current employer. I do not remember your name on the parchment.~
-== %IMOEN_BANTER% ~What's the difference? I may as well be <CHARNAME>'s sister. If I say something, <PRO_HESHE>'ll back it up, right? Always been like that.~
-== BC0KVEL ~You have precious little understanding of contracts. Begone, child.~
-== %IMOEN_BANTER% ~I'm dying here!~
-== BC0KVEL ~Call me again once you've properly died.~
+== BC0KVEL ~等吃饭的时候。~
+== %IMOEN_BANTER% ~可我现在就饿！~
+== BC0KVEL ~那不关我的事。~
+== %IMOEN_BANTER% ~可你总给全队做饭！你做的饭太好吃了，我现在顿顿都把碗刮干净。再说，你跟<CHARNAME>签了契约，就得听命令。~
+== BC0KVEL ~<CHARNAME>是我现在的雇主。那张羊皮纸上，我不记得有你的名字。~
+== %IMOEN_BANTER% ~有什么区别？我差不多就是<CHARNAME>的姐妹。我一开口，<PRO_HESHE>就会撑我，对吧？一向如此。~
+== BC0KVEL ~你对契约懂得极少。去吧，孩子。~
+== %IMOEN_BANTER% ~我要饿死了！~
+== BC0KVEL ~等你真死透了，再来叫我。~
 EXIT
 
 CHAIN IF ~InParty("%IMOEN_DV%")
@@ -449,15 +449,15 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelImoen2","GLOBAL",0)~ THEN %IMOEN_BANTER% C0KvelImoen2
-~K'Vel, why don't you ever speak drow?~
+~克维尔，你怎么从不说卓尔语？~
 DO ~SetGlobal("C0KvelImoen2","GLOBAL",1)~
-== BC0KVEL ~Would you understand me if I did?~
-== %IMOEN_BANTER% ~No...?~
-== BC0KVEL ~Then there is hardly a point.~
-== %IMOEN_BANTER% ~But it's such a beautiful-sounding language. Most of the phrases I've heard are awful when they're translated, sure, but I'd like to learn!~
-== BC0KVEL ~And do what, even if you mastered the language?~
-== %IMOEN_BANTER% ~Speak with other drow who are better talkers than you, for a start.~
-== BC0KVEL ~Then I am withholding the knowledge for your own safety.~
+== BC0KVEL ~我说了，你听得懂么？~
+== %IMOEN_BANTER% ~不……懂？~
+== BC0KVEL ~那就没什么意义。~
+== %IMOEN_BANTER% ~可这语言听起来多美。我听过的那些话翻出来多半很可怕，这我信，可我想学！~
+== BC0KVEL ~学了又做什么，就算你精通了这门语言？~
+== %IMOEN_BANTER% ~至少能跟别的、比你更会说话的卓尔聊。~
+== BC0KVEL ~那我更要瞒着这知识，为你自身的安全。~
 EXIT
 
 CHAIN IF ~InParty("%IMOEN_DV%")
@@ -469,23 +469,23 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelImoen3","GLOBAL",0)~ THEN %IMOEN_BANTER% C0KvelImoen3
-~Haa! "En garde"!~
+~哈！“预备——起”！~
 DO ~SetGlobal("C0KvelImoen3","GLOBAL",1)~
-== BC0KVEL ~...~
-== %IMOEN_BANTER% ~Hey, I said, "en garde"! Draw your sword, scallywag, and settle this once and for all!~
-== BC0KVEL ~It may be a waste to ask, but what is this?~
-== %IMOEN_BANTER% ~I wanna spar, of course! I'm your apprentice in swordsmanship!~
-== BC0KVEL ~I do not remember making this arrangement.~
-== %IMOEN_BANTER% ~That's because I made the decision! I'm going to Imoen the Blademistress from now on, and you'll teach me how to fight properly!~
-== BC0KVEL ~And what became of your usual fascination with magic?~
-== %IMOEN_BANTER% ~I can learn how to use a sword and magic at the same time!~
-== BC0KVEL ~...~
-== BC0KVEL ~*sigh* If you do intend to learn, though I doubt there is a point, start by brandishing a proper sword. That is a tuber you're holding, not even a branch.~
-== %IMOEN_BANTER% ~What? It is? Oh... you're right, it's kinda bendy. This is no good, it'd break as soon as it hit something.~
-== BC0KVEL ~Wait. Don't toss it.~
-== %IMOEN_BANTER% ~Huh?~
-== BC0KVEL ~Give it to me—I have use for it. When skinned and boiled, this makes for a nutritious addition to a stew.~
-== %IMOEN_BANTER% ~Oh. Right, that's why I got it for you. Definitely the reason all along. Ha ha! Aren't you grateful?~
+== BC0KVEL ~……~
+== %IMOEN_BANTER% ~喂，我说了，“预备——起”！拔你的剑，你这无赖，今天就把这事了结！~
+== BC0KVEL ~问也许白问，可这是什么？~
+== %IMOEN_BANTER% ~我当然是要跟你过招！我是你剑术上的徒弟！~
+== BC0KVEL ~我不记得有过这样的约定。~
+== %IMOEN_BANTER% ~那是因为决定是我下的！从今往后我就是“剑术女师傅爱蒙”，你得教我正经打斗！~
+== BC0KVEL ~那你往常对魔法的那股痴迷呢？~
+== %IMOEN_BANTER% ~我可以一边学剑一边学魔法！~
+== BC0KVEL ~……~
+== BC0KVEL ~*叹气* 你若真打算学——尽管我怀疑有何意义——先拿一把正经的剑来挥。你手里那是个块茎，连树枝都算不上。~
+== %IMOEN_BANTER% ~什么？真的？哦……你说得对，它有点软。这不成，一碰就断。~
+== BC0KVEL ~等等。别扔。~
+== %IMOEN_BANTER% ~啊？~
+== BC0KVEL ~给我——我有用处。去了皮煮一煮，是炖菜里顶有营养的一样。~
+== %IMOEN_BANTER% ~哦。对，我本来就是为这个才弄来的。当然，一直就是这个缘故。哈哈！你不感激我么？~
 EXIT
 
 // Jaheira
@@ -499,19 +499,19 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelJaheira1","GLOBAL",0)~ THEN %JAHEIRA_BANTER% C0KvelJaheira1
-~How many years have you lived on the surface for, K'Vel?~
+~克维尔，你在地表住了多少年了？~
 DO ~SetGlobal("C0KvelJaheira1","GLOBAL",1)~
-== BC0KVEL ~What business is that of yours?~
-== %JAHEIRA_BANTER% ~It is important.~
-== BC0KVEL ~...Seven years, if you must know.~
-== %JAHEIRA_BANTER% ~Though a short amount of time for an elf, it is enough to leave some history.~
-== BC0KVEL ~You intend to investigate my background?~
-== %JAHEIRA_BANTER% ~One can never be too careful.~
-== BC0KVEL ~Then you should not have told me.~
-== %KHALID_BANTER% IF ~InParty("KHALID")~ THEN ~D–don't take this p–personally, she does this for everyone. It's not because you're d–d—~
-== %JAHEIRA_BANTER% IF ~InParty("KHALID")~ THEN ~THANK you, Khalid, I was just about to get to that part.~
-== %JAHEIRA_BANTER% ~This is common protocol for those in my line of work. I would like to trust you... that is a foreign concept to a drow, I suspect.~
-== %JAHEIRA_BANTER% ~But if you have lived up here for so long, preferably without incident, you would do well to remember some things are not as they are in the Underdark.~
+== BC0KVEL ~这与你何干？~
+== %JAHEIRA_BANTER% ~这要紧。~
+== BC0KVEL ~……七年，你若一定要知道。~
+== %JAHEIRA_BANTER% ~对精灵来说虽短，也够留下些来历了。~
+== BC0KVEL ~你打算查我的底细？~
+== %JAHEIRA_BANTER% ~人再谨慎也不为过。~
+== BC0KVEL ~那你就不该告诉我。~
+== %KHALID_BANTER% IF ~InParty("KHALID")~ THEN ~别、别往心里去，她、她对谁都这样。不是因为你是个卓、卓——~
+== %JAHEIRA_BANTER% IF ~InParty("KHALID")~ THEN ~谢谢，卡立德，我正要说到那儿。~
+== %JAHEIRA_BANTER% ~于我这一行，这是寻常规矩。我本愿信你……不过对卓尔来说，这怕是个陌生的念头。~
+== %JAHEIRA_BANTER% ~可你既在这上头住了这么久，最好还没出过什么事，那你该记住：有些事不像幽暗地域里那样。~
 EXIT
 
 CHAIN IF ~InParty("Jaheira")
@@ -523,15 +523,15 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelJaheira2","GLOBAL",0)~ THEN %JAHEIRA_BANTER% C0KvelJaheira2
-~Ecthel Darcourt.~
+~埃克瑟尔·达库尔特。~
 DO ~SetGlobal("C0KvelJaheira2","GLOBAL",1)~
-== BC0KVEL ~That is my former employer's name, not mine.~
-== %JAHEIRA_BANTER% ~I had just realized why it sounded familiar. He is a Harper contact. A relatively new one, but I have heard his name before.~
-== BC0KVEL ~I may have some recollection.~
-== %JAHEIRA_BANTER% ~You do not know more?~
-== BC0KVEL ~His personal affairs were never my concern.~
-== %JAHEIRA_BANTER% ~Fine. At least I know that someone trusted by the Harpers has vouched for you in the past. That is good news for you.~
-== BC0KVEL ~I do not need 'good news'. If all it takes to gain your trust is the word of someone under the same label, then you are in for greater disappointments in the future.~
+== BC0KVEL ~那是我前雇主的名，不是我的。~
+== %JAHEIRA_BANTER% ~我刚想明白为什么这名字耳熟。他是竖琴手的一个联络人。算是新近的，可我从前听过这名字。~
+== BC0KVEL ~我也许有些印象。~
+== %JAHEIRA_BANTER% ~你就不知道更多？~
+== BC0KVEL ~他的私事从不在我关心之内。~
+== %JAHEIRA_BANTER% ~好。至少我知道，竖琴手信得过的人从前替你作过保。这对你是好消息。~
+== BC0KVEL ~我不需要什么“好消息”。若得你信任只须同门中人的一句话，那你往后的失望会更大。~
 EXIT
 
 // Kagain
@@ -544,21 +544,21 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKagain1","GLOBAL",0)~ THEN %KAGAIN_BANTER% C0KvelKagain1
-~Bah! <CHARNAME>, we hafta make talk on the gold we spend on our provisions ere the next time we resupply! I may be a miser, but I think I cannae stomach the quality o' this bread for another day! Pfaugh! I've tasted dirt that done more to whet me appetite!~
+~呸！<CHARNAME>，下次补给前，咱们得谈谈花在口粮上的金子！我也许吝啬，可这面包的成色，我实在再咽不下一日！呸！我吃过比这更能开胃的泥！~
 DO ~SetGlobal("C0KvelKagain1","GLOBAL",1)~
-== BC0KVEL ~If it is to silence your constant bleating, dwarf, then you may sate your hunger on these. Consider yourself fortunate that I have gathered enough of them to share.~
-== %KAGAIN_BANTER% ~And what are "these", if ye dinnae mind explainin' to me, drow?~
-== BC0KVEL ~Gilded morels. Rare, and deeply flavorful. They are cooked in oil, lightly salted then dried. Add them in a pot with and boil with water, to be consumed with bread or hardtack, or whatever pleases you. Alternatively, you might eat them as they are.~
-== %KAGAIN_BANTER% ~Ye think I be a fool? I may not know what ye dark-skinned elves call sustenance in the Underdark, but don't think I be stupid enough to eat whatever ye put in front of me! How can I be sure these wrinkly things aren't filled with deadly poison, eh?~
-== BC0KVEL ~*sigh*~
-== BC0KVEL ~...*munch* *chew*~
-== %KAGAIN_BANTER% ~Eh?~
-== BC0KVEL ~Do you... *swallow*... do you truly believe I enjoy surviving on ancient and stale bread any more than you do, dwarf? I believed you to be practical.~
-== BC0KVEL ~I care little for your discomfort, but it would be worse for us both if you were to collapse from hunger while in battle.~
-== %KAGAIN_BANTER% ~Well...~
-== BC0KVEL ~The offer is only good for now. I cannot promise you any will be left for you later.~
-== %KAGAIN_BANTER% ~Pfeh, to the Nine Hells with it. *grumble* *munch*~
-== %KAGAIN_BANTER% ~...That ain't bad.~
+== BC0KVEL ~矮人，若只为堵住你没完的嘟囔，那你就拿这些填肚子吧。算你走运，我采得够多，可以分你些。~
+== %KAGAIN_BANTER% ~那“这些”又是什么，卓尔，你若不嫌麻烦就说说？~
+== BC0KVEL ~镀金羊肚菌。稀罕，极有滋味。用油煎过，略撒盐再晾干。丢进锅里加水煮，配面包或硬饼吃，或你爱配什么都行。要不，就这么干吃也行。~
+== %KAGAIN_BANTER% ~你当我是傻瓜？你们这些黑皮精灵在幽暗地域里拿什么充饥，我许是不懂，可别以为我蠢到会把摆在我面前的东西照吃不误！我怎么知道这些皱巴巴的玩意儿里没塞满要命的毒，嗯？~
+== BC0KVEL ~*叹气*~
+== BC0KVEL ~……*咀嚼* *嚼*~
+== %KAGAIN_BANTER% ~嗯？~
+== BC0KVEL ~你……*吞咽*……你当真以为，我比你更爱靠陈年硬面包过活么，矮人？我原当你是个务实的人。~
+== BC0KVEL ~你的不适我不大在意，可你若在战阵中饿倒，于我们俩都更糟。~
+== %KAGAIN_BANTER% ~那……~
+== BC0KVEL ~这提议只在眼下算数。我不能答应你过后还有剩的。~
+== %KAGAIN_BANTER% ~呸，去他九层地狱。*嘟囔* *咀嚼*~
+== %KAGAIN_BANTER% ~……还不赖。~
 EXIT
 
 CHAIN IF ~InParty("Kagain")
@@ -570,19 +570,19 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKagain1","GLOBAL",1)~ THEN %KAGAIN_BANTER% C0KvelKagain2
-~Ye... ugh... ye lyin' sack o' donkey dung, drow! *urp*~
+~你……呃……你这满嘴驴粪的混账，卓尔！*打嗝*~
 DO ~SetGlobal("C0KvelKagain1","GLOBAL",2)~
-== BC0KVEL ~What are you blathering on about now, dwarf?~
-== %KAGAIN_BANTER% ~Them mushrooms... ye have a tolerance fer 'em, don't ye? Admit it!~
-== BC0KVEL ~As I told you before, they are not poisonous. Whatever seems to ail you now, it is none of my affair.~
-== %KAGAIN_BANTER% ~Don't ye play me fer a fool! I found myself cravin' some after we ran out, so I went to the woods an' found one. Cooked it like ye said, an' I've been feelin' me stomach twistin' an' churning fer hours since!~
-== BC0KVEL ~Perhaps you are too thickheaded to follow simple instructions. They are simple enough to cook until they are safe to eat, and only a child or a dimwit would do it wrong.~
-== BC0KVEL ~Unless...~
-== %KAGAIN_BANTER% ~What? WHAT?!~
-== BC0KVEL ~You picked the type with pink spots on the base, didn't you?~
-== %KAGAIN_BANTER% ~So what if I did, eh? There be a difference between 'em?~
-== BC0KVEL ~*sigh* Perhaps I should have warned you in advance. Fair enough, dwarf, I will provide you with an antidote for mushroom poisoning when I have a chance.~
-== %KAGAIN_BANTER% ~Ye'll make one fer me now if ye know what's good for ye! I'm half ready to hack me belly open just to put an end to the agony... oohhhh...~
+== BC0KVEL ~你这又唠叨什么，矮人？~
+== %KAGAIN_BANTER% ~那些蘑菇……你对它们有耐受，是不是？承认吧！~
+== BC0KVEL ~我早说过，它们没毒。你现在有什么不适，都不关我的事。~
+== %KAGAIN_BANTER% ~别拿我当傻子耍！我们吃完了，我就馋起来，去林子里找了一朵。照你说的煮了，打那以后这肚子翻搅了几个时辰！~
+== BC0KVEL ~也许你脑子太硬，照不来简单的吩咐。煮到能吃为止，这够简单了，只有孩子或蠢货才会弄错。~
+== BC0KVEL ~除非……~
+== %KAGAIN_BANTER% ~什么？什么？！~
+== BC0KVEL ~你采的是根部带粉红斑的那一种，是不是？~
+== %KAGAIN_BANTER% ~是又怎样，嗯？它们还有分别？~
+== BC0KVEL ~*叹气* 也许我该先提醒你。也罢，矮人，我寻着空子给你配一副蘑菇毒的解毒剂。~
+== %KAGAIN_BANTER% ~你若识相，现在就给我配！我半想要把肚子剖开来止这疼……哦哦哦……~
 EXIT
 
 // Khalid
@@ -595,13 +595,13 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKhalid1","GLOBAL",0)~ THEN %KHALID_BANTER% C0KvelKhalid1
-~You are a c–c–capable swordsman, K'vel.~
+~克维尔，你是个能、能干的剑客。~
 DO ~SetGlobal("C0KvelKhalid1","GLOBAL",1)~
-== BC0KVEL ~I hardly need you to inform me of that.~
-== %KHALID_BANTER% ~Such ability is not ac–cquired without intense training. Why is it that you chose t–to resort to magic and thievery?~
-== BC0KVEL ~Do you believe it inefficient?~
-== %KHALID_BANTER% ~No, I merely b–believe it to be a waste to squander such t–talent in neglecting focus in a single t–trade.~
-== BC0KVEL ~If it sates your curiosity and stills your wavering tongue, then I will simply tell you. I suffered a... physical loss, long ago. The apex of swordsmanship is beyond me now. That is all.~
+== BC0KVEL ~这用不着你来告诉我。~
+== %KHALID_BANTER% ~这样的本事不、不是不苦练就到手的。你为什么偏要去、去靠魔法和偷盗？~
+== BC0KVEL ~你觉得这不划算？~
+== %KHALID_BANTER% ~不，我只、只是觉得，把这份天分糟蹋在不专一门上，是浪费。~
+== BC0KVEL ~若这能满足你的好奇、堵住你发抖的舌头，那我就直说。很久以前，我受过一桩……身体上的损。剑术的巅峰于我已不可及。就这样。~
 EXIT
 
 CHAIN IF ~InParty("Khalid")
@@ -613,17 +613,17 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKhalid1","GLOBAL",1)~ THEN %KHALID_BANTER% C0KvelKhalid2
-~K'Vel, you said you c–could not reach the apex of swordsmanship. From what I have ob–b–served, I b–believe that is untrue.~
+~克维尔，你说你到、到不了剑术的巅峰。依我观、观察，我觉、觉得这话不实。~
 DO ~SetGlobal("C0KvelKhalid1","GLOBAL",2)~
-== BC0KVEL ~Perhaps not entirely true. It would not be impossible. But... too difficult, and a waste of time.~
-== %KHALID_BANTER% ~I d–doubt you always b–believed so, or you would n–not attain such skill at all. What changed?~
-== BC0KVEL ~I will ask you, Khalid. Suppose a terrible accident claimed your sword arm.~
-== %JAHEIRA_BANTER% IF ~InParty("JAHEIRA")~ THEN ~Do not wish such terrible misfortune upon him!~
-== %KHALID_BANTER% IF ~InParty("JAHEIRA")~ THEN ~P–please, Jaheira. He was merely speaking th–th–theoretically.~
-== %KHALID_BANTER% ~What if I l–lose my arm?~
-== BC0KVEL ~You live a life of danger. Given the choice to retrain with your left, or wield a simpler weapon from then on. What would you do?~
-== %KHALID_BANTER% ~Much as I p–prefer the sword, for the sake of d–duty, I should l–l–logically choose another weapon to survive.~
-== BC0KVEL ~Then you understand.~
+== BC0KVEL ~也许不全对。并非不可能。不过……太难，也白费工夫。~
+== %KHALID_BANTER% ~我、我不信你一向这么想，不然你根本练不、不出这份本事。是什么变了？~
+== BC0KVEL ~卡立德，我问你。假设一场惨祸夺了你的剑臂。~
+== %JAHEIRA_BANTER% IF ~InParty("JAHEIRA")~ THEN ~别拿这般惨祸咒他！~
+== %KHALID_BANTER% IF ~InParty("JAHEIRA")~ THEN ~请、请，贾希拉。他只是理、理论上一说。~
+== %KHALID_BANTER% ~要是我真失、失了手臂呢？~
+== BC0KVEL ~你过的是凶险日子。若让你选择：用左手重新练起，或此后改使更简单的兵器。你会怎么做？~
+== %KHALID_BANTER% ~虽、虽说我更爱剑，可为了尽责，按、按理我该另选一件兵器活下来。~
+== BC0KVEL ~那你就明白了。~
 EXIT
 
 // Kivan
@@ -637,16 +637,16 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKivan1","GLOBAL",0)~ THEN BC0KVEL C0KvelKivan1
-~...~
+~……~
 DO ~SetGlobal("C0KvelKivan1","GLOBAL",1)~
-== %KIVAN_BANTER% ~...~
-== BC0KVEL ~If you wish to observe the best way to kill me, you would find more success when I cannot notice you.~
-== %KIVAN_BANTER% ~A challenge, dark one?~
-== BC0KVEL ~I will not act against you. What you intend with me is your affair, and I will act in my best interest.~
-== %KIVAN_BANTER% ~Talking to me will not change anything.~
-== BC0KVEL ~Ditto. It will not make what you are considering any easier. Yet you seem content to respond.~
-== %KIVAN_BANTER% ~Then I will continue to offer silence, until my decision is made.~
-== BC0KVEL ~That suits me well enough.~
+== %KIVAN_BANTER% ~……~
+== BC0KVEL ~你若想观摩杀我的最好法子，趁我看不见你时，成算更大。~
+== %KIVAN_BANTER% ~挑衅么，黑暗者？~
+== BC0KVEL ~我不会对你下手。你于我打算什么，是你的事，我会为自己最大的利益行事。~
+== %KIVAN_BANTER% ~跟我说话改变不了什么。~
+== BC0KVEL ~一样。这也不会让你正在考虑的事更容易些。可你似乎乐意回应。~
+== %KIVAN_BANTER% ~那我就继续沉默，直到我拿定主意。~
+== BC0KVEL ~那样正合我意。~
 EXIT
 
 CHAIN IF ~InParty("Kivan")
@@ -658,17 +658,17 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKivan1","GLOBAL",1)~ THEN %KIVAN_BANTER% C0KvelKivan2
-~Have you ever hated, drow?~
+~卓尔，你可曾恨过？~
 DO ~SetGlobal("C0KvelKivan1","GLOBAL",2)~
-== BC0KVEL ~Hate is the poisonous wine that we imbibe until it destroys us. Drow have killed each other more than your kind have killed us since the beginning of our history. I have tried to abstain for the past decade.~
-== %KIVAN_BANTER% ~And you believe this absolves you? You have little arrogance or cruelty, to that I am not blind. But you are no less a killer. What you call survival is a life that has claimed the lives of many, those who deserved it, and those who do not.~
-== BC0KVEL ~...~
-== %KIVAN_BANTER% ~And you do not even deny it! You may not know hate, like most drow, but your heart is no less black with bile.~
-== BC0KVEL ~Will you try to cut it out and check for certain? I do not encourage it, but you are welcome to try.~
-== %KIVAN_BANTER% ~...~
-== BC0KVEL ~...~
-== %KIVAN_BANTER% ~No.~
-== %KIVAN_BANTER% ~Not yet.~
+== BC0KVEL ~恨是我们饮下的毒酒，直到它毁了我们。自有史以来，卓尔自相残杀的，多过你们这类人杀我们的。这十年来，我尽力不沾。~
+== %KIVAN_BANTER% ~你以为这就免了你的罪？你少有傲慢与残忍，这我看得见。可你一样是个杀手。你所谓的活命，是一段夺去许多性命的日子——有些该死，有些不该。~
+== BC0KVEL ~……~
+== %KIVAN_BANTER% ~你连否认都不否认！你也许不像多数卓尔那样懂得恨，可你的心，一样浸满黑胆汁。~
+== BC0KVEL ~你要剖开它验一验么？我不劝你，但你尽管试。~
+== %KIVAN_BANTER% ~……~
+== BC0KVEL ~……~
+== %KIVAN_BANTER% ~不。~
+== %KIVAN_BANTER% ~还不到时候。~
 EXIT
 
 CHAIN IF ~InParty("Kivan")
@@ -680,15 +680,15 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKivan1","GLOBAL",2)~ THEN BC0KVEL C0KvelKivan3
-~You have still yet to kill me, elf, after all this time.~
+~精灵，过了这么久，你竟还没杀我。~
 DO ~SetGlobal("C0KvelKivan1","GLOBAL",3)~
-== %KIVAN_BANTER% ~Vengeance drives me, but I am no monster. <CHARNAME> has need of you, and so I stay my hand.~
-== BC0KVEL ~Vengeance... take a moment to humor me, Kivan of Shilmista. Do you know how many times I have heard that word, 'vharcan'—vengeance, spoken among my own kind?~
-== %KIVAN_BANTER% ~Do not dare to insinuate I am anything like you!~
-== BC0KVEL ~Me. That is the core of it, is it not? You do not even ask if I believe in 'vengeance'?~
-== BC0KVEL ~No, because you do not see me, only a drow, only the face of a horrific sin committed that you can never forgive. And so it does not matter what I say. We will forever be enemies.~
-== %KIVAN_BANTER% ~You are correct in that.~
-== BC0KVEL ~Then there is nothing more to say.~
+== %KIVAN_BANTER% ~复仇驱着我，可我不是怪物。<CHARNAME>需要你，所以我才按住手。~
+== BC0KVEL ~复仇……且容我拿这个逗你一逗，希尔斯塔的基万。你可知道我听过多少回这个词，“vharcan”——复仇，在我族人之间说起？~
+== %KIVAN_BANTER% ~你敢暗示我与你是一路人！~
+== BC0KVEL ~我。症结就在这里，不是么？你连问都不问我是否信“复仇”。~
+== BC0KVEL ~不问，因为你看不见我，只看见一个卓尔，只看见一桩你永远不能宽赦的可怕罪行的脸面。所以我怎么说都不打紧。我们永远是仇敌。~
+== %KIVAN_BANTER% ~这点你说对了。~
+== BC0KVEL ~那就再没什么可说的了。~
 EXIT
 
 CHAIN IF ~InParty("Kivan")
@@ -700,19 +700,19 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelKivan1","GLOBAL",3)~ THEN %KIVAN_BANTER% C0KvelKivan4
-~You said you do not believe in vengeance. I do not believe it. By your own words, your kind slay each other more than any other could. Do you think I will believe that you have never been wronged or betrayed?~
+~你说你不信复仇。我不信这话。照你自己的说法，你的族人互相残杀多过任何人。你以为我会信你从没被冤屈、被背叛过？~
 DO ~SetGlobal("C0KvelKivan1","GLOBAL",4)~
-== BC0KVEL ~I have been betrayed. Most grievously. It cost me everything I once was.~
-== %KIVAN_BANTER% ~Then you are a liar, or a fool. No man living could suffer such a wrong and not seek vengeance.~
-== BC0KVEL ~A drow who has been slain through betrayal can avenge nobody.~
-== %KIVAN_BANTER% ~But you are still alive.~
-== BC0KVEL ~I am, indeed, for now. But that will not last. You need not know the reason why, Kivan of Shilmista, but regardless of whether you choose to kill me or not, I will die soon enough. I have not even felt the comfort of reverie for years, and I sleep each night knowing there is a chance I might not awaken.~
-== BC0KVEL ~I know, were I not your enemy, your advice would be for me to bring the wretch who cut my life short and send him to the Demonweb Pits before I fall, merely for the slight chance of gratification.~
-== BC0KVEL ~But I see little satisfaction in that. It would be tiresome, and a waste of time. I only mean to find my purpose in the remaining years. And so if you wish to end my life when it would torment me the most... put your arrow through my heart right now.~
-== BC0KVEL ~No one will stop you.~
-== %KIVAN_BANTER% ~...~
-== BC0KVEL ~Too cowardly to take the shot? Or...~
-== %KIVAN_BANTER% ~...I will consider what you have said.~
+== BC0KVEL ~我被背叛过。极惨。它夺走了我曾是的一切。~
+== %KIVAN_BANTER% ~那你不是骗子，就是愚人。活人受了那样的冤屈，没有不寻复仇的。~
+== BC0KVEL ~一个因背叛而死的卓尔，报不了任何仇。~
+== %KIVAN_BANTER% ~可你还活着。~
+== BC0KVEL ~我确实还活着，眼下是。但这不会长久。缘由你不必知道，希尔斯塔的基万，可无论你杀不杀我，我都很快会死。我已多年感觉不到冥思的安适，每晚睡下都清楚，自己也许不会再醒。~
+== BC0KVEL ~我知道，若我不是你的仇敌，你会劝我在倒下之前，把那截断我性命的恶徒揪出来，送进魔索深渊，只为那一线快意。~
+== BC0KVEL ~可我在其中看不出多少满足。那会累人，也白费工夫。我只想在余下的年月里找到我的目的。所以，你若想在我最受折磨的时候了结我……现在就把你的箭穿进我的心。~
+== BC0KVEL ~没人会拦你。~
+== %KIVAN_BANTER% ~……~
+== BC0KVEL ~怯了，不敢放？还是……~
+== %KIVAN_BANTER% ~……你说的，我会想。~
 EXIT
 
 // Minsc
@@ -725,13 +725,13 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelMinsc1","GLOBAL",0)~ THEN %MINSC_BANTER% C0KvelMinsc1
-~K'Vel, my comrade, when you swing that greatsword, Minsc feels he fights not alongside a dark elf, but a fearless berserker of Rashemen!~
+~克维尔，我的同伴，你挥那口巨剑时，明斯克觉得身边并肩的不是一个暗精灵，而是拉舍曼无畏的狂战士！~
 DO ~SetGlobal("C0KvelMinsc1","GLOBAL",1)~
-== BC0KVEL ~You sense rage in my strikes, ranger?~
-== %MINSC_BANTER% ~No, not rage! Valor! The kind of valor that makes evil tremble in their non-too-fitting boots! The only thing that would make it perfect would be a loud battlecry! Like—~
-== BC0KVEL ~"Go for the eyes". Yes, I know.~
-== %MINSC_BANTER% ~Consider making your own, my friend. It is simple. Simply think of the part of evil you wish to kick the most, then bellow at the top of your lungs! They will cower and protect that which you threaten to strike and quiver in terror!~
-== BC0KVEL ~I think not. One shrieking warrior in combat is a valuable asset. Another would only mean chaos.~
+== BC0KVEL ~游侠，你在我招式里感到怒气了？~
+== %MINSC_BANTER% ~不，不是怒气！是勇武！是那种叫邪恶在他们那双不甚合脚的靴子里发抖的勇武！唯一能让它更完美的，是一声嘹亮的战吼！就像——~
+== BC0KVEL ~“戳他们的眼”。是，我知道。~
+== %MINSC_BANTER% ~何不自己也编一个，我的朋友。很简单。只要想着邪恶身上你最想踹的那一处，然后放声吼出来！他们会缩起来，护住你扬言要打的地方，吓得发抖！~
+== BC0KVEL ~我不这么想。阵上一个嚎叫的战士是宝贵资产。再多一个，只会成了乱子。~
 EXIT
 
 CHAIN IF ~InParty("Minsc")
@@ -743,12 +743,12 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelMinsc2","GLOBAL",0)~ THEN BC0KVEL C0KvelMinsc2
-~A curious companion you keep at your side, ranger.~
+~游侠，你身边这位同伴真奇特。~
 DO ~SetGlobal("C0KvelMinsc2","GLOBAL",1)~
-== %MINSC_BANTER% ~You speak of Boo? We are the greatest of companions!~
-== BC0KVEL ~I have yet to see his contribution to your might, but perhaps that is his strength. If he has the natural skills of the cats that—~
-== %MINSC_BANTER% ~SHH! Do not mention that word... that which begins with 'C', while Boo is within earshot, K'Vel. You will give him the shivers, which causes Minsc to itch awfully while he rests in my armor!~
-== BC0KVEL ~...Perhaps I have overestimated you.~
+== %MINSC_BANTER% ~你说布布？我们是最了不起的同伴！~
+== BC0KVEL ~我还没见他为你这份力量出过什么力，不过也许那正是他的长处。若他有那种猫的天性——~
+== %MINSC_BANTER% ~嘘！别在布布听得见的地方提那个词……那个以“猫”开头的，克维尔。你会把它吓得发抖，明斯克靠在我甲里歇息时就会痒得难受！~
+== BC0KVEL ~……也许我高看了你。~
 EXIT
 
 // Montaron
@@ -761,16 +761,16 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelMontaron1","GLOBAL",0)~ THEN %MONTARON_BANTER% C0KvelMontaron1
-~Yer pretty covert for such a brutish-lookin' elf.~
+~以这么个粗蛮模样的精灵来说，你倒挺会藏。~
 DO ~SetGlobal("C0KvelMontaron1","GLOBAL",1)~
-== BC0KVEL ~There is worth in remaining unpredictable, unlike yourself.~
-== %MONTARON_BANTER% ~If the honest life ever gets on yer nerves, like it always does for yer type, I've a few people I wouldn't mind introducin' ye to.~
-== %XZAR_BANTER% IF ~InParty("XZAR")~ THEN ~Now, now, Monty, what rules have we set against unauthorized recruitment? Must I remind you again?~
-== %MONTARON_BANTER% IF ~InParty("XZAR")~ THEN ~*Ye* made the rules. I ne'er said a thing 'bout following 'em.~
-== %XZAR_BANTER% IF ~InParty("XZAR")~ THEN ~I wouldn't have saw the need, had the three before I set those rules not all tried killing me in my sleep! Good thing I sleep with my eyes open, hehe... wonderful corpses they made. On second thought, maybe I wouldn't mind so much either.~
-== BC0KVEL ~I would mind. Greatly.~
-== %MONTARON_BANTER% ~Stomach too weak? I'd not have expected that of ye.~
-== BC0KVEL ~There is little competence I could imagine from any group that sees present company as a worthwhile investment.~
+== BC0KVEL ~保持让人捉摸不透，自有其价值——不像你。~
+== %MONTARON_BANTER% ~若哪天安生日子磨得你心烦，就像你们这类人总有的那样，我倒有几个人乐意引荐给你。~
+== %XZAR_BANTER% IF ~InParty("XZAR")~ THEN ~且慢，蒙提，我们不是立过规矩，不许擅自招人么？还要我再提醒你一回？~
+== %MONTARON_BANTER% IF ~InParty("XZAR")~ THEN ~规矩是*你*立的。我可一个字也没说要照办。~
+== %XZAR_BANTER% IF ~InParty("XZAR")~ THEN ~立规矩之前，前前后后有三人想趁我睡着杀我！幸亏我睡觉睁着眼，嘿嘿……他们死得可真好。再一想，我兴许也不介意。~
+== BC0KVEL ~我介意。很介意。~
+== %MONTARON_BANTER% ~肚子太软？我倒没料到你会这样。~
+== BC0KVEL ~任何一个把眼前这些人看作值得投本的团体，我想不出能有什么本事。~
 EXIT
 
 CHAIN IF ~InParty("Montaron")
@@ -782,12 +782,12 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelMontaron2","GLOBAL",0)~ THEN %MONTARON_BANTER% C0KvelMontaron2
-~Ye almost broke me hand, drow. Still achin' since this mornin'.~
+~你差点把我手打断，卓尔。今早起来还在疼。~
 DO ~SetGlobal("C0KvelMontaron2","GLOBAL",1)~
-== BC0KVEL ~If you attempt to tamper with food mid-preparation again, I will sever it and add it to the pot next time.~
-== %MONTARON_BANTER% ~All I'm sayin' is that it'd have been juicier with a nice big dollop of lard.~
-== BC0KVEL ~I would debate with you, but I doubt you have more appreciation for flavor than a primitive taste for blood.~
-== %MONTARON_BANTER% ~Don't forget the marrow. I like suckin' it straight from the bone.~
+== BC0KVEL ~你若再敢在做饭时乱插手，下回我就把它剁下来丢进锅里。~
+== %MONTARON_BANTER% ~我只是说，要是搁一大勺猪油进去，会更肥美。~
+== BC0KVEL ~我本想跟你辩一辩，可我疑心你对滋味的赏识，还不如对血的那点原始嗜好。~
+== %MONTARON_BANTER% ~别忘了骨髓。我就爱直接从骨头里吸。~
 EXIT
 
 // Neera
@@ -800,15 +800,15 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelNeera1","GLOBAL",0)~ THEN %NEERA_BANTER% C0KvelNeera1
-~Hey, K'Vel, I have a question for you. Is it true that drow are exceptionally resistant to magic?~
+~嘿，克维尔，我有个问题。卓尔是不是天生特别抗魔法？~
 DO ~SetGlobal("C0KvelNeera1","GLOBAL",1)~
-== BC0KVEL ~You have seen the proof of it yourself.~
-== %NEERA_BANTER% ~Yeah. Magic missiles fizzle on your body, and you eat hot fireballs like breakfast. Wicked! I feel so bad for mages that try to kill us sometimes...~
-== %NEERA_BANTER% ~Anyways, I'll get right to the point. Can I practice a few spells on you? You know, cause I'd feel really bad if I surged while casting at someone else. You, on the other hand...~
-== BC0KVEL ~No.~
-== %NEERA_BANTER% ~But...~
-== BC0KVEL ~...~
-== %NEERA_BANTER% ~Buuuut on second thought, I think it'd spoil the camaraderie we've got going on. Casting spells at friends, what a terrible thing to do, right? Tee-hee!~
+== BC0KVEL ~你自己已见过凭证。~
+== %NEERA_BANTER% ~是啊。魔法飞弹打在你身上就灭了，火球你当早饭吃。太狠了！有时候真替那些想杀我们的法师难过……~
+== %NEERA_BANTER% ~总之，直说吧。我能拿你练几道法术么？要知道，我若在施法时对别人暴走，我会很难过。可换了你……~
+== BC0KVEL ~不。~
+== %NEERA_BANTER% ~可是……~
+== BC0KVEL ~……~
+== %NEERA_BANTER% ~可——可是再一想，我觉得这会坏了我们之间的情分。对朋友施法，多可怕的事，对吧？嘻嘻！~
 EXIT
 
 CHAIN IF ~InParty("Neera")
@@ -820,21 +820,21 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelNeera2","GLOBAL",0)~ THEN %NEERA_BANTER% C0KvelNeera2
-~Um.~ [CAS_M05]
+~呃。~ [CAS_M05]
 DO ~SetGlobal("C0KvelNeera2","GLOBAL",1)
 ReallyForceSpellRES("C0KVSP02","C0KVEL")~
-== %NEERA_BANTER% ~Imsorryiswearthatwasntintentional!~
-== BC0KVEL ~...~
-== BC0KVEL ~*sigh*~
-== BC0KVEL ~Say that again. Slowly, that I might understand.~
-== %NEERA_BANTER% ~K'Vel, I SWEAR it wasn't intentional.~
-== BC0KVEL ~I have little patience for riddles. Get to the point.~
-== %NEERA_BANTER% ~You, uh, might want to look in a mirror.~
-== BC0KVEL ~...~
-== BC0KVEL ~I assume the effects will dissipate.~
-== %NEERA_BANTER% ~U–usually within a day or two... wait, you aren't mad?~
-== BC0KVEL ~I've seen the effects your unpredictable surges can cause. Compared to those, this is a blessing.~
-== %NEERA_BANTER% ~Hey, you're actually not that bad. *whisper* I'll just leave out the part where sometimes your hair will stay like that for several months...~
+== %NEERA_BANTER% ~对不起我发誓那不是故意的！~
+== BC0KVEL ~……~
+== BC0KVEL ~*叹气*~
+== BC0KVEL ~再说一遍。慢些，好让我听懂。~
+== %NEERA_BANTER% ~克维尔，我发誓那不是故意的。~
+== BC0KVEL ~我没耐心猜谜。说重点。~
+== %NEERA_BANTER% ~你，呃，也许该照照镜子。~
+== BC0KVEL ~……~
+== BC0KVEL ~我料这效果会消退。~
+== %NEERA_BANTER% ~通、通常一两天就没……等等，你不生气？~
+== BC0KVEL ~我见过你那些不定的暴走能闹出什么。比起来，这算是福气。~
+== %NEERA_BANTER% ~嘿，你人还真不坏。*低声* 我就略去那一段：有时候你的头发会保持那样好几个月……~
 EXIT
 
 // Quayle
@@ -847,15 +847,15 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelQuayle1","GLOBAL",0)~ THEN %QUAYLE_BANTER% C0KvelQuayle1
-~By golly, you're a brawny elf. How much did growing all that muscle suck out of your brains?~
+~天哪，你可真是个壮实的精灵。长出这一身肌肉，得从你脑子里榨走多少东西？~
 DO ~SetGlobal("C0KvelQuayle1","GLOBAL",1)~
-== BC0KVEL ~If that is your understanding of growth, I have to doubt that you were born with any at all.~
-== %QUAYLE_BANTER% ~You looking for a fight, big one? O–of wits! I mean a battle of wits, of course.~
-== BC0KVEL ~I see little purpose in such. You are the smarter one. I can see that.~
-== %QUAYLE_BANTER% ~I am? You mean it? Ha! That's right! I knew you had some brains in you after all. You're alright in my book.~
-== BC0KVEL ~Such a simple-minded one, so easy to manipulate...~
-== %QUAYLE_BANTER% ~What's that?~
-== BC0KVEL ~Nothing.~
+== BC0KVEL ~你若对“长成”是这个理解，那我很怀疑你生来有没有脑子。~
+== %QUAYLE_BANTER% ~你想打一架么，大块头？斗——斗智！我是说斗智，当然。~
+== BC0KVEL ~我看这没什么意义。你更聪明。这我看得出来。~
+== %QUAYLE_BANTER% ~是吗？当真？哈！对啦！我就知道你脑子里到底还是有点东西。你在我这儿算个好人。~
+== BC0KVEL ~这么个头脑简单的东西，真容易摆弄……~
+== %QUAYLE_BANTER% ~你说什么？~
+== BC0KVEL ~没什么。~
 EXIT
 
 // Rasaad
@@ -868,19 +868,19 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelRasaad1","GLOBAL",0)~ THEN BC0KVEL C0KvelRasaad1
-~Bald-headed one.~
+~秃头的那个。~
 DO ~SetGlobal("C0KvelRasaad1","GLOBAL",1)~
-== %RASAAD_BANTER% ~I would prefer to be referred to my name, friend, but what do you need—~
-== %RASAAD_BANTER% ~—ngh?!~ [HIT_03C]
-== BC0KVEL ~Impressive.~
-== %RASAAD_BANTER% ~Are you intending to take my life? Had I not raised my arm in time, that would not have been a light injury.~
-== BC0KVEL ~Were that truly the case, I would have used my proper weapon.~
-== %RASAAD_BANTER% ~If—gah... if you merely wished to exchange blows, you need only have asked. I would have been more than happy to oblige. The surprise attack was unnecessary.~
-== BC0KVEL ~Testing one's instinctive response to an unexpected strike tells its own stories, as well.~
-== %RASAAD_BANTER% ~Fair enough. I hope I did not disappoint.~
-== BC0KVEL ~Your strength is commendable, if not exceptional. Nor your speed, though it is well above what I expect from humans. What sets you apart is something else, though I cannot put my finger on it...~
-== %RASAAD_BANTER% ~If you are truly curious, I would not be opposed to showing you directly. I have no doubt you would learn in little time.~
-== BC0KVEL ~I think not. You have your style, and I have mine. Though there is much to be learned from an unknown fighting style. I hope you are prepared for similar exchanges in the future.~
+== %RASAAD_BANTER% ~朋友，我更愿你称我的名字，可你有什么事——~
+== %RASAAD_BANTER% ~——呃啊？！~ [HIT_03C]
+== BC0KVEL ~了得。~
+== %RASAAD_BANTER% ~你是想取我的命？我若没及时抬臂，那可不是轻伤。~
+== BC0KVEL ~若真如此，我就用我正经的兵器了。~
+== %RASAAD_BANTER% ~若——呃……你若只想换几招，只须开口。我很乐意奉陪。偷袭是多余的。~
+== BC0KVEL ~试一试人对突袭的本能反应，也能说明许多事。~
+== %RASAAD_BANTER% ~有道理。但愿我没让你失望。~
+== BC0KVEL ~你的力气可佩，虽不算出奇。速度也是，不过已远高于我对人类的预期。让你与众不同的，是别的什么，我一时说不清……~
+== %RASAAD_BANTER% ~你若真好奇，我不反对当面演给你看。我毫不怀疑你片刻就能学会。~
+== BC0KVEL ~我看不必。你有你的路数，我有我的。不过从陌生的打法里能学的东西很多。但愿你预备好往后还有这样的交手。~
 EXIT
 
 // Safana
@@ -893,14 +893,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelSafana1","GLOBAL",0)~ THEN %SAFANA_BANTER% C0KvelSafana1
-~I've always said that the high-and-mighty elves fail to appreciate a larger, more masuline form of beauty.~
+~我一向说，那些高高在上的精灵，不懂得欣赏更魁梧、更有阳刚气的形貌之美。~
 DO ~SetGlobal("C0KvelSafana1","GLOBAL",1)~
-== BC0KVEL ~On the contrary, I find it works to my advantage.~
-== %SAFANA_BANTER% ~Yes, yes, to go unnoticed, I understand the value. I'm more than just a pretty face, you know. But what a waste.~
-== BC0KVEL ~I can leverage my born strength and stature to overcome foes that are a struggle for my smaller kin. I see no waste.~
-== %SAFANA_BANTER% ~Is fighting all you *ever* think about? Never any consideration of what other kinds of advantage your bulk can give you? Pretty elves are a copper a dozen. You are exotic.~
-== BC0KVEL ~You are wasting your breath.~
-== %SAFANA_BANTER% ~I don't waste anything, dear. I just need time to slip through the cracks in your armor.~
+== BC0KVEL ~恰恰相反，这于我有好处。~
+== %SAFANA_BANTER% ~是，是，不惹眼，这价值我懂。我可不止有一张漂亮脸蛋，你知道的。可这多浪费。~
+== BC0KVEL ~我可以凭天生的力气与身量压过那些我这等瘦小族人苦战的对头。我看不出浪费在哪儿。~
+== %SAFANA_BANTER% ~你*满脑子*就只有打斗？从不曾想过你这副体格还能给你别的什么好处？漂亮的精灵一铜板一打。你才稀罕。~
+== BC0KVEL ~你在白费口舌。~
+== %SAFANA_BANTER% ~我从不浪费什么，亲爱的。我只是需要时间，从你甲胄的缝里钻进去。~
 EXIT
 
 // Shar-Teel
@@ -913,13 +913,13 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelSharteel1","GLOBAL",0)~ THEN %SHARTEEL_BANTER% C0KvelSharteel1
-~I see how it is, drow. Your height, and using it to your advantage with a greatsword to overpower your opponents. A pathetic overcompensation.~
+~我看明白了，卓尔。你的身高，配上巨剑，拿来压过对手。可怜，这是在补偿什么。~
 DO ~SetGlobal("C0KvelSharteel1","GLOBAL",1)~
-== BC0KVEL ~Think of it that way if you will. The fact that you continue to taste defeat will not change—by my account, you are the one compensating.~
-== %SHARTEEL_BANTER% ~Your arrogance will only make it more appealing to knock your face into the dirt!~
-== BC0KVEL ~Then act on it. Strike me when it is unexpected, or use whatever other tricks you please. I doubt there will be any I have not seen.~
-== %SHARTEEL_BANTER% ~Wretched man! Do you truly think so little of me? Your disgusting overconfidence, as though I cannot surpass you no matter what? This is why I will be sure to kill you personally.~
-== BC0KVEL ~Consider your own words meaningful when you have actually beaten me.~
+== BC0KVEL ~随你怎么想。你照样一次次尝败——依我看，需要补偿的是你。~
+== %SHARTEEL_BANTER% ~你的傲慢只会让人更想把你的脸按进泥里！~
+== BC0KVEL ~那就动手。趁我不备打我，或用你乐意的任何花招。我疑心没有我没见过的。~
+== %SHARTEEL_BANTER% ~混账！你就这么看我？你这恶心的自负，好像我怎么都越不过你？正因如此，我定要亲手杀了你。~
+== BC0KVEL ~等你真赢了我，再当你这话有分量。~
 EXIT
 
 CHAIN IF ~InParty("Sharteel")
@@ -931,14 +931,14 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelSharteel1","GLOBAL",0)~ THEN %SHARTEEL_BANTER% C0KvelSharteel1
-~I *will* defeat you yet, drow.~
+~我*一定*会赢你，卓尔。~
 DO ~SetGlobal("C0KvelSharteel1","GLOBAL",1)~
-== BC0KVEL ~Word alone hold little meaning. I will acknowledge them when they are proven.~
-== %SHARTEEL_BANTER% ~Do not think that is impossible. When I find your weakness, you will be groveling at my feet in pain.~
-== BC0KVEL ~By all means, try. I would be grateful if you discovered a weakness for me to address.~
-== %SHARTEEL_BANTER% ~And you believe you know all of mine? What do you know, male?~
-== BC0KVEL ~Your instinct to let ephemeral feelings dictate your skill is your weakness. If you resolved that which gives you your bloodthirsty spirit, I can see you defeating me.~
-== %SHARTEEL_BANTER% ~Do not pretend to understand me. I wish to kill you because you offend me. That is all.~
+== BC0KVEL ~空话没什么分量。等你证出来了，我再认。~
+== %SHARTEEL_BANTER% ~别以为那不可能。等我寻着你的弱点，你会疼得在我脚边爬。~
+== BC0KVEL ~尽管试。你若替我寻出一处弱点来补，我还感激你。~
+== %SHARTEEL_BANTER% ~你就以为我的弱点你都摸清了？你懂什么，男性？~
+== BC0KVEL ~你的弱点，就是让那些转眼即逝的情绪左右你的本事。你若有法子收束那股嗜血的心气，我看你能赢我。~
+== %SHARTEEL_BANTER% ~别装作懂我。我要杀你，只因你叫我厌恶。如此而已。~
 EXIT
 
 // Skie
@@ -951,18 +951,18 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelSkie1","GLOBAL",0)~ THEN %SKIE_BANTER% C0KvelSkie1
-~That pot of fondue we had last night was absolutely wonderful, K'Vel! I never thought anyone could make eating hardtack an enjoyable experience.~
+~昨夜那锅干酪锅真是好极了，克维尔！我从没想过有人能把啃硬饼变成一桩享受。~
 DO ~SetGlobal("C0KvelSkie1","GLOBAL",1)~
-== BC0KVEL ~Savor the memory. It will be difficult to find the resources needed to remake that meal.~
-== %SKIE_BANTER% ~I don't suppose you might be interested in a job as in my estate? Between you and me, I've gotten tired of our old cook's recipes for years now, and I've just never said it. I'm sure you'd be able to take over his job in less than a minute if you show off your talent!~
-== BC0KVEL ~No.~
-== %SKIE_BANTER% ~Oh, come now. Isn't this the kind of safe, stable life you've been after? You wouldn't need to worry about having trouble finding work as a drow again. It'd be hard to convince my father... but I think I could do it.~
-== BC0KVEL ~And I would receive a warm bed in private quarters, away from the chaos of battle, without need to fear cold or hunger again, so long as a simple service is provided?~
-== %SKIE_BANTER% ~Yes, exactly!~
-== BC0KVEL ~Then answer me one question and I may consider accepting, Skie Silvershield. Why did you leave, then?~
-== %SKIE_BANTER% ~I, um...~
-== %SKIE_BANTER% ~Okay, touché.~
-== BC0KVEL ~There are more things we live for apart from comfort. I know mine, and I see you have yet to find yours. Figure that out for yourself before you pry into the lives of others.~
+== BC0KVEL ~记住那个味道吧。要再凑齐再做那顿饭的材料，可不容易。~
+== %SKIE_BANTER% ~我倒想问，你有无意到我的庄园里当差？私下说，我们那老厨子的菜色，我早吃腻了，只是一直没说。你若露一手本事，我信你一分钟内就能接下他的活！~
+== BC0KVEL ~不。~
+== %SKIE_BANTER% ~哎呀，来吧。这不就是你想要的安稳日子？你再不必担心卓尔找不着活干。要说服我父亲是难些……不过我想我能办到。~
+== BC0KVEL ~于是我就能得一张暖床、一处独静的房间，远离战乱，只要做一桩简单的差事，就再不愁饥寒？~
+== %SKIE_BANTER% ~对，正是！~
+== BC0KVEL ~那答我一个问题，我也许会考虑接下，丝琪·银盾。那你当初又为什么走？~
+== %SKIE_BANTER% ~我，呃……~
+== %SKIE_BANTER% ~好吧，说得好。~
+== BC0KVEL ~我们活着，除了安适，还有别的东西。我知道我的是什么，而我看你还没找着你的。先自己想明白，再来探别人的日子。~
 EXIT
 
 CHAIN IF ~InParty("Skie")
@@ -974,17 +974,17 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelSkie1","GLOBAL",1)~ THEN %SKIE_BANTER% C0KvelSkie2
-~I've been thinking a little about what you said, K'Vel. You're right. There's more to life than living comfortably.~
+~克维尔，我一直在想你说的那话。你说得对。活着不只是图个安适。~
 DO ~SetGlobal("C0KvelSkie1","GLOBAL",2)~
-== BC0KVEL ~Hmm.~
-== %SKIE_BANTER% ~What? No praise? I figured out what you were trying to tell me!~
-== BC0KVEL ~If I had made it any clearer, I would need to examine you for stunted growth to your mind.~
-== %SKIE_BANTER% ~Oh, don't be rude. I'm very grateful, you know. I know I need to figure out what I'm doing out here. Because I want to be here. I just haven't put words to why yet.~
-== BC0KVEL ~You will have to learn that for yourself.~
-== %SKIE_BANTER% ~Don't worry. I'm a quick learner.~
-== %SKIE_BANTER% ~I still want to hire you as my cook though. You've spoiled me!~
-== BC0KVEL ~That, I cannot take credit for. I will withhold your portion from our nightly meals, if you find it concerning.~
-== %SKIE_BANTER% ~NO! You can't do that to me!~
+== BC0KVEL ~嗯。~
+== %SKIE_BANTER% ~什么？不夸我一句？我明白你想对我说什么了！~
+== BC0KVEL ~我若说得再明白些，就得给你查一查脑子是不是长僵了。~
+== %SKIE_BANTER% ~哦，别这么无礼。我很感激你的，你知道。我知道我得弄清楚自己在这儿做什么。因为我想在这儿。我只是还没找到话说明为什么。~
+== BC0KVEL ~那得你自己去学。~
+== %SKIE_BANTER% ~别担心。我学得快。~
+== %SKIE_BANTER% ~不过我还是想雇你当我的厨子。你把我惯坏了！~
+== BC0KVEL ~这可算不得我的功劳。你若觉得不妥，我今晚就从我们的饭里扣下你那份。~
+== %SKIE_BANTER% ~不！你不能这么对我！~
 EXIT
 
 // Tiax
@@ -998,16 +998,16 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelTiax1","GLOBAL",0)~ THEN %TIAX_BANTER% C0KvelTiax1
-~YOU! Drow, Tiax demands that you—~
+~你！卓尔，泰亚克斯命你——~
 DO ~SetGlobal("C0KvelTiax1","GLOBAL",1)~
-== BC0KVEL ~No. Be silent.~
-== %TIAX_BANTER% ~The very impudence! How dare you silence Tiax, whose words carry the weight of the heavens themselves?~
-== BC0KVEL ~I have learned over the years that even a fool's words can tell much. You are the exception—less than even a fool. What I need to know of you, you have revealed within your first five words, if even that.~
-== %TIAX_BANTER% ~The great Tiax's words are worth every bit of their weight in gold!~
-== BC0KVEL ~...~
-== BC0KVEL ~...Ponder on what you have just said, you ridiculous imbecile.~
-== %TIAX_BANTER% ~Eh... how much do words weigh again? I need to think...~
-== BC0KVEL ~Yes. Think more, if you've even the capacity, and speak less. This conversation is over.~
+== BC0KVEL ~不。住口。~
+== %TIAX_BANTER% ~好大的胆子！你竟敢叫泰亚克斯闭嘴——他的话可是带着天国的分量！~
+== BC0KVEL ~这些年我学到，连愚人的话也能说明许多。你是例外——连愚人都不如。我需要知道你的事，你头五个字里就已全露了，甚至用不着五个。~
+== %TIAX_BANTER% ~伟大的泰亚克斯，他的话字字都值同等重量的金子！~
+== BC0KVEL ~……~
+== BC0KVEL ~……把你自己刚说的话好好想想，你这可笑的蠢货。~
+== %TIAX_BANTER% ~呃……话到底有多重来着？我得想想……~
+== BC0KVEL ~是。多想，若你还有那个能耐，少说。这场谈话到此为止。~
 EXIT
 
 // Viconia
@@ -1022,17 +1022,17 @@ CombatCounter(0)
 Global("C0KvelViconia1","GLOBAL",0)~ THEN %VICONIA_BANTER% C0KvelViconia1
 ~Dos lueth usstan phuul abban, wun nindol ssussun kul'gobsula.~
 DO ~SetGlobal("C0KvelViconia1","GLOBAL",1)~
-== BC0KVEL ~...~
+== BC0KVEL ~……~
 == %VICONIA_BANTER% ~Waela jaluk?~
-== BC0KVEL ~...~
-== %VICONIA_BANTER% ~Must we communicate in this tongue? It is a rare thing that I may use my original speech, and my partner in conversation is content to play deaf and mute.~
-== BC0KVEL ~If you are seeking to indulge in the nostagia of Menzoberranzan's natural hierarchies, I cannot indulge you.~
-== %VICONIA_BANTER% ~I am no priestess of Lolth, nor do I seek comfort in acting my former station. Do you see garments and a snake whip, male? I merely seek to assure an natural alliance between two outcasts of mutual origin.~
-== BC0KVEL ~'Natural alliance'? You have truly forgotten what being drow is truly like, Viconia, if you believe what you are saying, and I do not consider you such a fool. You seek an asset to use for your convenience, and are now using a honeyed tongue to do so.~
-== BC0KVEL ~It is sickeningly transparent.~
-== %VICONIA_BANTER% ~Your tongue spews nothing but bile. Perhaps 'tis for the best that you have abandoned our native tongue, for the words coming from your mouth would undoubtedly be nothing short of ear-grating.~
-== BC0KVEL ~I have no use for words which have no value. You would do best to remember, as well. You are a dark elf, but a 'drow'? I do not see one before me anymore.~
-== %VICONIA_BANTER% ~Mzilna wael! Remove the fetters of a drow male, and they suddenly believe they are above all. Make no mistake, jaluk—you are nothing to these humans, and even less among drow. You are less than nobody now—what a pitiful existence.~
+== BC0KVEL ~……~
+== %VICONIA_BANTER% ~我们非得用这语言交谈么？我难得能用上母语，而我的谈话对象却乐于装聋作哑。~
+== BC0KVEL ~你若想借魔索布莱城的天然尊卑来过瘾，我奉陪不了。~
+== %VICONIA_BANTER% ~我不是罗丝的祭司，也不在重演旧位分里寻安适。你看见法袍和蛇鞭了么，男性？我只想确保两个同源的弃儿之间有一场天然同盟。~
+== BC0KVEL ~“天然同盟”？维康妮亚，你若真信自己说的话，那你真是忘了做卓尔是什么滋味——而我不觉得你蠢到这个地步。你要的是一个供你使唤的本钱，如今正用甜嘴来讨。~
+== BC0KVEL ~这透明得叫人恶心。~
+== %VICONIA_BANTER% ~你嘴里吐出来的全是胆汁。也许你丢下母语倒是好事，因为你嘴里的话，无疑只会刺耳。~
+== BC0KVEL ~没有价值的话，我不用。你也最好记住。你是个暗精灵，可还算“卓尔”么？我眼前已看不见一个了。~
+== %VICONIA_BANTER% ~Mzilna wael！给一个卓尔男性卸了镣铐，他们就忽然以为自己高过一切。别弄错，jaluk——在这些人眼里你什么都不是，在卓尔之中更不算什么。你如今连“无名之辈”都不如——多可悲的活法。~
 EXIT
 
 CHAIN IF ~InParty("Viconia")
@@ -1044,12 +1044,12 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelViconia2","GLOBAL",0)~ THEN %VICONIA_BANTER% C0KvelViconia2
-~So after however many years spent slaving away for surfacers, you have gained the unconditional trust of... what, one human?~
+~那么，给地表人做牛做马这么些年，你换来了……什么，一个人的无条件信任？~
 DO ~SetGlobal("C0KvelViconia2","GLOBAL",1)~
-== BC0KVEL ~One is enough.~
-== %VICONIA_BANTER% ~Enough? What measure of safety can one short-lived human provide?~
-== BC0KVEL ~When you have identified the traits within a surfacer's character which can be trusted, it becomes simpler.~
-== %VICONIA_BANTER% ~You speak of "trust"? Shar, to think that such deluded words can spew from a drow's mouth. You are truly an aberration.~
+== BC0KVEL ~一个就够了。~
+== %VICONIA_BANTER% ~够？一个短命的人类能给你几分安全？~
+== BC0KVEL ~等你认清了地表人身上哪些品性可以信，事情就简单了。~
+== %VICONIA_BANTER% ~你说“信任”？莎尔啊，这种昏话竟能从卓尔嘴里吐出来。你真是个异类。~
 EXIT
 
 CHAIN IF ~InParty("Viconia")
@@ -1061,16 +1061,16 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelViconia3","GLOBAL",0)~ THEN %VICONIA_BANTER% C0KvelViconia3
-~Male, your choice of blackwing mushrooms for our stew was not to my palate. I demand you use cavernstalkers instead from hereon.~
+~男性，你给我们那锅炖菜挑的黑翼菇不合我的口味。从今往后，我要你改用穴茎菇。~
 DO ~SetGlobal("C0KvelViconia3","GLOBAL",1)~
-== BC0KVEL ~Cavernstalkers only grow in the underground. Were this the Underdark, they would be plentiful, but it is a different story here.~
-== BC0KVEL ~Not to mention they are near indistinguishable from orbbwebs, which are fatally toxic. I would rather not risk my life for a slightly enhanced flavor.~
-== %VICONIA_BANTER% ~Toxins can be simply cleansed by a priestess of skill such as myself. The quality of cavernstalkers is infinitely superior to that of common blackwings.~
-== BC0KVEL ~The difference in taste between blackwings and cavernstalkers is negligable when sautéed with the right oil. My role is to keep you fed. Your comfort is irrelevant.~
-== %VICONIA_BANTER% ~Taste? Taste is inconsequential. The difference in the textures between the two mushrooms makes the difference between a meal fit for a commoner and a noble.~
-== BC0KVEL ~Then it is even more preferable to use blackwings. By surface standards, you can hardly even be considered a commoner.~
-== %VICONIA_BANTER% ~You forget yourself, jaluk!~
-== BC0KVEL ~The failing of drow females has always been their shortsightedness, the belief that they will always know better. You are on the surface now. It would behoove you to learn rather than attempt to teach of that which you know nothing.~
+== BC0KVEL ~穴茎菇只长在地下。若这里是幽暗地域，它们多得是，可在这儿是另一回事。~
+== BC0KVEL ~更别说它们跟球网菇几乎分不清，而那是剧毒的。我宁愿不要为稍好一点的味道拿命去赌。~
+== %VICONIA_BANTER% ~毒素只要由我这样有本事的祭司净化就行。穴茎菇的品相，远胜寻常黑翼菇。~
+== BC0KVEL ~黑翼菇与穴茎菇的滋味之别，用对的油一炒，几乎尝不出来。我的职责是让你有饭吃。你的舒坦不相干。~
+== %VICONIA_BANTER% ~滋味？滋味无关紧要。两种蘑菇口感之别，才是一顿粗人饭与贵人饭的分野。~
+== BC0KVEL ~那就更该用黑翼菇。以地表的眼光看，你连粗人都算不上。~
+== %VICONIA_BANTER% ~你忘了分寸，jaluk！~
+== BC0KVEL ~卓尔女性的毛病，一向是短视——总以为自己永远更懂。你如今在地表了。你该学，而不是去教那些你一窍不通的事。~
 EXIT
 
 // Xan
@@ -1083,12 +1083,12 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelXan1","GLOBAL",0)~ THEN %XAN_BANTER% C0KvelXan1
-~We are now to entrust our group's safety to one of my dark elven cousins. *groan* Now we are certainly doomed.~
+~如今我们要把全队的安全交给我的一位暗精灵表亲了。*呻吟* 这下我们准完了。~
 DO ~SetGlobal("C0KvelXan1","GLOBAL",1)~
-== BC0KVEL ~And what doom do you see befalling you, elf?~
-== %XAN_BANTER% ~I know not. I only know from history that each time one of the People and a drow have deigned to work together, it has always ended in disaster. More often, for the elf.~
-== BC0KVEL ~You are a dullard for fearing a death that may never come.~
-== %XAN_BANTER% ~And I would be wiser if were it clear before my eyes, ready to claim me? *sigh* I think I prefer 'dullard'.~
+== BC0KVEL ~精灵，你看出什么灾祸要落到你头上？~
+== %XAN_BANTER% ~我不知道。我只从史书上知道，每当一个“族人”与一个卓尔屈尊共事，结局总是灾祸。多半是精灵遭殃。~
+== BC0KVEL ~怕一场也许永不会来的死，你是个呆子。~
+== %XAN_BANTER% ~若它明明白白摆在我眼前，等着收我，我反倒更明白？*叹气* 我看我还是宁可当“呆子”。~
 EXIT
 
 CHAIN IF ~InParty("Xan")
@@ -1104,20 +1104,20 @@ TimeOfDay(NIGHT)
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelXan2","GLOBAL",0)~ THEN %XAN_BANTER% C0KvelXan2
-~When I look under the cover of darkness, and squint very hard, I almost see a kinsman, albeit several heads taller and brawnier. How did our kind becomes so different, I wonder?~
+~我在暗处瞧着，使劲眯起眼，几乎看见一个亲族，只是高出好几头，也壮实许多。我们的族类怎么变得这样不同，我倒想知道。~
 DO ~SetGlobal("C0KvelXan2","GLOBAL",1)~
-== BC0KVEL ~I'm certain we've both heard all the myths many times. Believe whichever one you prefer.~
-== %XAN_BANTER% ~Yes, yes, the tales of how Araushnee became Lolth, how she enslaved the dark elves who were once her children, or the ones where they followed her willingly. I've heard them all a million times. Whichever one the teller thinks makes their side of the conflict sound more righteous.~
-== BC0KVEL ~Oh? You've heard the stories from the mouths of your natural enemy?~
-== %XAN_BANTER% ~As a defender of Tel'Quessir, I believe in... understanding what it is I am truly fighting. Make no mistake—I find the current status of the Ilythiiri truly appalling, but also pitiable. I know your true enemy is no longer the People, but each other.~
-== BC0KVEL ~If you are attempting to find common ground, I advise you save your breath. No small amount of elvenkind have died at my hand across my lifetime.~
-== %XAN_BANTER% ~Nor is my moonblade clean of dark elven blood, so I suppose 'tis true that I have no right to pity you. *sigh* K'Velarin, I hold no illusions of heroism or being an enforcer of righteousness. I am but a servant of my People, and I can only do what I must.~
-== %XAN_BANTER% ~It may be that one day it will be my duty to raise this sword against you, and one of our lives will end—and with how cruel fate can be, perhaps both—but I still feel foolishly obligated to say this.~
-== %XAN_BANTER% ~We may not understand each other, but... strangely, I do not dislike you. And I see some hope in that.~
-== BC0KVEL IF ~InParty("ELDOTH")~ THEN ~All things considered, I believe we do have one thing in common.~
-== %XAN_BANTER% IF ~InParty("ELDOTH")~ THEN ~I do not think so, but do tell.~
-== BC0KVEL IF ~InParty("ELDOTH")~ THEN ~We both hope the charlatan dies.~
-== %XAN_BANTER% IF ~InParty("ELDOTH")~ THEN ~I... *chuckle* well, undeniably true. There is that.~
+== BC0KVEL ~那些传说我们俩想必都听过许多遍。你爱信哪个就信哪个。~
+== %XAN_BANTER% ~是啊，是啊，什么阿拉乌施妮如何成了罗丝，如何奴役了本是她子女的暗精灵，或说他们自愿追随她。这些我听过一百万遍。全看讲的人想让哪一方显得更义正。~
+== BC0KVEL ~哦？你竟从你天生仇敌的嘴里听过这些故事？~
+== %XAN_BANTER% ~身为 Tel'Quessir 的守护者，我相信……要弄清我真正在与什么作战。别弄错——我觉得伊力希瑞如今的境况实在可憎，也可怜。我知道你们真正的仇敌已不是“族人”，而是你们彼此。~
+== BC0KVEL ~你若想找共同之处，我劝你省省气力。我这一生，死在我手上的精灵不在少数。~
+== %XAN_BANTER% ~我这把月刃上也没少沾暗精灵的血，所以我大概确实没资格可怜你。*叹气* 克维拉林，我并不自以为英雄，也不自命义的执行者。我只是我族人的仆从，只能做我该做的。~
+== %XAN_BANTER% ~也许有一天，我的职责就是举这把剑对着你，我们中会有一个死去——以命运的残酷，也许两个都死——可我还是愚蠢地觉得该说这一句。~
+== %XAN_BANTER% ~我们也许彼此不懂，可……说来古怪，我并不讨厌你。而我在其中看见了一点指望。~
+== BC0KVEL IF ~InParty("ELDOTH")~ THEN ~总而言之，我相信我们确有一处相同。~
+== %XAN_BANTER% IF ~InParty("ELDOTH")~ THEN ~我不这么想，不过你说吧。~
+== BC0KVEL IF ~InParty("ELDOTH")~ THEN ~我们都盼那骗子死。~
+== %XAN_BANTER% IF ~InParty("ELDOTH")~ THEN ~我……*轻笑* 好吧，无可否认。确有这么一处。~
 EXIT
 
 // Xzar
@@ -1130,16 +1130,16 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelXzar1","GLOBAL",0)~ THEN %XZAR_BANTER% C0KvelXzar1
-~You are a most fascinating specimen, drow, to have such a thickset musculature. Almost human-like. Is it a random mutation? Experimentation from your infamous priestesses? Or...~
+~卓尔，你这身厚实的肌肉真是极有意思的标本。几乎像人类。是随机的变异？你那臭名昭著的祭司们做的试验？还是……~
 DO ~SetGlobal("C0KvelXzar1","GLOBAL",1)~
-== BC0KVEL ~Observe as long as you like, you will have no answers.~
-== %XZAR_BANTER% ~Correct, of course. The only way to understand more is to *really* get into the skin and bones. I mean that... figuratively, of course. Though I would not object you to spending a little time on the operating table...~
-== BC0KVEL ~If you can drag me on top of one by force, then you may cut as you wish. Though I am not optimistic, considering you are practically a walking skeleton yourself.~
-== %XZAR_BANTER% IF ~InParty("MONTARON")~ THEN ~Right! First priority would be to sew that mouth shut with some strong thread. Monty! Be a good chap and help our subject on the table, would you?~
-== %MONTARON_BANTER% IF ~InParty("MONTARON")~ THEN ~Shove yer twisted implements up yer arse and turn 'em, wizard.~
-== %XZAR_BANTER% IF ~InParty("MONTARON")~ THEN ~Hmph! Fine, a fleshy construct would do the same work, and with less lip! I'll just have to find some... material.~
-== %XZAR_BANTER% IF ~!InParty("MONTARON")~ THEN ~Right! First priority would be to sew that mouth shut with some strong thread. Now I just need to find a potent paralytic agent...~
-== BC0KVEL ~Good luck.~
+== BC0KVEL ~你爱看多久就看多久，得不到答案。~
+== %XZAR_BANTER% ~当然，你说得对。要懂得更多，唯一的法子是*真正*钻进皮肉骨头里去。我是说……打个比方，当然。不过你若肯在手术台上躺一会儿，我也不反对……~
+== BC0KVEL ~你若能硬把我拖上一张，那就随你割。不过我不大乐观，毕竟你自己差不多就是一副走路的骨架。~
+== %XZAR_BANTER% IF ~InParty("MONTARON")~ THEN ~对！头一件要办的，是拿结实的线把那张嘴缝上。蒙提！好伙计，帮我把我们的标本抬上桌，行么？~
+== %MONTARON_BANTER% IF ~InParty("MONTARON")~ THEN ~把你那些歪扭的家伙塞进你自己屁股里转一转吧，法师。~
+== %XZAR_BANTER% IF ~InParty("MONTARON")~ THEN ~哼！也罢，一具肉傀儡也能干同样的活，还少顶嘴！我只需找些……材料。~
+== %XZAR_BANTER% IF ~!InParty("MONTARON")~ THEN ~对！头一件要办的，是拿结实的线把那张嘴缝上。如今我只需寻一种厉害的麻痹药……~
+== BC0KVEL ~祝你好运。~
 EXIT
 
 // Yeslick
@@ -1153,21 +1153,21 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelYeslick1","GLOBAL",0)~ THEN %YESLICK_BANTER% C0KvelYeslick1
-~I don't suppose ye fought the the War of the Black River, drow? As I recall, ye claimed yer home city be Eryndlyn.~
+~卓尔，我猜你没打过黑河之战吧？我记得你说你故乡是埃林德林。~
 DO ~SetGlobal("C0KvelYeslick1","GLOBAL",1)
 RealSetGlobalTimer("C0KvelYeslickRestTalkRealTimer","GLOBAL",3600)
 SetGlobalTimer("C0KvelYeslickRestTalkTimer","GLOBAL",ONE_WEEK)~
-== BC0KVEL ~The battle against the shield dwarves of the Halls of the Hammer and House Xzarthel? No. That was none of my affair.~
-== %YESLICK_BANTER% ~Ye're certain? I've only some estimate o' the age of elves by face, but ye seem to be the right age. And from yer response, ye seem to have some recollection o' the whole thing.~
-== BC0KVEL ~I recall the countless bodies that littered the passage between the High Moor and the Upperdark. I was only relieved that I did not join them by some terrible accident. Both the dwarves and the drow were possessed by madness on that black day.~
-== %YESLICK_BANTER% ~'Tis good if ye haven't, drow... I've lost my share o' distant relatives in that terrible battle... I'd hate fer knowledge of that to be an obstacle in our path.~
-== BC0KVEL ~If the possibility is so concerning to you, then you should not have asked.~
-== %YESLICK_BANTER% ~Perhaps. But 'tis preferable to act honestly when one has misgivins'. Had ye taken part in the war...~
-== BC0KVEL ~You would act against me?~
-== %YESLICK_BANTER% ~*sigh* I've no quarrel with ye, dark elf. But I be an old dwarf, an' past wounds don't fade away some easily. I haven't forgotten the bloody wars fought between dwarfkin an' the dark ones o'er the centuries, much as I'd like to.~
-== %YESLICK_BANTER% ~Lookin' upon ye brings up old, dark memories. Ones I had hoped ter never think of again.~
-== BC0KVEL ~From my experience, the simplest cure for seeing something you would prefer not to is to look away.~
-== %YESLICK_BANTER% ~Nay... nay. Perhaps the best path forwards be to look back an' accept what's done is done. Then, I may fairly consider how to deal with the here an' now.~
+== BC0KVEL ~与锤厅的盾矮人和克萨瑟尔家族那一战？没有。那不关我的事。~
+== %YESLICK_BANTER% ~你确定？我只能凭脸估精灵的年纪，可你看着正当年纪。而且听你这回答，你似乎对那整件事有些印象。~
+== BC0KVEL ~我记得数不清的尸首散布在高荒原与上幽暗之间的通道上。我只庆幸自己没因什么可怕的意外与他们同去。那个黑暗的日子里，矮人与卓尔都疯了。~
+== %YESLICK_BANTER% ~你没打就好，卓尔……那一场恶战里，我也折了些远亲……我可不希望这成了我们路上的疙瘩。~
+== BC0KVEL ~你若这般在意这可能性，那你当初就不该问。~
+== %YESLICK_BANTER% ~也许。可心里有疑虑时，还是把话说开好。你若真参与了那场仗……~
+== BC0KVEL ~你会对我下手？~
+== %YESLICK_BANTER% ~*叹气* 我与你无怨，暗精灵。可我是个老矮人，旧伤不那么容易淡去。矮人与黑暗种族几百年间的血战，我没忘——尽管我极想忘。~
+== %YESLICK_BANTER% ~看着你，就翻起旧日那些阴暗的记忆。那些我本盼着再不必想起的。~
+== BC0KVEL ~依我的经验，看见不愿看的东西，最简单的治法就是转开眼。~
+== %YESLICK_BANTER% ~不……不。也许往前走最好的路，是回头看清、认了已成之事。这样，我才能好好想眼下该怎么办。~
 EXIT
 
 CHAIN IF ~InParty("Yeslick")
@@ -1179,28 +1179,28 @@ See("C0Kvel")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0KvelYeslickRestTalk1","GLOBAL",1)~ THEN %YESLICK_BANTER% C0KvelYeslick1
-~*sniff* What's that, now? I may be old, but me nose be keen enough to follow the scent o' grilled whitefish. Where's that comin' from...?~
+~*抽鼻* 这是什么味儿？我虽老，鼻子还够灵，能追着烤白鱼的香气走。这味儿从哪儿来的……？~
 DO ~SetGlobal("C0KvelYeslickRestTalk1","GLOBAL",2)~
-== BC0KVEL ~Here, dwarf.~
-== %YESLICK_BANTER% ~Oh, it be ye. I was wonderin' who be at work at the fire, cookin' a culinary delight. Mind if I take a seat?~
-== BC0KVEL ~Do as you wish. The food will be ready to serve before long.~
-== %YESLICK_BANTER% ~A fine catch in the pan, I see. Plenty of meat, an' just the right amount o' fat to cook well. I speak only truth, K'Vel, when I say this smell is making me mouth water.~
-== BC0KVEL ~The dwarven folk have a fondness for the taste of fish? That is new knowledge for me.~
-== %YESLICK_BANTER% ~Me old clanhold be situated by a river, in case ye've forgotten. We've our fair share of fisher dwarves, and they be no less adept at it than any drow, I assure ye.~
-== %YESLICK_BANTER% ~...Had, our fair share.~
-== BC0KVEL ~The man who taught me to fish is long gone as well. Were it not for this skill, I am not certain I would have remembered him.~
-== %YESLICK_BANTER% ~Ye dark-skinned folk be rarely known fer sentimentality.~
-== BC0KVEL ~...Perhaps.~
-== %YESLICK_BANTER% ~Beg pardon. That be soundin' far worse than I meant it.~
-== BC0KVEL ~We take much for granted from those that offer us simple things, and we think not of them—not until they are suddenly lost. Drow choose to deny attachment, so that they may show no weakness. For the faults as I see in surfacers, they are more true to their feelings. That much I respect.~
-== %YESLICK_BANTER% ~An' what else have you lost, if ye don't mind me askin'?~
-== BC0KVEL ~Enough for me to consider that I must look at some things differently.~
-== %YESLICK_BANTER% ~That be good, elf. Best if more of us learn that lesson.~
-== BC0KVEL ~...~
-== %YESLICK_BANTER% ~Oi, ye'd best be turnin' the fillet, else it'll be burned on the side before long.~
-== BC0KVEL ~Damn it—you are right.~
-== %YESLICK_BANTER% ~Don't suppose ye've any dried kerstol leaves? The earthy taste not be fer most, but I be an old-fashioned dwarf, an' the scent reminds me of some good times.~
-== BC0KVEL ~You are quite lucky, dwarf.~
-== %YESLICK_BANTER% ~Thank ye.~
-== %YESLICK_BANTER% ~*munch* Ah, now that be tasting just right.~
+== BC0KVEL ~这儿，矮人。~
+== %YESLICK_BANTER% ~哦，是你。我还在想是谁在火边忙活，做这样的美味。我坐一坐，行么？~
+== BC0KVEL ~随你。吃食很快就好。~
+== %YESLICK_BANTER% ~我看这锅里是上好的货。肉够多，油脂也正合火候。克维尔，我只说实话：这味儿叫我流口水。~
+== BC0KVEL ~矮人一族爱吃鱼？这于我倒是新知。~
+== %YESLICK_BANTER% ~我老家那氏族领地就在河边，你若忘了的话。我们也有不少打鱼的矮人，我向你保证，他们不比任何卓尔差。~
+== %YESLICK_BANTER% ~……曾有不少。~
+== BC0KVEL ~教我这手艺的人也早已不在了。若不是这门手艺，我未必还记得他。~
+== %YESLICK_BANTER% ~你们黑皮的族类，很少听说重感情。~
+== BC0KVEL ~……也许。~
+== %YESLICK_BANTER% ~恕我。这话说得比我本意难听多了。~
+== BC0KVEL ~对给我们简单东西的人，我们总当作理所当然，也不去想他们——直到忽然失去。卓尔选择不结情，好显得没有弱点。地表人固然有我看着的毛病，可他们对自己的情更真。这一点我敬。~
+== %YESLICK_BANTER% ~你若不见怪我问一句，你还失了些什么？~
+== BC0KVEL ~够我明白有些事非得换个眼光看不可。~
+== %YESLICK_BANTER% ~那好，精灵。我们这些人里，越多学到这一课越好。~
+== BC0KVEL ~……~
+== %YESLICK_BANTER% ~喂，你最好把鱼片翻一翻，不然一边很快就焦了。~
+== BC0KVEL ~该死——你说得对。~
+== %YESLICK_BANTER% ~你怕是没有干克斯特尔叶？那股土腥味多数人受不了，可我是个老派矮人，那香气叫我想到些好日子。~
+== BC0KVEL ~你倒走运，矮人。~
+== %YESLICK_BANTER% ~谢了。~
+== %YESLICK_BANTER% ~*咀嚼* 啊，这才对味。~
 DO ~RestParty()~ EXIT
